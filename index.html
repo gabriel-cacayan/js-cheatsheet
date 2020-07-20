@@ -1,0 +1,101 @@
+<script>
+	// JS Cheatsheet
+
+	/* 
+		VARIABLES AND CONSTANT
+		Assigning value to a variable,
+		var - ES5
+		let and const - ES6 > New version of JS.
+
+	*/
+	var age =  20; 
+	let myName =  "Gabriel";
+	const FULL_NAME = "GABRIEL A. CACAYAN";
+
+	/* 
+		DATA TYPES
+		undefined, null, string, number, boolean, object and symbol;
+
+	*/
+	
+	var newAge; // undefined
+	var noValue = ""; // null
+	var codes = "Javascript"; // string
+	var num = 1.23; // number
+	var bool = true; // boolean
+	var arr = ["123"] // object
+
+	/*
+		STRINGS 
+
+	*/
+
+		// escape literal quotes
+		var sampleStr = 'Alan said, "Peter is learning JavaScript".';
+		// this prints: Alan said, "Peter is learning JavaScript".
+	
+
+		// concatenating strings
+		var ourStr = "I come first. " + "I come second.";
+
+		// concatenating strings with +=
+		var ourStr = "I come first. ";
+		ourStr += "I come second.";
+
+		// constructing strings with variables
+		var ourName = "freeCodeCamp";
+		var ourStr = "Hello, our name is " + ourName + ", how are you?";
+
+		// appending variables to strings
+		var anAdjective = "awesome!";
+		var ourStr = "freeCodeCamp is ";
+		ourStr += anAdjective;
+
+	/*
+			Escape sequences
+			Code	Output
+			\'	single quote (')
+			\"	double quote (")
+			\\	backslash (\)
+			\n	newline
+			\r	carriage return
+			\t	tab
+			\b	backspace
+			\f	form feed
+	*/
+
+	/* 
+		STRING PROPERTIES AND METHODS
+	*/
+
+	// The length of a string
+	"Alan Peter".length; // 10
+
+	//SPLIT and JOIN
+	let str = 'a string';
+	let splittedStr = str.split(''); // ​​​​​[ 'a', ' ', 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
+
+	let joinedStr = splittedStr.join('') // a string​​​​​
+
+	//first element has an index of 0
+	var firstLetterOfFirstName = "";
+	var firstName = "Ada";
+	firstLetterOfFirstName = firstName[0]; // A
+
+	// find the last character of a string
+	var firstName = "Ada";
+	var lastLetterOfFirstName = firstName[firstName.length - 1]; // a
+
+
+	//charAt(0)
+	var character = firstName.charAt(0); //A
+
+	//charCodeA()t - Returns the Unicode of the character at the specified index
+	var charCode = character.charCodeAt(0); // A = 65
+
+	//concat()
+	var randomName = "Elle";
+	var fullName = firstName.concat(randomName); //AdaElle
+	
+	console.log(fullName);
+</script>
