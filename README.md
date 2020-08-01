@@ -7,6 +7,20 @@
 /* This is a
 multi-line comment */
 ```
+## Variables
+The **`var`** statement declares a **function-scoped or globally-scoped variable,** optionally initializing it to a value.
+
+The **`let`** statement declares a **block-scoped local variable**, optionally initializing it to a value.
+
+Constants **`const`** are **block-scoped**, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
+
+
+
+```javascript
+var myName = "Gabriel";
+let age = 20;
+const BIRTHDAY = "January 7, 2000";
+```
 
 ## Data Types 
 The latest ECMAScript standard defines nine types:
@@ -26,3 +40,27 @@ Data Types | Example | Description
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
+## Strings
+
+```javascript
+
+      // escape literal quotes
+      var sampleStr = 'Alan said, "Peter is learning JavaScript".'; //Alan said, "Peter is learning JavaScript"
+     
+      // concatenating strings
+      var ourStr = "I come first. " + "I come second."; //I come first. I come second.
+
+      // concatenating strings with +=
+      var ourStr = "I come first. ";
+      ourStr += "I come second."; //I come first. I come second.
+
+      // constructing strings with variables
+      var ourName = "freeCodeCamp";
+      var ourStr = "Hello, our name is " + ourName + ", how are you?"; //Hello, our name is freeCodeCamp, how are you?
+
+      // appending variables to strings
+      var anAdjective = "awesome!";
+      var ourStr = "freeCodeCamp is ";
+      ourStr += anAdjective; //freeCodeCamp is awesome!
+
+```
