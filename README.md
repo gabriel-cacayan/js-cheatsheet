@@ -42,6 +42,22 @@ Data Types | Example | Description
 
 ## Strings
 
+##  Escape sequences
+
+```
+ 
+Code	Output
+
+\'	single quote (')
+\"	double quote (")
+\\	backslash (\)
+\n	newline
+\r	carriage return
+\t	tab
+\b	backspace
+\f	form feed
+             
+```
 ```javascript
 
       // escape literal quotes
