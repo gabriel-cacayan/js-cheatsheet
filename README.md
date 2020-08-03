@@ -56,3 +56,7 @@ Data Types | Example
 ``` \f ``` | Form feed
 
 ## String Properties and Methods.
+
+Properties | Description
+------------ | -------------
+ `str.length;`| The LENGTH of a string (Returns the length of a string)
