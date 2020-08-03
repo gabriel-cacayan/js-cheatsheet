@@ -1,6 +1,6 @@
-# Js-cheatsheet
+# JavaScript-Cheatsheet :octocat:
 
-## Comments
+## Comments :pencil2:
 ```javascript
 // This is an in-line comment.
 
