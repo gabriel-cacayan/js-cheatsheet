@@ -1,5 +1,14 @@
 # JavaScript-Cheatsheet :octocat:
 
+```javascript
+ /*
+ Introduction:
+ 
+ JS is case sensitive, use camelCase.
+ JS is a multi-paradigm, meaning you can write your code in different way.
+   -use arrow function and ternary operator for less code. 
+*/
+```
 ## Comments :pencil2:
 ```javascript
 // This is an in-line comment.
@@ -40,7 +49,30 @@ Data Types | Example | Description
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
-## Strings :email:
+# Strings :black_nib:
+
+## Basics
+
+```javascript
+   // escape literal quotes
+   var sentence = 'Mikasa said, "Gabriel is learning JavaScript".'; // Mikasa said, "Gabriel is learning JavaScript".
+
+   // concatenating strings
+   var ourStr = "I come first. " + "I come second."; // I come first. I come second.
+
+   // concatenating strings with +=
+   var ourStr = "I come first. ";
+   ourStr += "I come second."; // I come first. I come second.
+
+   // constructing strings with variables
+   var myName = "Mikasa";
+   var myStr = "Hello, my name is " + myName + ", how are you?"; // Hello, my name is Mikasa, how are you?
+
+   // appending variables to strings
+   var anAdjective = "awesome!";
+   var ourStr = "freeCodeCamp is ";
+   ourStr += anAdjective; // freeCodeCamp is awesome!
+```
 
 ##  Escape sequences :lock:
 
@@ -66,7 +98,7 @@ Methods | Description
  `split()`|  Splits a string into an array of substrings
  `charAt()` |  Returns the character at the specified index
  `charCodeAt()` | Returns the Unicode of the character at the specified index
- ` fromCharCodeAt()` | Converts Unicode values to characters
+ ` fromCharCode()` | Converts Unicode values to characters
  `concat()` | Joins two or more strings, and returns a new joined strings
  `startsWith()` | Checks whether a string begins with specified characters
  `endsWith()` | Checks whether a string ends with specified string/characters
