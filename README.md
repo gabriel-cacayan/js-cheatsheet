@@ -51,7 +51,7 @@ Data Types | Example | Description
 
 # Strings :black_nib:
 
-## Basics
+## Basics :scroll:
 
 ```javascript
    // escape literal quotes
@@ -73,7 +73,14 @@ Data Types | Example | Description
    var ourStr = "freeCodeCamp is ";
    ourStr += anAdjective; // freeCodeCamp is awesome!
 ```
+## Template String :incoming_envelope:
 
+**Template string** is new to JavaScript, it is introduced to ES6. Syntax: ``` `${variable}` ``` 
+
+```javascript
+const BIRTHDAY = "January 7, 2000";
+const sentence = `Hi there! my birthday is ${BIRTHDAY}.`; // Hi there! my birthday is January 7, 2000.
+```
 ##  Escape sequences :lock:
 
 Data Types | Example
@@ -123,4 +130,23 @@ Methods | Description
 
 **Note: All string methods return a new value. They do not change the original variable.**
 
+## Regular Expressions
+
+Character | Description
+------------ | -------------
+`\` | Escapes a special character
+`.` | The wildcard character . will match any character except new lines.
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
+`` |
  
