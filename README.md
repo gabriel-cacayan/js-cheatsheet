@@ -1,4 +1,4 @@
-# JavaScript-Cheatsheet :octocat:
+# JS-Cheatsheet :octocat:
 
 ```javascript
  /*
@@ -23,13 +23,19 @@ The **`let`** statement declares a **block-scoped local variable**, optionally i
 
 Constants **`const`** are **block-scoped**, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
 
-
-
 ```javascript
 var myName = "Gabriel";
 let age = 20;
 const BIRTHDAY = "January 7, 2000";
 ```
+
+## Scope :earth_asia:
+
+**Global scoped** is when you declared your variables outside the function.
+
+**Function or Local scoped** is when you declared your variables inside the function.
+
+**Block scoped** is when you declared your variables inside the curly braces `{}`.
 
 ## Data Types :open_file_folder:
 The latest ECMAScript standard defines nine types:
@@ -50,6 +56,8 @@ Data Types | Example | Description
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
 # Strings :black_nib:
+
+String is a sequence of characters.
 
 ## Basics :scroll:
 
@@ -132,21 +140,14 @@ Methods | Description
 
 ## Regular Expressions
 
-Character | Description
+Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
+
+Character classes | Description
 ------------ | -------------
 `\` | Escapes a special character
 `.` | The wildcard character . will match any character except new lines.
 `` |
 `` |
 `` |
-`` |
-`` |
-`` |
-`` |
-`` |
-`` |
-`` |
-`` |
-`` |
-`` |
+
  
