@@ -31,11 +31,9 @@ const BIRTHDAY = "January 7, 2000";
 
 ## Scope :earth_asia:
 
-**Global scoped** is when you declared your variables outside the function.
-
-**Function or Local scoped** is when you declared your variables inside the function.
-
-**Block scoped** is when you declared your variables inside the curly braces `{}`.
+* **Global scoped** is when you declared your variables outside the function.
+* **Function or Local scoped** is when you declared your variables inside the function.
+* **Block scoped** is when you declared your variables inside the curly braces `{}`.
 
 ## Data Types :open_file_folder:
 The latest ECMAScript standard defines nine types:
@@ -54,6 +52,15 @@ Data Types | Example | Description
 `Object` | `var arr = ["123"];` | A object is a collection of properties.
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
+
+## Operators
+
+Arithmetic | Example | Description
+------------ | ------------- | -------------
+Remainder `%`| 12 % 5 returns 2 | Binary operator. Returns the integer remainder of dividing the two operands.
+Increment `++` | Unary operator. Adds one to its operand. If used as a prefix operator (++x), returns the value of its operand after adding one; if used as a postfix operator (x++), returns the value of its operand before adding one.| If x is 3, then ++x sets x to 4 and returns 4, whereas x++ returns 3 and, only then, sets x to 4.
+||
+||
 
 # Strings :black_nib:
 
