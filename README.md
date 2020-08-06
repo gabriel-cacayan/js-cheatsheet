@@ -1,14 +1,9 @@
 # JS-Cheatsheet :octocat:
 
-```javascript
- /*
- Introduction:
- 
- JS is case sensitive, use camelCase.
- JS is a multi-paradigm, meaning you can write your code in different way.
-   -use arrow function and ternary operator for less code. 
-*/
-```
+* Javascript is case sensitive, use camelCase.
+* JS is a multi-paradigm, meaning you can write your code in different way.
+* You can use arrow function and ternary operator for less code
+
 ## Comments :pencil2:
 ```javascript
 // This is an in-line comment.
@@ -58,9 +53,41 @@ Data Types | Example | Description
 Arithmetic | Example | Description
 ------------ | ------------- | -------------
 Remainder `%`| 12 % 5 returns 2 | Binary operator. Returns the integer remainder of dividing the two operands.
-Increment `++` | Unary operator. Adds one to its operand. If used as a prefix operator (++x), returns the value of its operand after adding one; if used as a postfix operator (x++), returns the value of its operand before adding one.| If x is 3, then ++x sets x to 4 and returns 4, whereas x++ returns 3 and, only then, sets x to 4.
-||
-||
+Increment `++` | Unary operator. Adds one to its operand. If used as a prefix operator `++x`, returns the value of its operand after adding one; if used as a postfix operator `x++`, returns the value of its operand before adding one.| If x is 3, then ++x sets x to 4 and returns 4, whereas x++ returns 3 and, only then, sets x to 4.
+Decrement `--`| Unary operator. Subtracts one from its operand. The return value is analogous to that for the increment operator.|If x is 3, then --x sets x to 2 and returns 2, whereas x-- returns 3 and, only then, sets x to 2.
+Unary negation `-` | Unary operator. Returns the negation of its operand. | 	If x is 3, then -x returns -3.
+Unary plus `+`| Unary operator. Attempts to convert the operand to a number, if it is not already. | +"3" returns 3. +true returns 1.
+Exponentiation operator `**` | Calculates the base to the exponent power, that is, baseexponent | 2 ** 3 returns 8. 10 ** -1 returns 0.1.
+Addition `+` | a + b returns c | add the both operands.
+Subtraction `-` | a - b returns c | subtract the both operands.
+Multiplication `*` | a * b returns c | multiply the both operands.
+Division `/` | a / b returns c | divide the both operands.
+
+Assignment | Example | Description
+------------ | ------------- | -------------
+Assignment `=`| x = y | x = y
+Addition assignment `+=`| x += y | x = x + y
+Subtraction assignment `-=`| x -= y | x = x - y
+Multiplication assignment `*=`| x *= y | x = x * y
+Division assignment `/=` | x /= y | x = x / y
+Remainder assignment `%=`| x %= y | x = x % y
+
+Comparison | Example | Description
+------------ | ------------- | -------------
+Equal to `==`| x == y | Returns true if the operands are equal.
+Not equal `!=`| x != y | Returns true if the operands are not equal.
+Strict equal `===`| x === y | Returns true if the operands are equal and of the same type.
+Strict not equal `!==`| x !== y | Returns true if the operands are of the same type but not equal, or are of different type.
+Greater than `>` | x > y | Returns true if the left operand is greater than the right operand.
+Greater than or equal `>=` | x >= y | Returns true if the left operand is greater than or equal to the right operand.
+Less than `<` | x < y | Returns true if the left operand is less than the right operand.
+Less than or equal `<=` | x <= y | Returns true if the left operand is less than or equal to the right operand.
+
+Logical | Example | Description
+------------ | ------------- | -------------
+Logical AND ```%%```| expr1 ```&&``` expr2 | Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, ```&&``` returns true if both operands are true; otherwise, returns false.
+Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
+Logical NOT ```!``` | ```!```expr | Returns false if its single operand that can be converted to true; otherwise, returns true.
 
 # Strings :black_nib:
 
