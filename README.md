@@ -11,12 +11,13 @@
 /* This is a
 multi-line comment */
 ```
+
 ## Variables :floppy_disk:
-The **`var`** statement declares a **function-scoped or globally-scoped variable,** optionally initializing it to a value.
+* **`var`** statement declares a **function-scoped or globally-scoped variable,** optionally initializing it to a value.
+* **`let`** statement declares a **block-scoped local variable**, optionally initializing it to a value.
+* **`const`** are **block-scoped**, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
 
-The **`let`** statement declares a **block-scoped local variable**, optionally initializing it to a value.
-
-Constants **`const`** are **block-scoped**, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
+**Note**: It is convention that `const` must be declared all UPPERCASE.
 
 ```javascript
 var myName = "Gabriel";
@@ -48,7 +49,7 @@ Data Types | Example | Description
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
-## Operators
+## Operators :wrench:
 
 Arithmetic | Example | Description
 ------------ | ------------- | -------------
@@ -85,10 +86,11 @@ Less than or equal `<=` | x <= y | Returns true if the left operand is less than
 
 Logical | Example | Description
 ------------ | ------------- | -------------
-Logical AND ```%%```| expr1 ```&&``` expr2 | Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, ```&&``` returns true if both operands are true; otherwise, returns false.
-Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
+Logical AND ```&&```| expr1 ```&&``` expr2 | Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, ```&&``` returns true if both operands are true; otherwise, returns false.
 Logical NOT ```!``` | ```!```expr | Returns false if its single operand that can be converted to true; otherwise, returns true.
+Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
 
+**Note:** The logical OR is this **`||`** and not in the table.
 # Strings :black_nib:
 
 String is a sequence of characters.
@@ -170,18 +172,4 @@ Methods | Description
  `trim()` | Removes whitespace from both ends of a string
  `valueOf()` | Returns the primitive value of a String object
 
-**Note: All string methods return a new value. They do not change the original variable.**
-
-## Regular Expressions
-
-Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
-
-Character classes | Description
------------- | -------------
-`\` | Escapes a special character
-`.` | The wildcard character . will match any character except new lines.
-`` |
-`` |
-`` |
-
- 
+**Note:** All string methods return a new value. They do not change the original variable.
