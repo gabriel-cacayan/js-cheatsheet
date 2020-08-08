@@ -88,7 +88,7 @@ Logical | Example | Description
 ------------ | ------------- | -------------
 Logical AND ```&&```| expr1 ```&&``` expr2 | Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, ```&&``` returns true if both operands are true; otherwise, returns false.
 Logical NOT ```!``` | ```!```expr | Returns false if its single operand that can be converted to true; otherwise, returns true.
-Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
+Logical OR `||` | expr1 `||` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `||` returns true if either operand is true; if both are false, returns false.
 
 **Note:** The logical OR is this **`||`** and not in the table.
 # Strings :black_nib:
