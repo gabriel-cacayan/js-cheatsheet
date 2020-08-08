@@ -1,5 +1,6 @@
-# JS-Cheatsheet :octocat:
 
+# :fire: JS-Cheatsheet :octocat:
+![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 * Javascript is case sensitive, use camelCase.
 * JS is a multi-paradigm, meaning you can write your code in different way.
 * You can use arrow function and ternary operator for less code
