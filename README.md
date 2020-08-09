@@ -1,3 +1,4 @@
+[Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope-earth_asia)
 
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
