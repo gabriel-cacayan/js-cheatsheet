@@ -185,3 +185,42 @@ Methods | Description
  `valueOf()` | Returns the primitive value of a String object
 
 **Note:** All string methods return a new value. They do not change the original variable.
+
+# Regular Expressions
+
+Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
+
+Character classes | Description
+------------ | -------------
+`\` | Escapes a special character
+`l` | OR
+`.` | The wildcard character . will match any character except new lines.
+`i` | This flag is used to ignore upper and lowercase. `/ignorecase/i.`
+`g` | Search or extract a pattern more than once.
+`[]` | Allow you to define the characters to match.` /b[au]g/` will match "bag", "bug" but not "bog".
+`[a-z]` | Match all the characters between a and z.
+`[1-9]` | Match all the numbers between 1 and 9.
+`[a-z1-9]` | Match all the character between a and z, and the numbers between 1 and 9.
+`[^]` | Match the characters not in the set. [^a-e] match all other characters except A, B, C, D, and E.
+`+` | Match 1 or more occurrences of the previous character in a row.
+`*` | Match 0 or more occurrences of the previous character.
+`?` | Match 0 or 1 occurrence of the previous character. Useful for Lazy matching.
+`^` | Search for patterns at the beginning of strings.
+`$` | Search for patterns at the end of a string.
+`\w`| Equal to [A-Za-z0-9_]. Matches upper, lowercase, numbers the and underscore character (-).
+`\W`| Matches any nonword character. Equivalent to [^a-za-z0-9_].
+`\d`| Equal to [0-9]. Match one digit.
+`\D`| Equal to [^0-9]. Match one non digit.
+`\s	`| Match a whitespace.
+`\S	`| Match everything except whitespace.
+`a{2,5}	`| Match the letter a between 3 and 5 times.
+`a{2,}`| Specify only the lower number of matches.
+`a{5}`| Specify the exact number of matches.
+`(...)`| Specify a group that can be acceded with number (from 1).
+
+## Regex Methods
+Method	 | Description
+------------ | -------------
+`test()`| Returns true or false if the pattern match a string or not.
+`match()`| Extract the actual matches found.
+`replace()`| Search and replace text in a string .
