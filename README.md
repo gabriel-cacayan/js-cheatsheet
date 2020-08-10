@@ -1,4 +1,7 @@
-[Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope-earth_asia)
+## Table of Contents
+1. [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+
+[Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
 
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
@@ -6,7 +9,7 @@
 * JS is a multi-paradigm, meaning you can write your code in different way.
 * You can use arrow function and ternary operator for less code
 
-## Comments :pencil2:
+## Comments
 ```javascript
 // This is an in-line comment.
 
@@ -14,7 +17,7 @@
 multi-line comment */
 ```
 
-## Variables :floppy_disk:
+## Variables
 * **`var`** statement declares a **function-scoped or globally-scoped variable,** optionally initializing it to a value.
 * **`let`** statement declares a **block-scoped local variable**, optionally initializing it to a value.
 * **`const`** are **block-scoped**, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
@@ -27,13 +30,13 @@ let age = 20;
 const BIRTHDAY = "January 7, 2000";
 ```
 
-## Scope :earth_asia:
+## Scope
 
 * **Global scoped** is when you declared your variables outside the function.
 * **Function or Local scoped** is when you declared your variables inside the function.
 * **Block scoped** is when you declared your variables inside the curly braces `{}`.
 
-## Data Types :open_file_folder:
+## Data Types
 The latest ECMAScript standard defines nine types:
 
 `
@@ -51,7 +54,7 @@ Data Types | Example | Description
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
-## Operators :wrench:
+## Operators
 
 Arithmetic | Example | Description
 ------------ | ------------- | -------------
@@ -104,11 +107,11 @@ Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binar
 
 **Note:** The logical OR is this **`||`** and not in the table.
 
-# Strings :black_nib:
+# Strings
 
 String is a sequence of characters.
 
-## Basics :scroll:
+## Basics
 
 ```javascript
    // escape literal quotes
@@ -130,7 +133,7 @@ String is a sequence of characters.
    var ourStr = "freeCodeCamp is ";
    ourStr += anAdjective; // freeCodeCamp is awesome!
 ```
-## Template String :incoming_envelope:
+## Template String
 
 **Template string** is new to JavaScript, it is introduced to ES6. Syntax: ``` `${variable}` ``` 
 
@@ -138,7 +141,7 @@ String is a sequence of characters.
 const BIRTHDAY = "January 7, 2000";
 const sentence = `Hi there! my birthday is ${BIRTHDAY}.`; // Hi there! my birthday is January 7, 2000.
 ```
-##  Escape sequences :lock:
+##  Escape sequences
 
 Data Types | Example
 ------------ | ------------- 
@@ -151,7 +154,7 @@ Data Types | Example
 ``` \b ``` | Backspace
 ``` \f ``` | Form feed
 
-## String Properties and Methods :key: 
+## String Properties and Methods
 
 Properties | Description
 ------------ | -------------
