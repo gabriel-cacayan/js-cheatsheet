@@ -125,7 +125,7 @@ Left shift `<<` | a `<<` b | ab Adding bit 0 to the  right (<32) of the binary n
 Sign-propagating right shift `>>` | a `>>` b | a The binary state bof the number (<32) shifts to the right by one bit. Shifts by adding b 0s for positive numbers and 1 for negative numbers.
 Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binary representation  of the a number , badds 0s to the left of the number regardless of whether the number is positive or negative  .
 
-**Note:** The logical OR is this **`||`** and not in the table.
+> **Note:** The logical OR is this **`||`** and not in the table.
 
 # Strings
 
