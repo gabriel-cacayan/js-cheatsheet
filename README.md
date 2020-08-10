@@ -30,16 +30,24 @@ multi-line comment */
 ```
 
 ## Variables
-* **`var`** statement declares a **function-scoped or globally-scoped variable,** optionally initializing it to a value.
-* **`let`** statement declares a **block-scoped local variable**, optionally initializing it to a value.
-* **`const`** are **block-scoped**, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
+* `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
+* `let` statement declares a block-scoped local variable, can't be redeclared but it can reassigned. 
+* `const` are block-scoped, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
 
-**Note**: It is convention that `const` must be declared all UPPERCASE.
+> **Note**: It is convention that `const` must be declared all UPPERCASE.
 
 ```javascript
-var myName = "Gabriel";
+var myProgLanguage = "Javascript";
+myProgLanguage = "gabriel"; // Can be reassigned
+var myProgLanguage = "Gab"; // Can be redeclared
+
 let age = 20;
-const BIRTHDAY = "January 7, 2000";
+age = 19; // Can be reassigned
+let age = 19; // Uncaught SyntaxError: Identifier 'name' has already been declared
+
+const FIRST_PHILIPPINES_PRESIDENT = "Emilio Aguinaldo";
+FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught TypeError: Assignment to constant variable.
+const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError: Identifier 'FIRST_PHILIPPINES_PRESIDENT' has already been declared
 ```
 
 ## Scope
