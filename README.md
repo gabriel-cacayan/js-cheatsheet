@@ -1,7 +1,10 @@
 ## Table of Contents
-1. [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+- [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+  - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/Creating-table-of-contents/README.md#comments)
+  - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/Creating-table-of-contents/README.md#variables)
+  - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/Creating-table-of-contents/README.md#scope)
 
-[Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+
 
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
