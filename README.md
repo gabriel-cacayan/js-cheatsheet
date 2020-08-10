@@ -1,16 +1,26 @@
-## Table of Contents
-- [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
-  - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/Creating-table-of-contents/README.md#comments)
-  - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/Creating-table-of-contents/README.md#variables)
-  - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/Creating-table-of-contents/README.md#scope)
-
-
-
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 * Javascript is case sensitive, use camelCase.
 * JS is a multi-paradigm, meaning you can write your code in different way.
 * You can use arrow function and ternary operator for less code
+
+
+## Table of Contents
+- [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
+  - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#comments)
+  - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
+  - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+- [Data Types](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#data-types)
+  - [Primitives](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#primitives)
+- [Operators](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#operators)
+- [Strings](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#strings)
+  - [Basics](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#basics)
+  - [Template String](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#template-string)
+  - [Escape Sequences](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#escape-sequences)
+  - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods)
+  - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
+  - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
+   
 
 ## Comments
 ```javascript
