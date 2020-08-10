@@ -1,11 +1,10 @@
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
-* Javascript is case sensitive, use camelCase.
-* JS is a multi-paradigm, meaning you can write your code in different way.
-* You can use arrow function and ternary operator for less code
+> Javascript is case sensitive programming languange and is a multi-paradigm, meaning you can write your code in different way.
+> You can use arrow function and ternary operator for less code
 
 
-## Table of Contents
+# Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
   - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#comments)
   - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
@@ -49,12 +48,12 @@ const BIRTHDAY = "January 7, 2000";
 * **Function or Local scoped** is when you declared your variables inside the function.
 * **Block scoped** is when you declared your variables inside the curly braces `{}`.
 
-## Data Types
+# Data Types
 The latest ECMAScript standard defines nine types:
 
-`
-The 6 primitives data types are undefined,string,boolean,bigint,object and symbol.
-`
+## Primitives 
+The 6 primitives data types are `undefined,string,boolean,bigint,object and symbol.`
+
 Data Types | Example | Description
 ------------ | ------------- |  -------------
 `Undefined` | `var myName;` | A variable that has `not been assigned a value is of type undefined`. 
@@ -67,7 +66,7 @@ Data Types | Example | Description
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
-## Operators
+# Operators
 
 Arithmetic | Example | Description
 ------------ | ------------- | -------------
@@ -203,7 +202,7 @@ Methods | Description
 
 **Note:** All string methods return a new value. They do not change the original variable.
 
-# Regular Expressions
+## Regular Expressions
 
 Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
 
