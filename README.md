@@ -208,7 +208,7 @@ Methods | Description
  `trim()` | Removes whitespace from both ends of a string
  `valueOf()` | Returns the primitive value of a String object
 
-**Note:** All string methods return a new value. They do not change the original variable.
+> **Note:** All string methods return a new value. They do not change the original variable.
 
 ## Regular Expressions
 
