@@ -38,8 +38,8 @@ multi-line comment */
 
 ```javascript
 var myProgLanguage = "Javascript";
-myProgLanguage = "gabriel"; // Can be reassigned
-var myProgLanguage = "Gab"; // Can be redeclared
+myProgLanguage = "Python"; // Can be reassigned
+var myProgLanguage = "Python"; // Can be redeclared
 
 let age = 20;
 age = 19; // Can be reassigned
@@ -185,7 +185,9 @@ Methods | Description
  `split()`|  Splits a string into an array of substrings
  `charAt()` |  Returns the character at the specified index
  `charCodeAt()` | Returns the Unicode of the character at the specified index
- ` fromCharCode()` | Converts Unicode values to characters
+ `codePointAt()` | Returns a non-negative integer that is the Unicode code point value.
+ `fromCharCode()` | Converts Unicode values to characters
+ `fromCodePoint()` | method returns a string created by using the specified sequence of code points.
  `concat()` | Joins two or more strings, and returns a new joined strings
  `startsWith()` | Checks whether a string begins with specified characters
  `endsWith()` | Checks whether a string ends with specified string/characters
