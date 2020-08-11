@@ -212,6 +212,16 @@ Methods | Description
 
 > **Note:** All string methods return a new value. They do not change the original variable.
 
+```javascript
+Properties
+const stringLength = () => "Javascript".length;  // console.log(stringLength()); //10
+const stringFirstIndex = str => str[0]; // console.log(stringFirstIndex("Hello, World!")); //H
+const stringLastIndex = str => str[str.length - 1]; // console.log(stringLastIndex("Hello, World!")); //!
+
+Methods
+const stringSplit = str => str.split(""); // console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
+const stringCharAt = str => str.charAt(0); // console.log(stringCharAt("Hello, World!")); //H
+```
 ## Regular Expressions
 
 Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
