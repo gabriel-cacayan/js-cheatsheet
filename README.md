@@ -187,7 +187,7 @@ Methods | Description
  `charCodeAt()` | Returns the Unicode of the character at the specified index
  `codePointAt()` | Returns a non-negative integer that is the Unicode code point value.
  `fromCharCode()` | Converts Unicode values to characters
- `fromCodePoint()` | method returns a string created by using the specified sequence of code points.
+ `fromCodePoint()` | Returns a string created by using the specified sequence of code points.
  `concat()` | Joins two or more strings, and returns a new joined strings
  `startsWith()` | Checks whether a string begins with specified characters
  `endsWith()` | Checks whether a string ends with specified string/characters
@@ -221,6 +221,14 @@ const stringLastIndex = str => str[str.length - 1]; // console.log(stringLastInd
 Methods
 const stringSplit = str => str.split(""); // console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
 const stringCharAt = str => str.charAt(0); // console.log(stringCharAt("Hello, World!")); //H
+const stringCharCodeAt = str => str.charCodeAt(str); // console.log(stringCharCodeAt("A")); //65
+const stringCodePointAt = str => str.codePointAt(0); //console.log(stringCodePointAt("B")); //66
+const stringFromCharCode = str => String.fromCharCode(str); // console.log(stringFromCharCode(66)); //B
+const stringFromCodePoint = str => String.fromCodePoint(str); //console.log(stringFromCodePoint(65)); //A
+const stringConcat = str => "Hello, ".concat(str);  //console.log(stringConcat("Gabriel")); // Hello, Gabriel
+const stringStartsWith = str => str.startsWith("Hello"); // console.log(stringStartsWith("Hello, Gabriel!")); //true
+const stringEndsWith = str => str.endsWith("Gabriel!"); // console.log(stringEndsWith("Hello, Gabriel!")); //true
+const stringIncludes = str => str.includes("Python");// console.log(stringIncludes("Javascript is easy to learn")); //false
 ```
 ## Regular Expressions
 

@@ -4,51 +4,44 @@
 	//	STRING PROPERTIES AND METHODS
 	
 	// The LENGTH of a string (Returns the length of a string)
-	const stringLength = () => "Javascript".length; 
-	// console.log(stringLength()); //10
+	const stringLength = () => "Javascript".length; // console.log(stringLength()); //10
 	
 	// find the FIRST element has an index of 0
-	const stringFirstIndex = str => str[0];
-	// console.log(stringFirstIndex("Hello, World!")); //H
+	const stringFirstIndex = str => str[0]; // console.log(stringFirstIndex("Hello, World!")); //H
 
 	// find the LAST character of a string
-	const stringLastIndex = str => str[str.length - 1];
-	// console.log(stringLastIndex("Hello, World!")); //!
+	const stringLastIndex = str => str[str.length - 1];// console.log(stringLastIndex("Hello, World!")); //!
 
 	// split() (Splits a string into an array of substrings)
-	const stringSplit = str => str.split("");
-	// console.log(stringSplit("a string")); // ​​​​​[ 'a', ' ', 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
+	const stringSplit = str => str.split(""); // console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
 	
 	// charAt() (Returns the character at the specified index) 
-	const stringCharAt = str => str.charAt(0);
-	// console.log(stringCharAt("Hello, World!")); //H
+	const stringCharAt = str => str.charAt(0); // console.log(stringCharAt("Hello, World!")); //H
 
 	// charCodeAt()  (Returns the Unicode of the character at the specified index)
-	const stringCharCodeAt = str => str.charCodeAt(str);
-	// console.log(stringCharCodeAt("A")); //65
+	const stringCharCodeAt = str => str.charCodeAt(str); // console.log(stringCharCodeAt("A")); //65
 
-	// fromCharCodeAt() (Converts Unicode values to characters)
+	//codePointAt() (Returns a non-negative integer that is the Unicode code point value.)
+	const codePointAt = str => str.codePointAt(0); //console.log(codePointAt("B")); //66
+
+	// String.fromCharCodeAt() (Converts Unicode values to characters)
 	const stringFromCharCode = str => String.fromCharCode(str);
 	// console.log(stringFromCharCode(66)); //B
 
+	// String.fromCodePoint() (Returns a string created by using the specified sequence of code points.)
+	const stringFromCodePoint = str => String.fromCodePoint(str); //console.log(stringFromCodePoint(65)); //A
+
 	// concat()  (Joins two or more strings, and returns a new joined strings)
-	const stringConcat = str => {
-		var greet = "Hello ";
-		return greet.concat(str);
-	}
-	// console.log(stringConcat("Gabriel")); // Hello Gabriel
+	const stringConcat = str => "Hello, ".concat(str); // console.log(stringConcat("Gabriel")); // Hello, Gabriel
 
 	// startsWith() (Checks whether a string begins with specified characters)
-	const stringStartsWith = str => str.startsWith("Hello");
-	 // console.log(stringStartsWith("Hello, Gabriel!")); //true
+	const stringStartsWith = str => str.startsWith("Hello"); // console.log(stringStartsWith("Hello, Gabriel!")); //true
 
 	// endsWith() (Checks whether a string ends with specified string/characters)
-	const stringEndsWith = str => str.endsWith("Gabriel!");
-	// console.log(stringEndsWith("Hello, Gabriel!")); //true
+	const stringEndsWith = str => str.endsWith("Gabriel!"); // console.log(stringEndsWith("Hello, Gabriel!")); //true
 
 	// includes() (Checks whether a string contains the specified string/characters)
-	const stringIncludes = str => str.includes("Hello");
-	// console.log(stringIncludes("This is a javascript cheatsheet made by Gabriel")); //false
+	const stringIncludes = str => str.includes("Python");// console.log(stringIncludes("Javascript is easy to learn")); //false
 
 	// indexOf() (Returns the position of the first found occurrence of a specified value in a string)
 	const stringIndexOf = str => str.indexOf("is");
