@@ -229,6 +229,23 @@ const stringConcat = str => "Hello, ".concat(str);  //console.log(stringConcat("
 const stringStartsWith = str => str.startsWith("Hello"); // console.log(stringStartsWith("Hello, Gabriel!")); //true
 const stringEndsWith = str => str.endsWith("Gabriel!"); // console.log(stringEndsWith("Hello, Gabriel!")); //true
 const stringIncludes = str => str.includes("Python");// console.log(stringIncludes("Javascript is easy to learn")); //false
+const stringIndexOf = str => str.indexOf("is"); // console.log(stringIndexOf("This is a javascript cheatsheet")); //2
+const stringLastIndexOf = str => str.lastIndexOf("is"); //console.log(stringLastIndexOf("This is a javascript cheatsheet")); //5
+const stringMatch = str => str.match(/\d/g); // console.log(stringMatch("This is a javascript cheatsheet made by Gabriel on July 31")); //["3", "1"]
+const stringReplace = str => str.replace(/\d/g, "5"); // console.log(stringReplace("July 31")); // July 55
+const stringRepeat = str => str.repeat(3); // console.log(stringRepeat("Javascript")); //JavascriptJavascriptJavascript
+const stringSearch = str => str.search("lit");// console.log(stringSearch("Javascript is lit")); //14
+const stringSlice = str => str.slice(0, 10); // console.log(stringSlice("Javascript is lit")); //Javascript
+const stringSubStr = str => str.substr(1, 2); // console.log(stringSubStr("Javascript is lit")); // av
+const stringSubString = str => str.substring(1, 2); // console.log(stringSubString("Javascript is lit")); // a
+const stringLocaleCompare = str => str.localeCompare("c"); // console.log(stringLocaleCompare("Hello")); // -1
+const stringToLocaleLowerCase = str => str.toLocaleLowerCase(); // console.log(stringToLocaleLowerCase("Javascript is LIT")); // javascript is lit
+const stringToLocaleUpperCase = str => str.toLocaleUpperCase(); // console.log(stringToLocaleUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
+const stringToLowerCase = str => str.toLowerCase(); // console.log(stringToLowerCase("Javascript is LIT")); // javascript is lit
+const stringToUpperCase = str => str.toUpperCase(); // console.log(stringToUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
+const stringToString = str => str.toString(); // console.log(stringToString(["j","s"])); // j,s
+const stringTrim = str => str.trim(); // console.log(stringTrim("      Hello")); // Hello
+const stringValueOf = str => str.valueOf(); // console.log(stringValueOf("Hello, World!")); // Hello, World!
 ```
 ## Regular Expressions
 
