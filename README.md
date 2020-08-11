@@ -1,7 +1,6 @@
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
-> Javascript is case sensitive programming languange and is a multi-paradigm, meaning you can write your code in different way.
-> You can use arrow function and ternary operator for less code
+> javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
 
 # Table of Contents
