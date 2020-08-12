@@ -1,3 +1,5 @@
+>Code wars
+![Code Wars](https://www.codewars.com/users/%E3%83%9F%E3%82%AB%E3%82%B5/badges/large)
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 > Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
