@@ -18,6 +18,7 @@
   - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods)
   - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
+  - [Examples](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
 - [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statemenst)
   - [If..else Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#if...else-statements)
   - [Switch Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
@@ -288,6 +289,111 @@ Method	 | Description
 `match()`| Extract the actual matches found.
 `replace()`| Search and replace text in a string .
 
+### Examples
+
+```javascript
+// test method returns true or false if the pattern match a string or not
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString);
+
+// extract the matches of a regex with the match method
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/;
+let result = extractStr.match(codingRegex);
+
+// Search and replace
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue"); // Returns "The sky is blue."
+
+// search for multiple patterns using the alternation or OR operator: |
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/;
+let result = petRegex.test(petString);
+
+// ignore upper or lowercase
+let myString = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/i; // flag i
+let result = fccRegex.test(myString);
+
+// Search or extract a pattern more than once
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; // a regex can have multiple flags
+let result = twinkleStar.match(starRegex);
+
+// The wildcard character . will match any character except new lines.
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/;
+let result = unRegex.test(exampleStr);
+
+// define the characters to match, in this example all the vowels in quoteSample
+let quoteSample =
+  "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi;
+let result = quoteSample.match(vowelRegex);
+
+// Match all the characters in quoteSample (between a and z)
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;
+let result = quoteSample.match(alphabetRegex);
+
+// Match all the character between two characters and numbers
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi;
+let result = quoteSample.match(myRegex);
+
+// Match all that is not a number or a vowel
+let quoteSample = "3 blind mice.";
+let myRegex = /[^aeiou0-9]/gi;
+let result = quoteSample.match(myRegex);
+
+// Match 1 or more occurrences of the previous character (* for 0 or more)
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g;
+let result = difficultSpelling.match(myRegex);
+
+// ? Match 0 or 1 occurrence of the previous character. Useful for Lazy matching
+let text = "titanic";
+let myRegex = /t[a-z]*?i/;
+let result = text.match(myRegex);
+
+// Search for patterns at the beginning of strings
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/;
+let result = calRegex.test(rickyAndCal);
+
+// Search for patterns at the end of a string
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/;
+let result = lastRegex.test(caboose);
+
+// \w is equal to [A-Za-z0-9_]
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g;
+let result = quoteSample.match(alphabetRegexV2).length;
+
+// Match only 3 to 6 letter h's in the word "Oh no"
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/;
+let result = ohRegex.test(ohStr);
+
+// Match both the American English (favorite) and the British English (favourite) version of the word
+let favWord = "favorite";
+let favRegex = /favou?rite/;
+let result = favRegex.test(favWord);
+
+// Groups () let you reuse patterns
+let repeatNum = "42 42 42";
+let reRegex =  /^(\d+)\s\1\s\1$/; // every 1 represent the group (\d+)
+let result = reRegex.test(repeatNum);
+
+// Remove all the spaces at the beginning an end of a string
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+(.*\S)\s+$/;
+let result = hello.replace(wsRegex, '$1'); // returns 'Hello, World!'
+
+```
 # Conditional Statements
 
 Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made.
