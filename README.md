@@ -1,4 +1,4 @@
->Code wars
+[Codewars Profile](https://www.codewars.com/users/%E3%83%9F%E3%82%AB%E3%82%B5/badges)
 ![Code Wars](https://www.codewars.com/users/%E3%83%9F%E3%82%AB%E3%82%B5/badges/large)
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
