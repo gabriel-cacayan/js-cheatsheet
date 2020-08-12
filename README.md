@@ -18,7 +18,10 @@
   - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods)
   - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
-- [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statemenst)  - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#if...else-statements)
+- [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statemenst)
+  - [If..else Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#if...else-statements)
+  - [Switch Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
+  - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ternary-operator)
 
 ## Comments
 ```javascript
@@ -299,4 +302,34 @@ if (condition) {
 } else {
   run some other code instead
 }
+```
+
+## Switch Statements
+
+Switch statements take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
+
+```javascript
+switch (expression) {
+  case choice1:
+    run this code
+    break;
+
+  case choice2:
+    run this code instead
+    break;
+    
+  // include as many cases as you like
+
+  default:
+    actually, just run this code
+}
+
+```
+
+## Ternary Operator
+
+Ternary or conditional operator is a small bit of syntax that tests a condition and returns one value/expression if it is true, and another if it is false — this can be useful in some situations, and can take up a lot less code than an if...else block if you simply have two choices that are chosen between via a true/false condition. The pseudocode looks like this:
+
+```javascript
+  ( condition ) ? run this code : run this code instead;
 ```
