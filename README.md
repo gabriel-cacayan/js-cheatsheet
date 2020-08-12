@@ -1,6 +1,6 @@
 # :fire: JS-Cheatsheet :octocat:
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
-> javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
+> Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
 
 # Table of Contents
@@ -27,6 +27,8 @@
   - [For loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#for-loop)
   - [While loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#while-loop)
   - [Do...while](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#dowhile)
+- [Array](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array)
+  - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
 ## Comments
 ```javascript
 // This is an in-line comment.
