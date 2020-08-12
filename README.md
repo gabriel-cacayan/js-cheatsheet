@@ -19,8 +19,8 @@
   - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
   - [Examples](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
-- [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statemenst)
-  - [If..else Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#if...else-statements)
+- [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statements)
+  - [If..else Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
   - [Switch Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
   - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ternary-operator)
 
