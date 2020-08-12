@@ -18,7 +18,7 @@
   - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods)
   - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
-   
+- [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statemenst)  - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#if...else-statements)
 
 ## Comments
 ```javascript
@@ -284,3 +284,19 @@ Method	 | Description
 `test()`| Returns true or false if the pattern match a string or not.
 `match()`| Extract the actual matches found.
 `replace()`| Search and replace text in a string .
+
+# Conditional Statements
+
+Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made.
+
+## If...else Statements
+
+Basic if...else syntax looks like the following in [pseudocode:](https://developer.mozilla.org/en-US/docs/Glossary/pseudocode)
+
+```javascript
+if (condition) {
+  code to run if condition is true
+} else {
+  run some other code instead
+}
+```
