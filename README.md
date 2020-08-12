@@ -184,7 +184,7 @@ Data Types | Example
 
 Properties | Description
 ------------ | -------------
- `str.length`|  Returns the length of a string
+ `length`|  Returns the length of a string
  
 Methods | Description
 ------------ | -------------
@@ -220,38 +220,96 @@ Methods | Description
 
 ```javascript
 Properties
-const stringLength = () => "Javascript".length;  // console.log(stringLength()); //10
-const stringFirstIndex = str => str[0]; // console.log(stringFirstIndex("Hello, World!")); //H
-const stringLastIndex = str => str[str.length - 1]; // console.log(stringLastIndex("Hello, World!")); //!
+const stringLength = () => "Javascript".length;
+// console.log(stringLength()); //10
+
+const stringFirstIndex = str => str[0]; 
+// console.log(stringFirstIndex("Hello, World!")); //H
+
+const stringLastIndex = str => str[str.length - 1]; 
+// console.log(stringLastIndex("Hello, World!")); //!
 
 Methods
-const stringSplit = str => str.split(""); // console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
-const stringCharAt = str => str.charAt(0); // console.log(stringCharAt("Hello, World!")); //H
-const stringCharCodeAt = str => str.charCodeAt(str); // console.log(stringCharCodeAt("A")); //65
-const stringCodePointAt = str => str.codePointAt(0); //console.log(stringCodePointAt("B")); //66
-const stringFromCharCode = str => String.fromCharCode(str); // console.log(stringFromCharCode(66)); //B
-const stringFromCodePoint = str => String.fromCodePoint(str); //console.log(stringFromCodePoint(65)); //A
-const stringConcat = str => "Hello, ".concat(str);  //console.log(stringConcat("Gabriel")); // Hello, Gabriel
-const stringStartsWith = str => str.startsWith("Hello"); // console.log(stringStartsWith("Hello, Gabriel!")); //true
-const stringEndsWith = str => str.endsWith("Gabriel!"); // console.log(stringEndsWith("Hello, Gabriel!")); //true
-const stringIncludes = str => str.includes("Python");// console.log(stringIncludes("Javascript is easy to learn")); //false
-const stringIndexOf = str => str.indexOf("is"); // console.log(stringIndexOf("This is a javascript cheatsheet")); //2
-const stringLastIndexOf = str => str.lastIndexOf("is"); //console.log(stringLastIndexOf("This is a javascript cheatsheet")); //5
-const stringMatch = str => str.match(/\d/g); // console.log(stringMatch("This is a javascript cheatsheet made by Gabriel on July 31")); //["3", "1"]
-const stringReplace = str => str.replace(/\d/g, "5"); // console.log(stringReplace("July 31")); // July 55
-const stringRepeat = str => str.repeat(3); // console.log(stringRepeat("Javascript")); //JavascriptJavascriptJavascript
-const stringSearch = str => str.search("lit");// console.log(stringSearch("Javascript is lit")); //14
-const stringSlice = str => str.slice(0, 10); // console.log(stringSlice("Javascript is lit")); //Javascript
-const stringSubStr = str => str.substr(1, 2); // console.log(stringSubStr("Javascript is lit")); // av
-const stringSubString = str => str.substring(1, 2); // console.log(stringSubString("Javascript is lit")); // a
-const stringLocaleCompare = str => str.localeCompare("c"); // console.log(stringLocaleCompare("Hello")); // -1
-const stringToLocaleLowerCase = str => str.toLocaleLowerCase(); // console.log(stringToLocaleLowerCase("Javascript is LIT")); // javascript is lit
-const stringToLocaleUpperCase = str => str.toLocaleUpperCase(); // console.log(stringToLocaleUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
-const stringToLowerCase = str => str.toLowerCase(); // console.log(stringToLowerCase("Javascript is LIT")); // javascript is lit
-const stringToUpperCase = str => str.toUpperCase(); // console.log(stringToUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
-const stringToString = str => str.toString(); // console.log(stringToString(["j","s"])); // j,s
-const stringTrim = str => str.trim(); // console.log(stringTrim("      Hello")); // Hello
-const stringValueOf = str => str.valueOf(); // console.log(stringValueOf("Hello, World!")); // Hello, World!
+const stringSplit = str => str.split(""); 
+// console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
+
+const stringCharAt = str => str.charAt(0); 
+// console.log(stringCharAt("Hello, World!")); //H
+
+const stringCharCodeAt = str => str.charCodeAt(str); 
+// console.log(stringCharCodeAt("A")); //65
+
+const stringCodePointAt = str => str.codePointAt(0); 
+//console.log(stringCodePointAt("B")); //66
+
+const stringFromCharCode = str => String.fromCharCode(str); 
+// console.log(stringFromCharCode(66)); //B
+
+const stringFromCodePoint = str => String.fromCodePoint(str); 
+//console.log(stringFromCodePoint(65)); //A
+
+const stringConcat = str => "Hello, ".concat(str);  
+//console.log(stringConcat("Gabriel")); // Hello, Gabriel
+
+const stringStartsWith = str => str.startsWith("Hello"); 
+// console.log(stringStartsWith("Hello, Gabriel!")); //true
+
+const stringEndsWith = str => str.endsWith("Gabriel!"); 
+// console.log(stringEndsWith("Hello, Gabriel!")); //true
+
+const stringIncludes = str => str.includes("Python");
+// console.log(stringIncludes("Javascript is easy to learn")); //false
+
+const stringIndexOf = str => str.indexOf("is"); 
+// console.log(stringIndexOf("This is a javascript cheatsheet")); //2
+
+const stringLastIndexOf = str => str.lastIndexOf("is"); 
+//console.log(stringLastIndexOf("This is a javascript cheatsheet")); //5
+
+const stringMatch = str => str.match(/\d/g); 
+// console.log(stringMatch("This is a javascript cheatsheet made by Gabriel on July 31")); //["3", "1"]
+
+const stringReplace = str => str.replace(/\d/g, "5"); 
+// console.log(stringReplace("July 31")); // July 55
+
+const stringRepeat = str => str.repeat(3); 
+// console.log(stringRepeat("Javascript")); //JavascriptJavascriptJavascript
+
+const stringSearch = str => str.search("lit");
+// console.log(stringSearch("Javascript is lit")); //14
+
+const stringSlice = str => str.slice(0, 10); 
+// console.log(stringSlice("Javascript is lit")); //Javascript
+
+const stringSubStr = str => str.substr(1, 2); 
+// console.log(stringSubStr("Javascript is lit")); // av
+
+const stringSubString = str => str.substring(1, 2); 
+// console.log(stringSubString("Javascript is lit")); // a
+
+const stringLocaleCompare = str => str.localeCompare("c"); 
+// console.log(stringLocaleCompare("Hello")); // -1
+
+const stringToLocaleLowerCase = str => str.toLocaleLowerCase(); 
+// console.log(stringToLocaleLowerCase("Javascript is LIT")); // javascript is lit
+
+const stringToLocaleUpperCase = str => str.toLocaleUpperCase(); 
+// console.log(stringToLocaleUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
+
+const stringToLowerCase = str => str.toLowerCase(); 
+// console.log(stringToLowerCase("Javascript is LIT")); // javascript is lit
+
+const stringToUpperCase = str => str.toUpperCase(); 
+// console.log(stringToUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
+
+const stringToString = str => str.toString(); 
+// console.log(stringToString(["j","s"])); // j,s
+
+const stringTrim = str => str.trim();
+ // console.log(stringTrim("      Hello")); // Hello
+
+const stringValueOf = str => str.valueOf(); 
+// console.log(stringValueOf("Hello, World!")); // Hello, World!
 ```
 # Regular Expressions
 
@@ -476,3 +534,18 @@ do {
   final-expression
 } while (condition)
 ```
+
+# Array
+
+Arrays are generally described as "list-like objects"; they are basically single objects that contain multiple values stored in a list.
+
+## Array Properties and Methods
+
+Properties | Description
+------------ | -------------
+`length` | The length property of an object which is an instance of type Array sets or returns the number of elements in that array.
+
+Methods | Description
+------------ | -------------
+`concat()` | The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+`` |
