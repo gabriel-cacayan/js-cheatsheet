@@ -16,14 +16,17 @@
   - [Template String](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#template-string)
   - [Escape Sequences](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#escape-sequences)
   - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods)
-  - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
+- [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
   - [Examples](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
 - [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statements)
   - [If..else Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
   - [Switch Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
   - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ternary-operator)
-
+- [Loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#loop)
+  - [For loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#for-loop)
+  - [While loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#while-loop)
+  - [Do...while](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#dowhile)
 ## Comments
 ```javascript
 // This is an in-line comment.
@@ -250,7 +253,7 @@ const stringToString = str => str.toString(); // console.log(stringToString(["j"
 const stringTrim = str => str.trim(); // console.log(stringTrim("      Hello")); // Hello
 const stringValueOf = str => str.valueOf(); // console.log(stringValueOf("Hello, World!")); // Hello, World!
 ```
-## Regular Expressions
+# Regular Expressions
 
 Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
 
@@ -438,4 +441,38 @@ Ternary or conditional operator is a small bit of syntax that tests a condition 
 
 ```javascript
   ( condition ) ? run this code : run this code instead;
+```
+
+# Loop
+
+Programming loops are all to do with doing the same thing over and over again — which is termed iteration in programming speak.
+
+## For loop
+
+```javascript
+for (initializer; condition; final-expression) {
+  // code to run
+}
+```
+
+## While loop
+
+```javascript
+initializer
+while (condition) {
+  // code to run
+
+  final-expression
+}
+```
+
+## Do...while
+
+```javascript
+initializer
+do {
+  // code to run
+
+  final-expression
+} while (condition)
 ```
