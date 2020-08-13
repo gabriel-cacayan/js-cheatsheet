@@ -138,19 +138,7 @@
 		keys
 
 	Basic
-		concat
 		fill
-		includes
-		indexOF
-		lastIndexOf
-		join
-		pop
-		push
-		unshift
-		shift
-		reverse
-		slice
-		splice
 		toLocaleString
 		toString
 		values
@@ -169,4 +157,44 @@
 		sort
 
 	*/
+	// ARRAY PROPERTIES
+	const arrayLength = arr => arr.length;
+	// console.log(arrayLength(["javascript", "is", "a", "programming", "language"])); // 5
+
+	// ARRAY METHODS
+	const arrayConcat = arr => [1,2,3].concat(arr);
+	// console.log(arrayConcat([4,5,6])); // [1, 2, 3, 4, 5, 6]
+
+	const arrayIncludes = arr => arr.includes(2);
+	// console.log(arrayIncludes([1,2,3,4,5,6])); // true
+
+	const arrayJoin = arr => arr.join();
+	// console.log(arrayJoin(["javascript", "is", "a", "programming", "language"])); //javascript,is,a,programming,language
+
+	const arrayPop = () => [1,2,3].pop();
+	// console.log(arrayPop()) // 3
+
+	const arrayPush = arr =>  arr.push("Gabriel");
+	// console.log(arrayPush(["Hello"])) // 2
+
+	const arrayShift = () => [10,2,3,4,5,6].shift();
+	// console.log(arrayShift()); // 10
+
+	const arrayUnShift = arr => arr.unshift(7,8,9);
+	// console.log(arrayUnShift([1,2,3,4,5,6])); // 9
+
+	const arrayIndexOf = arr => arr.indexOf("language");
+	// console.log(arrayIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+
+	const arrayLastIndexOf = arr => arr.lastIndexOf("language");
+	// console.log(arrayLastIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+
+	const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse();
+	// console.log(arrayReverse()); //  ["language", "programming", "a", "is", "javascript"]
+
+	const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1);
+	// console.log(arraySlice()); //["javascript"]
+
+	const arraySplice = arr => arr.splice(1,2);
+	//console.log(arraySplice(["Java","C","C++"])); //["C", "C++"]
 </script>

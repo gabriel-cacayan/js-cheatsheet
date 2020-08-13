@@ -221,7 +221,8 @@ Methods | Description
 > **Note:** All string methods return a new value. They do not change the original variable.
 
 ```javascript
-Properties
+// STRING PROPERTIES
+
 const stringLength = () => "Javascript".length;
 // console.log(stringLength()); //10
 
@@ -231,7 +232,8 @@ const stringFirstIndex = str => str[0];
 const stringLastIndex = str => str[str.length - 1]; 
 // console.log(stringLastIndex("Hello, World!")); //!
 
-Methods
+// STRING METHODS
+
 const stringSplit = str => str.split(""); 
 // console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
 
@@ -550,4 +552,63 @@ Properties | Description
 Methods | Description
 ------------ | -------------
 `concat()` | The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
-`` |
+`includes()` | The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+`join()` | The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
+`pop()` | The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+`push()` | The push() method adds one or more elements to the end of an array and returns the new length of the array.
+`shift()` | The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+`unshift()` | The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+`indexOf()` | The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+`lastIndexOf()` | The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+`reverse()` | The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+`slice()` | The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+`splice()` | The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+
+```javascript
+  // ARRAY PROPERTIES
+
+  const arrayLength = arr => arr.length;
+  // console.log(arrayLength(["javascript", "is", "a", "programming", "language"])); // 5
+
+
+  // ARRAY METHODS
+
+  const arrayConcat = arr => [1,2,3].concat(arr);
+  // console.log(arrayConcat([4,5,6])); // [1, 2, 3, 4, 5, 6]
+
+  const arrayIncludes = arr => arr.includes(2);
+  // console.log(arrayIncludes([1,2,3,4,5,6])); // true
+
+  const arrayJoin = arr => arr.join();
+  // console.log(arrayJoin(["javascript", "is", "a", "programming", "language"])); //javascript,is,a,programming,language
+
+  const arrayPop = () => [1,2,3].pop();
+  // console.log(arrayPop()) // 3
+
+  const arrayPush = arr =>  arr.push("Gabriel");
+  // console.log(arrayPush(["Hello"])) // 2
+
+  const arrayShift = () => [10,2,3,4,5,6].shift();
+  // console.log(arrayShift()); // 10
+
+  const arrayUnShift = arr => arr.unshift(7,8,9);
+  // console.log(arrayUnShift([1,2,3,4,5,6])); // 9
+
+  const arrayIndexOf = arr => arr.indexOf("language");
+  // console.log(arrayIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+
+  const arrayLastIndexOf = arr => arr.lastIndexOf("language");
+  // console.log(arrayLastIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+
+  const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse();
+  // console.log(arrayReverse()); //  ["language", "programming", "a", "is", "javascript"]
+
+  const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1);
+  // console.log(arraySlice()); //["javascript"]
+
+  const arraySplice = arr => arr.splice(1,2);
+  //console.log(arraySplice(["Java","C","C++"])); //["C", "C++"]
+
+```
+
