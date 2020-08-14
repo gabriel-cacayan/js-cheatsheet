@@ -25,8 +25,12 @@
   - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ternary-operator)
 - [Loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#loop)
   - [For loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#for-loop)
+  - [for...of statement](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#forof-statement) 
+  - [for...in statement](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#forin-statement) 
   - [While loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#while-loop)
   - [Do...while](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#dowhile)
+  - [Break](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#break)
+  - [Continue](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#continue)
 - [Array](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
 ## Comments
@@ -517,6 +521,26 @@ for (initializer; condition; final-expression) {
 }
 ```
 
+## for...of statement
+
+The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+
+```javascript
+for (variable of iterable) {
+  //statement
+}
+```
+
+## for...in statement
+
+The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
+
+```javascript
+for (variable in object) {
+  //statement
+}
+```
+
 ## While loop
 
 ```javascript
@@ -537,6 +561,53 @@ do {
 
   final-expression
 } while (condition)
+```
+
+## Break
+
+The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
+
+Example:
+```javascript
+const num = 123456;
+
+  for (let i = 0; i < num; i++) {
+    if (i === 3) {
+      break;
+    }
+    console.log(i);  
+  }
+
+/*
+    0 
+    1
+    2
+*/
+```
+
+## Continue
+
+The continue statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
+
+Example:
+```javascript
+const num = 123456;
+
+  for (let i = 0; i < num; i++) {
+    if (i === 3) {
+      continue;
+    }
+    console.log(i);  
+  }
+
+/*
+    0 
+    1
+    2
+    4
+    5
+    6
+*/
 ```
 
 # Array
@@ -563,6 +634,21 @@ Methods | Description
 `reverse()` | The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
 `slice()` | The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
 `splice()` | The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+`fill()` | The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
+`toString()` | The toString() method returns a string representing the specified array and its elements.
+`values()` | The values() method returns a new Array Iterator object that contains the values for each index in the array.
+`forEach()` | The forEach() method executes a provided function once for each array element.
+`every()` | The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+`some()` | The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+`map()` | The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+`filter()` | The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+`reduce()` | The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.
+`reduceRight()` | The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
+`find()` | The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
+`findIndex()` | The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
+`sort()` | The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+
+
 
 
 ```javascript
@@ -610,5 +696,50 @@ Methods | Description
   const arraySplice = arr => arr.splice(1,2);
   //console.log(arraySplice(["Java","C","C++"])); //["C", "C++"]
 
+  const arrayFill = arr => arr.fill(666);
+  // console.log(arrayFill([1,2,3,4,5,6]));
+
+  const arrayToString = arr => arr.toString();
+  // console.log(arrayToString([1,2,3,4,5,6]));  // "1,2,3,4,5,6"
+
+  const arrayValues = arr => {
+    const iterator = arr.values();
+    let val = "";
+    for (const value of iterator) {
+       val += value;
+    }
+    return val;
+  }
+  // console.log(arrayValues(["a","b","c","d"])); // "abcd"
+
+  const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element));
+  // console.log(arrayForEach()); // A\nB\nC\nD
+
+  const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0);
+  //console.log(arrayEvery()); // true
+
+  const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0);
+  // console.log(arraySome()); // true
+
+  const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));
+  // console.log(arrayMap()); // [1, 4, 9, 16, 25, 36]
+
+  const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);
+  // console.log(arrayFilter()); //  [2, 4, 6]
+
+  const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0);
+  // console.log(arrayReduce()); //  21
+
+  const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0);
+  // console.log(arrayReduceRight()); //  21
+
+  const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1);
+  // console.log(arrayFind()); // 1
+
+  const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6);
+  // console.log(arrayFindIndex()); // 5
+
+  const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y);
+  // console.log(arraySort()); // [1, 2, 5, 6, 14, 29, 37]
 ```
 
