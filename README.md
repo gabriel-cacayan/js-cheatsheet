@@ -647,6 +647,13 @@ Methods | Description
 `find()` | The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
 `findIndex()` | The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
 `sort()` | The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+`from()` | The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+`isArray()` | The Array.isArray() method determines whether the passed value is an Array.
+`of` | The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
+`copyWithin()` | The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+`entries()` | The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+`keys()` | The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
+`flat()` | The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
 
 
@@ -741,5 +748,40 @@ Methods | Description
 
   const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y);
   // console.log(arraySort()); // [1, 2, 5, 6, 14, 29, 37]
+
+  const arrayFrom = arr => Array.from(arr);
+  // console.log(arrayFrom('foo')); // ["f", "o", "o"]
+
+  const arrayIsArray = arr => Array.isArray(arr);
+  // console.log(arrayIsArray(["Hello","World"])); // true
+
+  const arrayOf = arr => Array.of(arr);
+  // console.log(arrayOf(10)); // [10]
+
+  const arrayCopyWithin = arr => arr.copyWithin(4,0);
+  // console.log(arrayCopyWithin( ['a', 'b', 'c', 'd', 'e'])); // ["a", "b", "c", "d", "a"]
+
+  const arrayEntries = arr => {
+    let iterator = arr.entries();
+    let ent = "";
+    for (const key of iterator) {
+        ent += key;
+    }
+    return ent;
+  }
+   // console.log(arrayEntries(['a', 'b', 'c'])); // 0,a1,b2,c
+
+  const arrayKeys = arr => {
+    let iterator = arr.keys();
+    let keys = "";
+    for (const key of iterator) {
+        keys += key;
+    }
+    return keys;
+  }
+   // console.log(arrayKeys(['a', 'b', 'c'])); // 012
+
+   const arrayFlat = arr => arr.flat();
+   // console.log(arrayFlat([0, 1, 2, [3, 4]])); // [0, 1, 2, 3, 4]
 ```
 
