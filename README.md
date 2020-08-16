@@ -2,7 +2,6 @@
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 > Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
-
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
   - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#comments)
@@ -20,19 +19,24 @@
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
   - [Examples](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
 - [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statements)
-  - [If..else Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
-  - [Switch Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
+  - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
+  - [switch statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
   - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ternary-operator)
 - [Loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#loop)
-  - [For loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#for-loop)
+  - [for loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#for-loop)
   - [for...of statement](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#forof-statement) 
   - [for...in statement](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#forin-statement) 
-  - [While loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#while-loop)
-  - [Do...while](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#dowhile)
-  - [Break](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#break)
-  - [Continue](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#continue)
+  - [while loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#while-loop)
+  - [do...while](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#dowhile)
+  - [break](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#break)
+  - [continue](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#continue)
 - [Array](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
+- [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
+  - [Function Syntax](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-syntax)
+  - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
+  - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
+
 ## Comments
 ```javascript
 // This is an in-line comment.
@@ -198,8 +202,8 @@ Methods | Description
  `charAt()` |  Returns the character at the specified index
  `charCodeAt()` | Returns the Unicode of the character at the specified index
  `codePointAt()` | Returns a non-negative integer that is the Unicode code point value.
- `fromCharCode()` | Converts Unicode values to characters
- `fromCodePoint()` | Returns a string created by using the specified sequence of code points.
+ `String.fromCharCode()` | Converts Unicode values to characters
+ `String.fromCodePoint()` | Returns a string created by using the specified sequence of code points.
  `concat()` | Joins two or more strings, and returns a new joined strings
  `startsWith()` | Checks whether a string begins with specified characters
  `endsWith()` | Checks whether a string ends with specified string/characters
@@ -467,7 +471,7 @@ let result = hello.replace(wsRegex, '$1'); // returns 'Hello, World!'
 
 Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made.
 
-## If...else Statements
+## if...else statements
 
 Basic if...else syntax looks like the following in [pseudocode:](https://developer.mozilla.org/en-US/docs/Glossary/pseudocode)
 
@@ -479,7 +483,7 @@ if (condition) {
 }
 ```
 
-## Switch Statements
+## switch statements
 
 Switch statements take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
@@ -513,7 +517,7 @@ Ternary or conditional operator is a small bit of syntax that tests a condition 
 
 Programming loops are all to do with doing the same thing over and over again — which is termed iteration in programming speak.
 
-## For loop
+## for loop
 
 ```javascript
 for (initializer; condition; final-expression) {
@@ -541,7 +545,7 @@ for (variable in object) {
 }
 ```
 
-## While loop
+## while loop
 
 ```javascript
 initializer
@@ -552,7 +556,7 @@ while (condition) {
 }
 ```
 
-## Do...while
+## do...while
 
 ```javascript
 initializer
@@ -563,13 +567,13 @@ do {
 } while (condition)
 ```
 
-## Break
+## break
 
 The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
 
 Example:
 ```javascript
-const num = 123456;
+const num = 5;
 
   for (let i = 0; i < num; i++) {
     if (i === 3) {
@@ -585,13 +589,13 @@ const num = 123456;
 */
 ```
 
-## Continue
+## continue
 
 The continue statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
 
 Example:
 ```javascript
-const num = 123456;
+const num = 5;
 
   for (let i = 0; i < num; i++) {
     if (i === 3) {
@@ -605,8 +609,6 @@ const num = 123456;
     1
     2
     4
-    5
-    6
 */
 ```
 
@@ -647,9 +649,9 @@ Methods | Description
 `find()` | The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
 `findIndex()` | The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
 `sort()` | The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
-`from()` | The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
-`isArray()` | The Array.isArray() method determines whether the passed value is an Array.
-`of` | The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
+`Array.from()` | The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+`Array.isArray()` | The Array.isArray() method determines whether the passed value is an Array.
+`Array.of()` | The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
 `copyWithin()` | The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
 `entries()` | The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 `keys()` | The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
@@ -785,3 +787,78 @@ Methods | Description
    // console.log(arrayFlat([0, 1, 2, [3, 4]])); // [0, 1, 2, 3, 4]
 ```
 
+# Functions
+
+Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
+
+## Function syntax
+
+A function can have multiple parameters or no parameters at all.
+
+```javascript
+function validFunctionName(parameter) {
+  return statement;
+}
+```
+## Function expression
+
+A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name.
+
+```javascript
+const fullName = function(firstName, lastName) {
+ return `${firstName} ${lastName}`;
+}
+fullName("Mikasa", "Ackerman"); // Mikasa Ackerman
+```
+
+## Arrow function
+
+An Arrow Function Expression is a shorter syntax for writing function expressions. Arrow functions do not create their own value.
+
+We can write the arrow function in multiple ways:
+
+**First:** it just looks like a regular function expression but have arrow (=>) key.
+
+```javascript
+const double = (value) => {
+  return value * 2
+}
+double(10); // 20
+```
+**Second:** Omit the return keyword
+
+```javascript
+const double2 = value => value * 2;
+double2(10); // 20
+```
+
+**Third:** If our function has no parameter
+
+```javascript
+const noise = () => console.log("Pling");
+noise(); // Pling
+````
+
+**or**
+
+```javascript
+const noise2 = _ => console.log("Pling");
+noise2(); // Pling
+```
+**Fourth:** If we have two or more parameter, you can must be used parenthesis
+
+```javascript
+const addAll = (x, y, z) => x + y + z;
+
+addAll(10, 20, 30); // 60
+```
+
+**Fifth:** We can use default value in our parameters
+
+```javascript
+const multiply = (a = 2, b = 3, c = 1) => a * b * c;
+multiply(2, 2, 2); // 8
+multiply(2, 2);    // 4
+multiply(3);       // 9
+multiply();        // 6
+```
