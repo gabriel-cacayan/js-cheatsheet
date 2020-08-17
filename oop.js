@@ -40,6 +40,6 @@ function Person(first,last,age,gender) {
 const person5 = new Person("Elle","Menopi",20,"Female"); // OBJECT INSTANCE
 const person6 = new Person("Monkey D.","Luffy",18,"Male");
 
-console.log(person5.bio());
-console.log(person6.bio());
+// console.log(person5.bio());
+// console.log(person6.bio());
 
