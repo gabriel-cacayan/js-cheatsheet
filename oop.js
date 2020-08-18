@@ -1,6 +1,6 @@
-document.write("Testing Object Oriented Programming => "); 
-document.write(Math.random());
-
+document.writeln("Testing Object Oriented Programming");
+document.writeln(Math.random());
+document.writeln(Date());
 
 // OBJECT LITERALS
 

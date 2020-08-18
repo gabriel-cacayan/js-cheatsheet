@@ -7,6 +7,7 @@
   - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#comments)
   - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
   - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+  - [Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
 - [Data Types](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#data-types)
   - [Primitives](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#primitives)
 - [Operators](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#operators)
@@ -22,7 +23,7 @@
   - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
   - [switch statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
   - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ternary-operator)
-- [Loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#loop)
+- [Loops and Iteration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#loops-and-iteration)
   - [for loop](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#for-loop)
   - [for...of statement](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#forof-statement) 
   - [for...in statement](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#forin-statement) 
@@ -33,7 +34,7 @@
 - [Array](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
 - [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
-  - [Function Syntax](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-syntax)
+  - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
 
@@ -66,17 +67,56 @@ FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught TypeError: Assignm
 const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError: Identifier 'FIRST_PHILIPPINES_PRESIDENT' has already been declared
 ```
 
+## Hoisting
+
+### Variable hoisting
+
+Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
+
+This concept is known as **hoisting**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
+
+```javascript
+// Example 1
+console.log(x === undefined); // true
+var x = 3;
+
+// Example 2
+(function() {
+  console.log(myvar); // undefined
+  var myvar = 'local value';
+})();
+```
+
+### Function hoisting
+
+In the case of functions, only function declarations are hoisted—but not the function expressions.
+
+```javascript
+/* Function declaration */
+foo(); // "bar"
+
+function foo() {
+  console.log('bar');
+}
+
+/* Function expression */
+baz(); // TypeError: baz is not a function
+
+var baz = function() {
+  console.log('bar2');
+};
+```
 ## Scope
 
-* **Global scoped** is when you declared your variables outside the function.
-* **Function or Local scoped** is when you declared your variables inside the function.
-* **Block scoped** is when you declared your variables inside the curly braces `{}`.
+**Global scoped** is when you declared your variables outside the function.
+**Function** or **Local scoped** is when you declared your variables inside the function.
+**Block scoped** is when you declared your variables inside the curly braces `{}`.
 
 # Data Types
-The latest ECMAScript standard defines nine types:
+The latest ECMAScript standard defines eight data types:
 
 ## Primitives 
-The 6 primitives data types are `undefined,string,boolean,bigint,object and symbol.`
+The 7 primitives data types are `undefined,string,boolean,bigint,null,object and symbol.`
 
 Data Types | Example | Description
 ------------ | ------------- |  -------------
@@ -84,11 +124,10 @@ Data Types | Example | Description
 `String` | `var greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
 `Number` | `const MATH_PI = 3.14159;` | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.
 `Boolean` | `const bool = true;` | `True` or `False`.
-`BigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent` whole numbers larger than 253 - 1,`.
-`Symbol` | Represents a unique identifier. | The data type symbol is a primitive data type. 
-`Object` | `var arr = ["123"];` | A object is a collection of properties.
+`BigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.
 `Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
-`Function` | `function greet(){};` | This answer is done as a special shorthand for Functions, though every Function constructor is derived from Object constructor.
+`Symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
+`Object` | `var arr = ["123"];` | A object is a collection of properties.
 
 # Operators
 
@@ -791,7 +830,7 @@ Methods | Description
 
 Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
 
-## Function syntax
+## Function Declaration
 
 A function can have multiple parameters or no parameters at all.
 
@@ -800,7 +839,7 @@ function validFunctionName(parameter) {
   return statement;
 }
 ```
-## Function expression
+## Function Expression
 
 A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name.
 
@@ -811,7 +850,7 @@ const fullName = function(firstName, lastName) {
 fullName("Mikasa", "Ackerman"); // Mikasa Ackerman
 ```
 
-## Arrow function
+## Arrow Function
 
 An Arrow Function Expression is a shorter syntax for writing function expressions. Arrow functions do not create their own value.
 

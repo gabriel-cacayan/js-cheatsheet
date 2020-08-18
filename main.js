@@ -298,4 +298,3 @@ const mathMin = math => Math.min(...math);
 
 const mathMax = math => Math.max(...math);
 // console.log(mathMax([10,69,2])); // 69
-
