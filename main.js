@@ -275,7 +275,7 @@ const mathPow = () => Math.pow(4,2);
 // const math = () => ;
 // console.log(math());
 
-const mathSqrt = () => Math.sqrt(16);
+const mathSqrt = () => Math.sqrt(16); 
 // console.log(mathSqrt()); // 4
 
 const mathCbrt = () => Math.cbrt(64);
@@ -298,3 +298,4 @@ const mathMin = math => Math.min(...math);
 
 const mathMax = math => Math.max(...math);
 // console.log(mathMax([10,69,2])); // 69
+

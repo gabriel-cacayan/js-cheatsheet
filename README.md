@@ -7,10 +7,11 @@
   - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#comments)
   - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
   - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
-  - [Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
+  - [Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#hoisting)
 - [Data Types](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#data-types)
   - [Primitives](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#primitives)
 - [Operators](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#operators)
+  - [Destructuring](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#destructuring)
 - [Strings](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#strings)
   - [Basics](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#basics)
   - [Template String](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#template-string)
@@ -170,7 +171,9 @@ Logical AND ```&&```| expr1 ```&&``` expr2 | Returns expr1 if it can be converte
 Logical NOT ```!``` | ```!```expr | Returns false if its single operand that can be converted to true; otherwise, returns true.
 Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
 
-Logical | Example | Description
+> **Note:** The logical OR is this **`||`** and not in the table.
+
+Bitwise | Example | Description
 ------------ | ------------- | -------------
 Bitwise AND `&` | a `&` b | Returns 0 if the corresponding bits of both sides of the bitwise operator are 1, at least one of them is 0.
 Bitwise OR `l` | a `l` b | Returns 1 if at least one of the corresponding bits of both sides of the bitwise operator is 1.
@@ -181,6 +184,22 @@ Sign-propagating right shift `>>` | a `>>` b | a The binary state bof the number
 Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binary representation  of the a number , badds 0s to the left of the number regardless of whether the number is positive or negative  .
 
 > **Note:** The logical OR is this **`||`** and not in the table.
+
+## Destructuring
+
+For more complex assignments, the destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.
+
+```javascript
+var foo = ['one', 'two', 'three'];
+
+// without destructuring
+var one   = foo[0];
+var two   = foo[1];
+var three = foo[2];
+
+// with destructuring
+var [one, two, three] = foo;
+```
 
 # Strings
 
@@ -270,8 +289,7 @@ Methods | Description
 ```javascript
 // STRING PROPERTIES
 
-const stringLength = () => "Javascript".length;
-// console.log(stringLength()); //10
+const stringLength = () => "Javascript".length; //10
 
 const stringFirstIndex = str => str[0]; 
 // console.log(stringFirstIndex("Hello, World!")); //H
@@ -281,86 +299,60 @@ const stringLastIndex = str => str[str.length - 1];
 
 // STRING METHODS
 
-const stringSplit = str => str.split(""); 
-// console.log(stringSplit("string")); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
+const stringSplit = () => "string".split(""); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
 
 const stringCharAt = str => str.charAt(0); 
-// console.log(stringCharAt("Hello, World!")); //H
+// console.log(stringCharAt("Hello, World!")); // H
 
-const stringCharCodeAt = str => str.charCodeAt(str); 
-// console.log(stringCharCodeAt("A")); //65
+const stringCharCodeAt = () => "A".charCodeAt(str); // 65
 
-const stringCodePointAt = str => str.codePointAt(0); 
-//console.log(stringCodePointAt("B")); //66
+const stringCodePointAt = () => "B".codePointAt(0); // 66
 
-const stringFromCharCode = str => String.fromCharCode(str); 
-// console.log(stringFromCharCode(66)); //B
+const stringFromCharCode = () => String.fromCharCode(66); // B
 
-const stringFromCodePoint = str => String.fromCodePoint(str); 
-//console.log(stringFromCodePoint(65)); //A
+const stringFromCodePoint = () => String.fromCodePoint(65); // A
 
-const stringConcat = str => "Hello, ".concat(str);  
-//console.log(stringConcat("Gabriel")); // Hello, Gabriel
+const stringConcat = () => "Hello, ".concat("Gabriel"); // Hello, Gabriel
 
-const stringStartsWith = str => str.startsWith("Hello"); 
-// console.log(stringStartsWith("Hello, Gabriel!")); //true
+const stringStartsWith = () => "Hello, Gabriel!".startsWith("Hello"); //true
 
-const stringEndsWith = str => str.endsWith("Gabriel!"); 
-// console.log(stringEndsWith("Hello, Gabriel!")); //true
+const stringEndsWith = () => "Hello, Gabriel!".endsWith("Gabriel!");  //true
 
-const stringIncludes = str => str.includes("Python");
-// console.log(stringIncludes("Javascript is easy to learn")); //false
+const stringIncludes = () => "Javascript is easy to learn".includes("Python"); //false
 
-const stringIndexOf = str => str.indexOf("is"); 
-// console.log(stringIndexOf("This is a javascript cheatsheet")); //2
+const stringIndexOf = () => "This is a javascript cheatsheet".indexOf("is"); //2
 
-const stringLastIndexOf = str => str.lastIndexOf("is"); 
-//console.log(stringLastIndexOf("This is a javascript cheatsheet")); //5
+const stringLastIndexOf = () => "This is a javascript cheatsheet".lastIndexOf("is"); //5
 
-const stringMatch = str => str.match(/\d/g); 
-// console.log(stringMatch("This is a javascript cheatsheet made by Gabriel on July 31")); //["3", "1"]
+const stringMatch = () => "This is a javascript cheatsheet made by Gabriel on July 31".match(/\d/g); //["3", "1"]
 
-const stringReplace = str => str.replace(/\d/g, "5"); 
-// console.log(stringReplace("July 31")); // July 55
+const stringReplace = () => "July 31".replace(/\d/g, "5"); // July 55
 
-const stringRepeat = str => str.repeat(3); 
-// console.log(stringRepeat("Javascript")); //JavascriptJavascriptJavascript
+const stringRepeat = ()=> "Javascript".repeat(3); //JavascriptJavascriptJavascript
 
-const stringSearch = str => str.search("lit");
-// console.log(stringSearch("Javascript is lit")); //14
+const stringSearch = () => "Javascript is lit".search("lit"); //14
 
-const stringSlice = str => str.slice(0, 10); 
-// console.log(stringSlice("Javascript is lit")); //Javascript
+const stringSlice = () => "Javascript is lit".slice(0, 10); //Javascript
 
-const stringSubStr = str => str.substr(1, 2); 
-// console.log(stringSubStr("Javascript is lit")); // av
+const stringSubStr = () => "Javascript is lit".substr(1, 2); // av
 
-const stringSubString = str => str.substring(1, 2); 
-// console.log(stringSubString("Javascript is lit")); // a
+const stringSubString = () => "Javascript is lit".substring(1, 2); // a
 
-const stringLocaleCompare = str => str.localeCompare("c"); 
-// console.log(stringLocaleCompare("Hello")); // -1
+const stringLocaleCompare = () => "Hello".localeCompare("c");  // -1
 
-const stringToLocaleLowerCase = str => str.toLocaleLowerCase(); 
-// console.log(stringToLocaleLowerCase("Javascript is LIT")); // javascript is lit
+const stringToLocaleLowerCase = () => "Javascript is LIT".toLocaleLowerCase(); // javascript is lit
 
-const stringToLocaleUpperCase = str => str.toLocaleUpperCase(); 
-// console.log(stringToLocaleUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
+const stringToLocaleUpperCase = () => "Javascript is LIT".toLocaleUpperCase(); // JAVASCRIPT IS LIT
 
-const stringToLowerCase = str => str.toLowerCase(); 
-// console.log(stringToLowerCase("Javascript is LIT")); // javascript is lit
+const stringToLowerCase = () => "Javascript is LIT".toLowerCase(); // javascript is lit
 
-const stringToUpperCase = str => str.toUpperCase(); 
-// console.log(stringToUpperCase("Javascript is LIT")); // JAVASCRIPT IS LIT
+const stringToUpperCase = () => "Javascript is LIT".toUpperCase(); // JAVASCRIPT IS LIT
 
-const stringToString = str => str.toString(); 
-// console.log(stringToString(["j","s"])); // j,s
+const stringToString = () => ["j","s"].toString();  // js
 
-const stringTrim = str => str.trim();
- // console.log(stringTrim("      Hello")); // Hello
+const stringTrim = () => "      Hello".trim(); // Hello
 
-const stringValueOf = str => str.valueOf(); 
-// console.log(stringValueOf("Hello, World!")); // Hello, World!
+const stringValueOf = () => "Hello, World!".valueOf(); // Hello, World!
 ```
 # Regular Expressions
 
@@ -405,107 +397,69 @@ Method	 | Description
 
 ```javascript
 // test method returns true or false if the pattern match a string or not
-let myString = "Hello, World!";
-let myRegex = /Hello/;
-let result = myRegex.test(myString);
+const greeting = /Hello/.test("Hello, World!"); // true
 
 // extract the matches of a regex with the match method
-let extractStr = "Extract the word 'coding' from this string.";
-let codingRegex = /coding/;
-let result = extractStr.match(codingRegex);
+const matching = "Extract the word 'coding' from this string.".match(/coding/); // ["coding"]
 
 // Search and replace
-let wrongText = "The sky is silver.";
-let silverRegex = /silver/;
-wrongText.replace(silverRegex, "blue"); // Returns "The sky is blue."
+const replacing = "The sky is silver.".replace(/silver/, "blue"); // "The sky is blue."
 
 // search for multiple patterns using the alternation or OR operator: |
-let petString = "James has a pet cat.";
-let petRegex = /dog|cat|bird|fish/;
-let result = petRegex.test(petString);
+const pet = /dog|cat|bird|fish/.test("James has a pet cat."); // true
 
-// ignore upper or lowercase
-let myString = "freeCodeCamp";
-let fccRegex = /freeCodeCamp/i; // flag i
-let result = fccRegex.test(myString);
+// ignore upper or lowercase using flag i
+const ignore = /freeCodeCamp/i.test("freeCodeCamp"); // true
 
-// Search or extract a pattern more than once
-let twinkleStar = "Twinkle, twinkle, little star";
-let starRegex = /Twinkle/gi; // a regex can have multiple flags
-let result = twinkleStar.match(starRegex);
+// Search or extract a pattern more than once, using multiple flags
+const twinkle = "Twinkle, twinkle, little star".match(/Twinkle/gi); // ["Twinkle", "twinkle"]
 
 // The wildcard character . will match any character except new lines.
-let exampleStr = "Let's have fun with regular expressions!";
-let unRegex = /.un/;
-let result = unRegex.test(exampleStr);
+const wildCard = /.un/.test("Let's have fun with regular expressions!"); // true
 
 // define the characters to match, in this example all the vowels in quoteSample
-let quoteSample =
-  "Beware of bugs in the above code; I have only proved it correct, not tried it.";
-let vowelRegex = /[aeiou]/gi;
-let result = quoteSample.match(vowelRegex);
+const bugs =  "Beware of bugs in the above code; I have only proved it correct, not tried it.".match(/[aeiou]/gi);
+// ["e", "a", "e", "o", "u", "i", "e", "a", "o", "e", "o", "e", "I", "a", "e", "o", "o", "e", "i", "o", "e", "o", "i", "e", "i"]
 
 // Match all the characters in quoteSample (between a and z)
-let quoteSample = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /[a-z]/gi;
-let result = quoteSample.match(alphabetRegex);
+const getChar = "The quick brown fox jumps over the lazy dog.".match(/[a-z]/gi);
+// ["T", "h", "e", "q", "u", "i", "c", "k", "b", "r", "o", "w", "n", "f", "o", "x", "j", "u", "m", "p", "s", "o", "v", "e", "r", "t", "h", "e", "l", "a", "z", "y", "d", "o", "g"]
 
 // Match all the character between two characters and numbers
-let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s2-6]/gi;
-let result = quoteSample.match(myRegex);
+const blueBerry = "Blueberry 3.141592653s are delicious.".match(/[h-s2-6]/gi);
+//  ["l", "r", "r", "3", "4", "5", "2", "6", "5", "3", "s", "r", "l", "i", "i", "o", "s"]
 
 // Match all that is not a number or a vowel
-let quoteSample = "3 blind mice.";
-let myRegex = /[^aeiou0-9]/gi;
-let result = quoteSample.match(myRegex);
+const mice = "3 blind mice.".match(/[^aeiou0-9]/gi); // [" ", "b", "l", "n", "d", " ", "m", "c", "."]
 
 // Match 1 or more occurrences of the previous character (* for 0 or more)
-let difficultSpelling = "Mississippi";
-let myRegex = /s+/g;
-let result = difficultSpelling.match(myRegex);
+const mp = "Mississippi".match(/s+/g); //  ["ss", "ss"]
 
 // ? Match 0 or 1 occurrence of the previous character. Useful for Lazy matching
-let text = "titanic";
-let myRegex = /t[a-z]*?i/;
-let result = text.match(myRegex);
+const titanic = "titanic".match(/t[a-z]*?i/); // ["ti"]
 
 // Search for patterns at the beginning of strings
-let rickyAndCal = "Cal and Ricky both like racing.";
-let calRegex = /^Cal/;
-let result = calRegex.test(rickyAndCal);
+const cal = /^Cal/.test("Cal and Ricky both like racing."); // true
 
 // Search for patterns at the end of a string
-let caboose = "The last car on a train is the caboose";
-let lastRegex = /caboose$/;
-let result = lastRegex.test(caboose);
+const caboose = /caboose$/.test("The last car on a train is the caboose"); // true
 
 // \w is equal to [A-Za-z0-9_]
-let quoteSample = "The five boxing wizards jump quickly.";
-let alphabetRegexV2 = /\w/g;
-let result = quoteSample.match(alphabetRegexV2).length;
+const wizards = "The five boxing wizards jump quickly.".match(/\w/g).length; // 31
 
 // Match only 3 to 6 letter h's in the word "Oh no"
-let ohStr = "Ohhh no";
-let ohRegex = /Oh{3,6} no/;
-let result = ohRegex.test(ohStr);
+const ohhh = /Oh{3,6} no/.test("Ohhh no"); // true
 
 // Match both the American English (favorite) and the British English (favourite) version of the word
-let favWord = "favorite";
-let favRegex = /favou?rite/;
-let result = favRegex.test(favWord);
+const fav = /favou?rite/.test("favorite"); // true
 
-// Groups () let you reuse patterns
-let repeatNum = "42 42 42";
-let reRegex =  /^(\d+)\s\1\s\1$/; // every 1 represent the group (\d+)
-let result = reRegex.test(repeatNum);
+// Groups () let you reuse patterns, every 1 represent the group (\d+)
+const groups = /^(\d+)\s\1\s\1$/.test("42 42 42"); // true
 
 // Remove all the spaces at the beginning an end of a string
-let hello = "   Hello, World!  ";
-let wsRegex = /^\s+(.*\S)\s+$/;
-let result = hello.replace(wsRegex, '$1'); // returns 'Hello, World!'
-
+const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, '$1'); // 'Hello, World!'
 ```
+
 # Conditional Statements
 
 Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made.
@@ -551,6 +505,10 @@ Ternary or conditional operator is a small bit of syntax that tests a condition 
 ```javascript
   ( condition ) ? run this code : run this code instead;
 ```
+
+```javascript
+var status = (age >= 18) ? 'adult' : 'minor';
+````
 
 # Loop
 
