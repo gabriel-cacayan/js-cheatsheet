@@ -139,51 +139,37 @@
 
 */
 	// ARRAY PROPERTIES
-	const arrayLength = arr => arr.length;
-	// console.log(arrayLength(["javascript", "is", "a", "programming", "language"])); // 5
+	const arrayLength = () =>["javascript", "is", "a", "programming", "language"].length; // 5
 
 	// ARRAY METHODS
 	const arrayConcat = arr => [1,2,3].concat(arr);
 	// console.log(arrayConcat([4,5,6])); // [1, 2, 3, 4, 5, 6]
+  
+	const arrayIncludes = () => [1,2,3,4,5,6].includes(2); // true
+  
+	const arrayJoin = () => ["javascript", "is", "cool"].join(" "); // javascript is cool
+  
+	const arrayPop = () => [1,2,3].pop(); // 3
 
-	const arrayIncludes = arr => arr.includes(2);
-	// console.log(arrayIncludes([1,2,3,4,5,6])); // true
+	const arrayPush = () =>  ["Hello"].push("Gabriel"); // 2
 
-	const arrayJoin = arr => arr.join();
-	// console.log(arrayJoin(["javascript", "is", "a", "programming", "language"])); //javascript,is,a,programming,language
+	const arrayShift = () => [10,2,3,4,5,6].shift(); // 10
 
-	const arrayPop = () => [1,2,3].pop();
-	// console.log(arrayPop()) // 3
+	const arrayUnShift = () => [1,2,3,4,5,6].unshift(7,8,9); // 9
 
-	const arrayPush = arr =>  arr.push("Gabriel");
-	// console.log(arrayPush(["Hello"])) // 2
+	const arrayIndexOf = () => ["javascript", "is", "a", "programming", "language"].indexOf("language"); // 4
 
-	const arrayShift = () => [10,2,3,4,5,6].shift();
-	// console.log(arrayShift()); // 10
+	const arrayLastIndexOf = () => ["javascript", "is", "a", "programming", "language"].lastIndexOf("language"); // 4
 
-	const arrayUnShift = arr => arr.unshift(7,8,9);
-	// console.log(arrayUnShift([1,2,3,4,5,6])); // 9
+	const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse(); //  ["language", "programming", "a", "is", "javascript"]
 
-	const arrayIndexOf = arr => arr.indexOf("language");
-	// console.log(arrayIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+	const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1); // ["javascript"]
 
-	const arrayLastIndexOf = arr => arr.lastIndexOf("language");
-	// console.log(arrayLastIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+	const arraySplice = () => ["Java","C","C++"].splice(1,2); // ["C", "C++"]
 
-	const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse();
-	// console.log(arrayReverse()); //  ["language", "programming", "a", "is", "javascript"]
+	const arrayFill = () => [1,2,3,4,5,6].fill(6); // [6, 6, 6, 6, 6, 6]
 
-	const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1);
-	// console.log(arraySlice()); //["javascript"]
-
-	const arraySplice = arr => arr.splice(1,2);
-	// console.log(arraySplice(["Java","C","C++"])); //["C", "C++"]
-
-	const arrayFill = arr => arr.fill(6);
- 	// console.log(arrayFill([1,2,3,4,5,6])); //[6, 6, 6, 6, 6, 6]
-
- 	const arrayToString = arr => arr.toString();
- 	// console.log(arrayToString([1,2,3,4,5,6]));  // "1,2,3,4,5,6"
+ 	const arrayToString = () => [1,2,3,4,5,6].toString(); // "1,2,3,4,5,6"
 
  	const arrayValues = arr => {
  		const iterator = arr.values();
@@ -195,47 +181,33 @@
  	}
  	// console.log(arrayValues(["a","b","c","d"])); // "abcd"
 
- 	const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element));
- 	// console.log(arrayForEach()); // A\nB\nC\nD
+ 	const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
 
- 	const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0);
- 	//console.log(arrayEvery()); // true
+ 	const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0); // true
 
- 	const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0);
- 	// console.log(arraySome()); // true
+ 	const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0); // true
 
- 	const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));
- 	// console.log(arrayMap()); // [1, 4, 9, 16, 25, 36]
+ 	const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));  // [1, 4, 9, 16, 25, 36]
 
- 	const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);
- 	// console.log(arrayFilter()); //  [2, 4, 6]
+ 	const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);  // [2, 4, 6]
 
- 	const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0);
- 	// console.log(arrayReduce()); //  21
+ 	const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0); // 21
 
- 	const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0);
- 	// console.log(arrayReduceRight()); //  21
+ 	const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0); // 21
 
- 	const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1);
- 	// console.log(arrayFind()); // 1
+ 	const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1); // 1
 
- 	const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6);
- 	// console.log(arrayFindIndex()); // 5
+ 	const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6); // 5
 
- 	const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y);
- 	// console.log(arraySort()); // [1, 2, 5, 6, 14, 29, 37]
+ 	const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
 
- 	const arrayFrom = arr => Array.from(arr);
- 	// console.log(arrayFrom('foo')); // ["f", "o", "o"]
+ 	const arrayFrom = arr => Array.from(arr); // ["f", "o", "o"]
 
- 	const arrayIsArray = arr => Array.isArray(arr);
- 	// console.log(arrayIsArray(["Hello","World"])); // true
+ 	const arrayIsArray = arr => Array.isArray(arr); // true
 
- 	const arrayOf = arr => Array.of(arr);
- 	// console.log(arrayOf(10)); // [10]
+ 	const arrayOf = arr => Array.of(arr);  // [10]
 
- 	const arrayCopyWithin = arr => arr.copyWithin(4,0);
- 	// console.log(arrayCopyWithin( ['a', 'b', 'c', 'd', 'e'])); // ["a", "b", "c", "d", "a"]
+ 	const arrayCopyWithin = () => ['a', 'b', 'c', 'd', 'e'].copyWithin(4,0); // ["a", "b", "c", "d", "a"]
 
  	const arrayEntries = arr => {
  		let iterator = arr.entries();
@@ -257,8 +229,7 @@
  	}
  	 // console.log(arrayKeys(['a', 'b', 'c'])); // 012
 
- 	 const arrayFlat = arr => arr.flat();
- 	 // console.log(arrayFlat([0, 1, 2, [3, 4]])); // [0, 1, 2, 3, 4]
+ 	 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 
 // MATH PROPERTIES AND METHODS
 

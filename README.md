@@ -76,6 +76,8 @@ Another unusual thing about variables in JavaScript is that you can refer to a v
 
 This concept is known as **hoisting**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
 
+> **Note:**  If you hoist (call) your variable before defining it, it will say undefined case first needs to be defined and then called. But functions by themselvs can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
+
 ```javascript
 // Example 1
 console.log(x === undefined); // true
@@ -91,6 +93,8 @@ var x = 3;
 ### Function hoisting
 
 In the case of functions, only function declarations are hoisted—but not the function expressions.
+
+> **Note:** function hoisting only works with function declarations—not with function expressions.
 
 ```javascript
 /* Function declaration */
@@ -121,14 +125,14 @@ The 7 primitives data types are `undefined,string,boolean,bigint,null,object and
 
 Data Types | Example | Description
 ------------ | ------------- |  -------------
-`Undefined` | `var myName;` | A variable that has `not been assigned a value is of type undefined`. 
-`String` | `var greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
+`Undefined` | `let myName;` | A variable that has `not been assigned a value is of type undefined`. 
+`String` | `let greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
 `Number` | `const MATH_PI = 3.14159;` | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.
 `Boolean` | `const bool = true;` | `True` or `False`.
 `BigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.
-`Null` | `var noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
+`Null` | `let noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `Symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
-`Object` | `var arr = ["123"];` | A object is a collection of properties.
+`Object` | `let arr = ["123"];` | A object is a collection of properties.
 
 # Operators
 
@@ -171,7 +175,7 @@ Logical AND ```&&```| expr1 ```&&``` expr2 | Returns expr1 if it can be converte
 Logical NOT ```!``` | ```!```expr | Returns false if its single operand that can be converted to true; otherwise, returns true.
 Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
 
-> **Note:** The logical OR is this **`||`** and not in the table.
+> **Note:** The logical OR syntax is double pipeline **`||`** and not in the table.
 
 Bitwise | Example | Description
 ------------ | ------------- | -------------
@@ -183,7 +187,7 @@ Left shift `<<` | a `<<` b | ab Adding bit 0 to the  right (<32) of the binary n
 Sign-propagating right shift `>>` | a `>>` b | a The binary state bof the number (<32) shifts to the right by one bit. Shifts by adding b 0s for positive numbers and 1 for negative numbers.
 Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binary representation  of the a number , badds 0s to the left of the number regardless of whether the number is positive or negative  .
 
-> **Note:** The logical OR is this **`||`** and not in the table.
+> **Note:** The Bitwise OR syntax is single pipeline **`|`** and not in the table.
 
 ## Destructuring
 
@@ -288,7 +292,6 @@ Methods | Description
 
 ```javascript
 // STRING PROPERTIES
-
 const stringLength = () => "Javascript".length; //10
 
 const stringFirstIndex = str => str[0]; 
@@ -298,7 +301,6 @@ const stringLastIndex = str => str[str.length - 1];
 // console.log(stringLastIndex("Hello, World!")); //!
 
 // STRING METHODS
-
 const stringSplit = () => "string".split(""); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
 
 const stringCharAt = str => str.charAt(0); 
@@ -658,130 +660,98 @@ Methods | Description
 
 
 ```javascript
-  // ARRAY PROPERTIES
+  	// ARRAY PROPERTIES
+	const arrayLength = () =>["javascript", "is", "a", "programming", "language"].length; // 5
 
-  const arrayLength = arr => arr.length;
-  // console.log(arrayLength(["javascript", "is", "a", "programming", "language"])); // 5
+	// ARRAY METHODS
+	const arrayConcat = arr => [1,2,3].concat(arr);
+	// console.log(arrayConcat([4,5,6])); // [1, 2, 3, 4, 5, 6]
+  
+	const arrayIncludes = () => [1,2,3,4,5,6].includes(2); // true
+  
+	const arrayJoin = () => ["javascript", "is", "cool"].join(" "); // javascript is cool
+  
+	const arrayPop = () => [1,2,3].pop(); // 3
 
+	const arrayPush = () =>  ["Hello"].push("Gabriel"); // 2
 
-  // ARRAY METHODS
+	const arrayShift = () => [10,2,3,4,5,6].shift(); // 10
 
-  const arrayConcat = arr => [1,2,3].concat(arr);
-  // console.log(arrayConcat([4,5,6])); // [1, 2, 3, 4, 5, 6]
+	const arrayUnShift = () => [1,2,3,4,5,6].unshift(7,8,9); // 9
 
-  const arrayIncludes = arr => arr.includes(2);
-  // console.log(arrayIncludes([1,2,3,4,5,6])); // true
+	const arrayIndexOf = () => ["javascript", "is", "a", "programming", "language"].indexOf("language"); // 4
 
-  const arrayJoin = arr => arr.join();
-  // console.log(arrayJoin(["javascript", "is", "a", "programming", "language"])); //javascript,is,a,programming,language
+	const arrayLastIndexOf = () => ["javascript", "is", "a", "programming", "language"].lastIndexOf("language"); // 4
 
-  const arrayPop = () => [1,2,3].pop();
-  // console.log(arrayPop()) // 3
+	const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse(); //  ["language", "programming", "a", "is", "javascript"]
 
-  const arrayPush = arr =>  arr.push("Gabriel");
-  // console.log(arrayPush(["Hello"])) // 2
+	const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1); // ["javascript"]
 
-  const arrayShift = () => [10,2,3,4,5,6].shift();
-  // console.log(arrayShift()); // 10
+	const arraySplice = () => ["Java","C","C++"].splice(1,2); // ["C", "C++"]
 
-  const arrayUnShift = arr => arr.unshift(7,8,9);
-  // console.log(arrayUnShift([1,2,3,4,5,6])); // 9
+	const arrayFill = () => [1,2,3,4,5,6].fill(6); // [6, 6, 6, 6, 6, 6]
 
-  const arrayIndexOf = arr => arr.indexOf("language");
-  // console.log(arrayIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+ 	const arrayToString = () => [1,2,3,4,5,6].toString(); // "1,2,3,4,5,6"
 
-  const arrayLastIndexOf = arr => arr.lastIndexOf("language");
-  // console.log(arrayLastIndexOf(["javascript", "is", "a", "programming", "language"])); // 4
+ 	const arrayValues = arr => {
+ 		const iterator = arr.values();
+ 		let val = "";
+ 		for (const value of iterator) {
+ 			 val += value;
+ 		}
+ 		return val;
+ 	}
+ 	// console.log(arrayValues(["a","b","c","d"])); // "abcd"
 
-  const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse();
-  // console.log(arrayReverse()); //  ["language", "programming", "a", "is", "javascript"]
+ 	const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
 
-  const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1);
-  // console.log(arraySlice()); //["javascript"]
+ 	const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0); // true
 
-  const arraySplice = arr => arr.splice(1,2);
-  //console.log(arraySplice(["Java","C","C++"])); //["C", "C++"]
+ 	const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0); // true
 
-  const arrayFill = arr => arr.fill(666);
-  // console.log(arrayFill([1,2,3,4,5,6]));
+ 	const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));  // [1, 4, 9, 16, 25, 36]
 
-  const arrayToString = arr => arr.toString();
-  // console.log(arrayToString([1,2,3,4,5,6]));  // "1,2,3,4,5,6"
+ 	const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);  // [2, 4, 6]
 
-  const arrayValues = arr => {
-    const iterator = arr.values();
-    let val = "";
-    for (const value of iterator) {
-       val += value;
-    }
-    return val;
-  }
-  // console.log(arrayValues(["a","b","c","d"])); // "abcd"
+ 	const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0); // 21
 
-  const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element));
-  // console.log(arrayForEach()); // A\nB\nC\nD
+ 	const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0); // 21
 
-  const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0);
-  //console.log(arrayEvery()); // true
+ 	const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1); // 1
 
-  const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0);
-  // console.log(arraySome()); // true
+ 	const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6); // 5
 
-  const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));
-  // console.log(arrayMap()); // [1, 4, 9, 16, 25, 36]
+ 	const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
 
-  const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);
-  // console.log(arrayFilter()); //  [2, 4, 6]
+ 	const arrayFrom = arr => Array.from(arr); // ["f", "o", "o"]
 
-  const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0);
-  // console.log(arrayReduce()); //  21
+ 	const arrayIsArray = arr => Array.isArray(arr); // true
 
-  const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0);
-  // console.log(arrayReduceRight()); //  21
+ 	const arrayOf = arr => Array.of(arr);  // [10]
 
-  const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1);
-  // console.log(arrayFind()); // 1
+ 	const arrayCopyWithin = () => ['a', 'b', 'c', 'd', 'e'].copyWithin(4,0); // ["a", "b", "c", "d", "a"]
 
-  const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6);
-  // console.log(arrayFindIndex()); // 5
+ 	const arrayEntries = arr => {
+ 		let iterator = arr.entries();
+ 		let ent = "";
+ 		for (const key of iterator) {
+  			ent += key;
+		}
+		return ent;
+ 	}
+ 	 // console.log(arrayEntries(['a', 'b', 'c'])); // 0,a1,b2,c
 
-  const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y);
-  // console.log(arraySort()); // [1, 2, 5, 6, 14, 29, 37]
+ 	const arrayKeys = arr => {
+ 		let iterator = arr.keys();
+ 		let keys = "";
+ 		for (const key of iterator) {
+  			keys += key;
+		}
+		return keys;
+ 	}
+ 	 // console.log(arrayKeys(['a', 'b', 'c'])); // 012
 
-  const arrayFrom = arr => Array.from(arr);
-  // console.log(arrayFrom('foo')); // ["f", "o", "o"]
-
-  const arrayIsArray = arr => Array.isArray(arr);
-  // console.log(arrayIsArray(["Hello","World"])); // true
-
-  const arrayOf = arr => Array.of(arr);
-  // console.log(arrayOf(10)); // [10]
-
-  const arrayCopyWithin = arr => arr.copyWithin(4,0);
-  // console.log(arrayCopyWithin( ['a', 'b', 'c', 'd', 'e'])); // ["a", "b", "c", "d", "a"]
-
-  const arrayEntries = arr => {
-    let iterator = arr.entries();
-    let ent = "";
-    for (const key of iterator) {
-        ent += key;
-    }
-    return ent;
-  }
-   // console.log(arrayEntries(['a', 'b', 'c'])); // 0,a1,b2,c
-
-  const arrayKeys = arr => {
-    let iterator = arr.keys();
-    let keys = "";
-    for (const key of iterator) {
-        keys += key;
-    }
-    return keys;
-  }
-   // console.log(arrayKeys(['a', 'b', 'c'])); // 012
-
-   const arrayFlat = arr => arr.flat();
-   // console.log(arrayFlat([0, 1, 2, [3, 4]])); // [0, 1, 2, 3, 4]
+ 	 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 ```
 
 # Functions

@@ -1,4 +1,4 @@
-document.writeln(Date());
+document.writeln(Date() + "<br />");
 
 // OBJECT LITERALS
 
