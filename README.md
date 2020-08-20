@@ -38,7 +38,8 @@
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
-
+  - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
+  - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#rest-parameters)
 ## Comments
 ```javascript
 // This is an in-line comment.
@@ -193,6 +194,8 @@ Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binar
 
 For more complex assignments, the destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.
 
+The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
 ```javascript
 var foo = ['one', 'two', 'three'];
 
@@ -292,11 +295,15 @@ Methods | Description
 
 ```javascript
 // STRING PROPERTIES
+
+// Returns length
 const stringLength = () => "Javascript".length; //10
 
+// Returns first index
 const stringFirstIndex = str => str[0]; 
 // console.log(stringFirstIndex("Hello, World!")); //H
 
+// Returns last index 
 const stringLastIndex = str => str[str.length - 1]; 
 // console.log(stringLastIndex("Hello, World!")); //!
 
@@ -828,4 +835,38 @@ multiply(2, 2, 2); // 8
 multiply(2, 2);    // 4
 multiply(3);       // 9
 multiply();        // 6
+```
+
+## Closures
+
+Closures are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to).
+
+However, the outer function does not have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.
+
+```javascript
+var pet = function(name) {   // The outer function defines a variable called "name"
+  var getName = function() {
+    return name;             // The inner function has access to the "name" variable of the outer 
+                             //function
+  }
+  return getName;            // Return the inner function, thereby exposing it to outer scopes
+}
+myPet = pet('Vivie');
+   
+myPet();                     // Returns "Vivie"
+```
+
+## Rest parameters
+
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+
+In the following example, the function multiply uses rest parameters to collect arguments from the second one to the end. The function then multiplies these by the first argument.
+
+```javascript
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map(x => multiplier * x);
+}
+
+var arr = multiply(2, 1, 2, 3);
+console.log(arr); // [2, 4, 6]
 ```
