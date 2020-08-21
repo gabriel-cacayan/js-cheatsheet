@@ -40,7 +40,9 @@
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
   - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#rest-parameters)
+
 ## Comments
+
 ```javascript
 // This is an in-line comment.
 
@@ -49,6 +51,7 @@ multi-line comment */
 ```
 
 ## Variables
+
 * `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
 * `let` statement declares a block-scoped local variable, can't be redeclared but it can reassigned. 
 * `const` are block-scoped, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
@@ -77,7 +80,7 @@ Another unusual thing about variables in JavaScript is that you can refer to a v
 
 This concept is known as **hoisting**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
 
-> **Note:**  If you hoist (call) your variable before defining it, it will say undefined case first needs to be defined and then called. But functions by themselvs can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
+> **Note:**  If you hoist (call) your variable before defining it, it will say undefined.It first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
 ```javascript
 // Example 1
@@ -115,7 +118,9 @@ var baz = function() {
 ## Scope
 
 **Global scoped** is when you declared your variables outside the function.
+
 **Function** or **Local scoped** is when you declared your variables inside the function.
+
 **Block scoped** is when you declared your variables inside the curly braces `{}`.
 
 # Data Types
@@ -663,12 +668,9 @@ Methods | Description
 `keys()` | The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
 `flat()` | The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
-
-
-
 ```javascript
-  	// ARRAY PROPERTIES
-	const arrayLength = () =>["javascript", "is", "a", "programming", "language"].length; // 5
+// ARRAY PROPERTIES
+  const arrayLength = () =>["javascript", "is", "a", "programming", "language"].length; // 5
 
 	// ARRAY METHODS
 	const arrayConcat = arr => [1,2,3].concat(arr);
@@ -791,45 +793,31 @@ An Arrow Function Expression is a shorter syntax for writing function expression
 
 We can write the arrow function in multiple ways:
 
-**First:** it just looks like a regular function expression but have arrow (=>) key.
-
 ```javascript
+// First: it just looks like a regular function expression but have arrow (=>) key.
 const double = (value) => {
   return value * 2
 }
 double(10); // 20
-```
-**Second:** Omit the return keyword
 
-```javascript
+// Second: Omit the return keyword
 const double2 = value => value * 2;
 double2(10); // 20
-```
 
-**Third:** If our function has no parameter
-
-```javascript
+// Third: If our function has no parameter
 const noise = () => console.log("Pling");
 noise(); // Pling
-````
 
-**or**
+// or
 
-```javascript
 const noise2 = _ => console.log("Pling");
 noise2(); // Pling
-```
-**Fourth:** If we have two or more parameter, you can must be used parenthesis
 
-```javascript
+// Fourth: If we have two or more parameter, you must use parenthesis.
 const addAll = (x, y, z) => x + y + z;
-
 addAll(10, 20, 30); // 60
-```
 
-**Fifth:** We can use default value in our parameters
-
-```javascript
+// Fifth: We can use default value in our 
 const multiply = (a = 2, b = 3, c = 1) => a * b * c;
 multiply(2, 2, 2); // 8
 multiply(2, 2);    // 4
