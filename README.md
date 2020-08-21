@@ -8,7 +8,7 @@
   - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
   - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
   - [Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#hoisting)
-      - [Variable Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#viariable-hoisting)
+      - [Variable Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variable-hoisting)
       - [Function Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-hoisting)
 - [Data Types](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#data-types)
   - [Primitives](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#primitives)
@@ -41,6 +41,8 @@
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
   - [Function parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-parameters)
+     - [Default parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#default-parameters)
+     - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#rest-parameters)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
 
