@@ -12,6 +12,7 @@
   - [Primitives](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#primitives)
 - [Operators](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#operators)
   - [Destructuring](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#destructuring)
+  - [Spread Operator](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#spread-operator)
 - [Strings](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#strings)
   - [Basics](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#basics)
   - [Template String](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#template-string)
@@ -37,9 +38,9 @@
 - [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
+  - [Function parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-parameters)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
-  - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#rest-parameters)
 
 ## Comments
 
@@ -211,6 +212,20 @@ var three = foo[2];
 
 // with destructuring
 var [one, two, three] = foo;
+```
+## Spread Operator
+
+Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// expected output: 6
 ```
 
 # Strings
@@ -779,6 +794,37 @@ const fullName = function(firstName, lastName) {
 }
 fullName("Mikasa", "Ackerman"); // Mikasa Ackerman
 ```
+## Function parameters 
+
+Starting with ECMAScript 2015, there are two new kinds of parameters: **_default parameters_** and **_rest parameters_**.
+
+### Default parameters
+
+In JavaScript, parameters of functions default to undefined. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.
+
+With default parameters, a manual check in the function body is no longer necessary. You can simply put 1 as the default value for b in the function head:
+
+```javascript
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+multiply(5); // 5
+```
+### Rest parameters
+
+The rest parameter syntax allows us to represent an **indefinite** number of arguments as an array.
+
+In the following example, the function multiply uses rest parameters to collect arguments from the second one to the end. The function then multiplies these by the first argument.
+
+```javascript
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map(x => multiplier * x);
+}
+
+var arr = multiply(2, 1, 2, 3);
+console.log(arr); // [2, 4, 6]
+```
 
 ## Arrow Function
 
@@ -835,19 +881,4 @@ var pet = function(name) {   // The outer function defines a variable called "na
 myPet = pet('Vivie');
    
 myPet();                     // Returns "Vivie"
-```
-
-## Rest parameters
-
-The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
-
-In the following example, the function multiply uses rest parameters to collect arguments from the second one to the end. The function then multiplies these by the first argument.
-
-```javascript
-function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
-}
-
-var arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
 ```
