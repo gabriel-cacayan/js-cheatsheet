@@ -315,52 +315,46 @@ const stringLastIndex = str => str[str.length - 1];
 // STRING METHODS
 const stringSplit = () => "string".split(""); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
 
-const stringCharAt = str => str.charAt(0); 
-// console.log(stringCharAt("Hello, World!")); // H
-
-const stringCharCodeAt = () => "A".charCodeAt(str); // 65
-
-const stringCodePointAt = () => "B".codePointAt(0); // 66
-
-const stringFromCharCode = () => String.fromCharCode(66); // B
-
-const stringFromCodePoint = () => String.fromCodePoint(65); // A
-
 const stringConcat = () => "Hello, ".concat("Gabriel"); // Hello, Gabriel
-
-const stringStartsWith = () => "Hello, Gabriel!".startsWith("Hello"); //true
-
-const stringEndsWith = () => "Hello, Gabriel!".endsWith("Gabriel!");  //true
-
-const stringIncludes = () => "Javascript is easy to learn".includes("Python"); //false
-
-const stringIndexOf = () => "This is a javascript cheatsheet".indexOf("is"); //2
-
-const stringLastIndexOf = () => "This is a javascript cheatsheet".lastIndexOf("is"); //5
-
-const stringMatch = () => "This is a javascript cheatsheet made by Gabriel on July 31".match(/\d/g); //["3", "1"]
-
-const stringReplace = () => "July 31".replace(/\d/g, "5"); // July 55
 
 const stringRepeat = ()=> "Javascript".repeat(3); //JavascriptJavascriptJavascript
 
-const stringSearch = () => "Javascript is lit".search("lit"); //14
-
 const stringSlice = () => "Javascript is lit".slice(0, 10); //Javascript
 
-const stringSubStr = () => "Javascript is lit".substr(1, 2); // av
+//Return the character or character code at the specified position in string.
+const stringCharAt = str => str.charAt(0); // console.log(stringCharAt("Hello, World!")); // H
+const stringCharCodeAt = () => "A".charCodeAt(str); // 65
+const stringCodePointAt = () => "B".codePointAt(0); // 66
 
+// Constructs a string from the specified sequence of Unicode values. This is a method of the String class, not a String instance.
+const stringFromCharCode = () => String.fromCharCode(66); // B
+const stringFromCodePoint = () => String.fromCodePoint(65); // A
+
+// Returns whether or not the string starts, ends or contains a specified string.
+const stringStartsWith = () => "Hello, Gabriel!".startsWith("Hello"); //true
+const stringEndsWith = () => "Hello, Gabriel!".endsWith("Gabriel!");  //true
+const stringIncludes = () => "Javascript is easy to learn".includes("Python"); //false
+
+// Return the position of specified substring in the string or last position of specified substring, respectively.
+const stringIndexOf = () => "This is a javascript cheatsheet".indexOf("is"); //2
+const stringLastIndexOf = () => "This is a javascript cheatsheet".lastIndexOf("is"); //5
+
+// Work with regular expressions.
+const stringMatch = () => "This is a javascript cheatsheet made by Gabriel on July 31".match(/\d/g); //["3", "1"]
+const stringReplace = () => "July 31".replace(/\d/g, "5"); // July 55
+const stringSearch = () => "Javascript is lit".search("lit"); //14
+
+// Return the specified subset of the string, either by specifying the start and end indexes or the start index and a length.
+const stringSubStr = () => "Javascript is lit".substr(1, 2); // av
 const stringSubString = () => "Javascript is lit".substring(1, 2); // a
 
-const stringLocaleCompare = () => "Hello".localeCompare("c");  // -1
-
+// Return the string in all lowercase or all uppercase, respectively.
 const stringToLocaleLowerCase = () => "Javascript is LIT".toLocaleLowerCase(); // javascript is lit
-
 const stringToLocaleUpperCase = () => "Javascript is LIT".toLocaleUpperCase(); // JAVASCRIPT IS LIT
-
 const stringToLowerCase = () => "Javascript is LIT".toLowerCase(); // javascript is lit
-
 const stringToUpperCase = () => "Javascript is LIT".toUpperCase(); // JAVASCRIPT IS LIT
+
+const stringLocaleCompare = () => "Hello".localeCompare("c");  // -1
 
 const stringToString = () => ["j","s"].toString();  // js
 
@@ -680,16 +674,16 @@ const arrayIncludes = () => [1,2,3,4,5,6].includes(2); // true
 
 const arrayJoin = () => ["javascript", "is", "cool"].join(" "); // javascript is cool
 
+// Add or Remove a value to the last index;
 const arrayPop = () => [1,2,3].pop(); // 3
-
 const arrayPush = () =>  ["Hello"].push("Gabriel"); // 2
 
+// Add or Remove a value to the first index;
 const arrayShift = () => [10,2,3,4,5,6].shift(); // 10
-
 const arrayUnShift = () => [1,2,3,4,5,6].unshift(7,8,9); // 9
 
+// Search for the index
 const arrayIndexOf = () => ["javascript", "is", "a", "programming", "language"].indexOf("language"); // 4
-
 const arrayLastIndexOf = () => ["javascript", "is", "a", "programming", "language"].lastIndexOf("language"); // 4
 
 const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse(); 
