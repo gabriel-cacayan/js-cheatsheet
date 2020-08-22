@@ -20,6 +20,7 @@
   - [Template String](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#template-string)
   - [Escape Sequences](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#escape-sequences)
   - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods)
+      - [String Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods-example)
 - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
   - [Examples](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
@@ -37,6 +38,7 @@
   - [continue](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#continue)
 - [Array](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
+      - [Array Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods-example)
 - [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
@@ -76,6 +78,14 @@ const FIRST_PHILIPPINES_PRESIDENT = "Emilio Aguinaldo";
 FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught TypeError: Assignment to constant variable.
 const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError: Identifier 'FIRST_PHILIPPINES_PRESIDENT' has already been declared
 ```
+
+## Scope
+
+* **Global scoped:** occurred when the variable declared outside the function. The variable is accessible anywhere.
+
+* **Function** or **Local scoped:** occurred when the variable declared within the function. The variable declared within the function is accessible only inside the function.
+
+* **Block scoped:** occurred when the variable declared within the curly braces `{}` For example: if..else or for loop. The variable is accessible only inside the curly braces.
 
 ## Hoisting
 
@@ -120,13 +130,6 @@ var baz = function() {
   console.log('bar2');
 };
 ```
-## Scope
-
-**Global scoped** is when you declared your variables outside the function.
-
-**Function** or **Local scoped** is when you declared your variables inside the function.
-
-**Block scoped** is when you declared your variables inside the curly braces `{}`.
 
 # Data Types
 The latest ECMAScript standard defines eight data types:
@@ -202,11 +205,10 @@ Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binar
 
 ## Destructuring
 
-For more complex assignments, the destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.
-
 The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
 ```javascript
+// Array Example:
 var foo = ['one', 'two', 'three'];
 
 // without destructuring
@@ -216,6 +218,17 @@ var three = foo[2];
 
 // with destructuring
 var [one, two, three] = foo;
+
+// Object Example:
+const user = {
+    id: 42,
+    is_verified: true
+};
+
+const {id, is_verified} = user;
+
+console.log(id); // 42
+console.log(is_verified); // true 
 ```
 ## Spread Operator
 
@@ -239,24 +252,24 @@ String is a sequence of characters.
 ## Basics
 
 ```javascript
-   // escape literal quotes
-   var sentence = 'Mikasa said, "Gabriel is learning JavaScript".'; // Mikasa said, "Gabriel is learning JavaScript".
+// escape literal quotes
+var sentence = 'Mikasa said, "Gabriel is learning JavaScript".'; // Mikasa said, "Gabriel is learning JavaScript".
 
-   // concatenating strings
-   var ourStr = "I come first. " + "I come second."; // I come first. I come second.
+// concatenating strings
+var ourStr = "I come first. " + "I come second."; // I come first. I come second.
 
-   // concatenating strings with +=
-   var ourStr = "I come first. ";
-   ourStr += "I come second."; // I come first. I come second.
+// concatenating strings with +=
+var ourStr = "I come first. ";
+ourStr += "I come second."; // I come first. I come second.
 
-   // constructing strings with variables
-   var myName = "Mikasa";
-   var myStr = "Hello, my name is " + myName + ", how are you?"; // Hello, my name is Mikasa, how are you?
+// constructing strings with variables
+var myName = "Mikasa";
+var myStr = "Hello, my name is " + myName + ", how are you?"; // Hello, my name is Mikasa, how are you?
 
-   // appending variables to strings
-   var anAdjective = "awesome!";
-   var ourStr = "freeCodeCamp is ";
-   ourStr += anAdjective; // freeCodeCamp is awesome!
+// appending variables to strings
+var anAdjective = "awesome!";
+var ourStr = "freeCodeCamp is ";
+ourStr += anAdjective; // freeCodeCamp is awesome!
 ```
 ## Template String
 
@@ -316,6 +329,8 @@ Methods | Description
  `valueOf()` | Returns the primitive value of a String object
 
 > **Note:** All string methods return a new value. They do not change the original variable.
+
+### String Properties and Methods Example:
 
 ```javascript
 // STRING PROPERTIES
@@ -680,6 +695,8 @@ Methods | Description
 `entries()` | The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 `keys()` | The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
 `flat()` | The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+### Array Properties and Methods Example:
 
 ```javascript
 // ARRAY PROPERTIES
