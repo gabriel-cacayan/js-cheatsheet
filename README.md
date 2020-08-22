@@ -771,25 +771,29 @@ const arrayOf = arr => Array.of(arr);  // [10]
 const arrayCopyWithin = () => ['a', 'b', 'c', 'd', 'e'].copyWithin(4,0); // ["a", "b", "c", "d", "a"]
 
 const arrayEntries = arr => {
- 		let iterator = arr.entries();
- 		let ent = "";
- 		for (const key of iterator) {
-  			ent += key;
-		}
-		return ent;
- 	}
- 	 // console.log(arrayEntries(['a', 'b', 'c'])); // 0,a1,b2,c
+  let iterator = arr.entries();
+  let ent = "";
+    for (const key of iterator) {
+      ent += key;
+      }
+      return ent;
+    }
 
- 	const arrayKeys = arr => {
- 		let iterator = arr.keys();
- 		let keys = "";
- 		for (const key of iterator) {
-  			keys += key;
-		}
-		return keys;
- 	}
- 	 // console.log(arrayKeys(['a', 'b', 'c'])); // 012
+// console.log(arrayEntries(['a', 'b', 'c'])); // 0,a1,b2,c
+
+const arrayKeys = arr => {
+  let iterator = arr.keys();
+  let keys = "";
+    for (const key of iterator) {
+      keys += key;
+  }
+  return keys;
+}
+
+// console.log(arrayKeys(['a', 'b', 'c'])); // 012
+
 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
+
 ```
 
 # Functions
