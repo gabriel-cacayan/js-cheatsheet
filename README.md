@@ -36,9 +36,10 @@
   - [do...while](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#dowhile)
   - [break](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#break)
   - [continue](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#continue)
-- [Array](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array)
+- [Arrays](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrays)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
       - [Array Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods-example)
+      - [Using some array methods for the given problems:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#using-some-array-methods-for-the-given-problems)
 - [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
@@ -47,6 +48,8 @@
      - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#rest-parameters)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
+- [Numbers](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#numbers)
+  - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
 
 ## Comments
 
@@ -61,7 +64,7 @@ multi-line comment */
 
 * `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
 * `let` statement declares a block-scoped local variable, can't be redeclared but it can reassigned. 
-* `const` are block-scoped, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
+* `const` are block-scoped, much like variables defined using the `let` keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
 
 > **Note**: It is convention that `const` must be declared all UPPERCASE.
 
@@ -94,8 +97,6 @@ const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError:
 Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
 
 This concept is known as **hoisting**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
-
-> **Note:**  If you hoist (call) your variable before defining it, it will say undefined.It first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
 ```javascript
 // Example 1
@@ -130,6 +131,8 @@ var baz = function() {
   console.log('bar2');
 };
 ```
+
+> **Short Explanation:**  If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
 # Data Types
 The latest ECMAScript standard defines eight data types:
@@ -232,7 +235,7 @@ console.log(is_verified); // true
 ```
 ## Spread Operator
 
-Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+Spread syntax `...` allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
 ```javascript
 function sum(x, y, z) {
@@ -241,9 +244,10 @@ function sum(x, y, z) {
 
 const numbers = [1, 2, 3];
 
-console.log(sum(...numbers));
-// expected output: 6
+console.log(sum(...numbers));// expected output: 6
 ```
+
+> **Short Explanation:**  `Apply()` method can be replace by spread syntax and it is much better to use for less code. Also spread syntax can **copy** and **concatenate** array. 
 
 # Strings
 
@@ -427,6 +431,8 @@ Character classes | Description
 `a{2,}`| Specify only the lower number of matches.
 `a{5}`| Specify the exact number of matches.
 `(...)`| Specify a group that can be acceded with number (from 1).
+
+> **Note:** The OR syntax is single pipeline **`|`** and not in the table.
 
 ## Regex Methods
 Method	 | Description
@@ -734,14 +740,15 @@ const arrayFill = () => [1,2,3,4,5,6].fill(6); // [6, 6, 6, 6, 6, 6]
 const arrayToString = () => [1,2,3,4,5,6].toString(); // "1,2,3,4,5,6"
 
 const arrayValues = arr => {
- 		const iterator = arr.values();
- 		let val = "";
- 		for (const value of iterator) {
- 			 val += value;
- 		}
- 		return val;
- 	}
- 	// console.log(arrayValues(["a","b","c","d"])); // "abcd"
+  const iterator = arr.values();
+  let val = "";
+      for (const value of iterator) {
+        val += value;
+      }
+      return val;
+  }
+// console.log(arrayValues(["a","b","c","d"])); // "abcd"
+
 const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
 
 const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0); // true
@@ -762,11 +769,11 @@ const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6); // 5
 
 const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
 
-const arrayFrom = arr => Array.from(arr); // ["f", "o", "o"]
+const arrayFrom = () => Array.from("foo"); // ["f", "o", "o"]
 
-const arrayIsArray = arr => Array.isArray(arr); // true
+const arrayIsArray = () => Array.isArray([1,2,3]); // true
 
-const arrayOf = arr => Array.of(arr);  // [10]
+const arrayOf = () => Array.of(10);  // [10]
 
 const arrayCopyWithin = () => ['a', 'b', 'c', 'd', 'e'].copyWithin(4,0); // ["a", "b", "c", "d", "a"]
 
@@ -795,6 +802,28 @@ const arrayKeys = arr => {
 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 
 ```
+### Using some array methods for the given problems:
+
+```javascript
+// Removing duplicates from array
+
+const arr = [1,2,2,3,4,5,6,10,10];
+
+const removeDuplicates = Array.from(new Set(arr));
+
+console.log(removeDuplicates); // [1, 2, 3, 4, 5, 6, 10]
+
+
+// Checking whether the word is palindrome
+function checkPalindrome(palindrome) {
+
+	const checked = palindrome.split("").reverse().join(""); // Checking whether the given variable is palindrome or not
+
+	return checked === palindrome ? "It is a palindrome!": "It is not palindrome!"; // Using ternary operator to check, if is it palindrome or not.
+}
+
+console.log(checkPalindrome("racecar"));
+```
 
 # Functions
 
@@ -809,6 +838,7 @@ function validFunctionName(parameter) {
   return statement;
 }
 ```
+
 ## Function Expression
 
 A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name.
@@ -819,6 +849,7 @@ const fullName = function(firstName, lastName) {
 }
 fullName("Mikasa", "Ackerman"); // Mikasa Ackerman
 ```
+
 ## Function parameters 
 
 Starting with ECMAScript 2015, there are two new kinds of parameters: **_default parameters_** and **_rest parameters_**.
@@ -896,14 +927,53 @@ Closures are one of the most powerful features of JavaScript. JavaScript allows 
 However, the outer function does not have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.
 
 ```javascript
-var pet = function(name) {   // The outer function defines a variable called "name"
-  var getName = function() {
-    return name;             // The inner function has access to the "name" variable of the outer 
-                             //function
+const pet = function(name) {   // This is the outer function
+
+  const greetPet = function(greet) { // This is the inner function
+
+    return `${greet}, ${name}`;    // The inner function has access to the outer's variable.     
   }
-  return getName;            // Return the inner function, thereby exposing it to outer scopes
+  return greetPet;            // calling the inner function
 }
-myPet = pet('Vivie');
-   
-myPet();                     // Returns "Vivie"
+
+const greetings = pet("Oreo")("Hello");
+console.log(greetings); // "Hello, Oreo"
 ```
+## Numbers
+
+## Number Properties and Methods
+
+The built-in Number object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:
+
+```javascript
+const BIGGEST_NUM = Number.MAX_VALUE;
+const SMALLEST_NUM = Number.MIN_VALUE;
+const INFINITE_NUM = Number.POSITIVE_INFINITY;
+const NEG_INFINITE_NUM = Number.NEGATIVE_INFINITY;
+const NOT_A_NUMBER = Number.NaN;
+```
+
+Property | Description
+------------ | ------------- 
+`Number.MAX_VALUE` | The largest representable number (±1.7976931348623157e+308)
+`Number.MIN_VALUE`| The smallest representable number (±5e-324)
+`Number.NaN`| Special "not a number" value
+`Number.NEGATIVE_INFINITY`| Special negative infinite value; returned on overflow
+`Number.POSITIVE_INFINITY`| Special positive infinite value; returned on overflow
+`Number.EPSILON`| Difference between 1 and the smallest value greater than 1 that can be represented as a Number (2.220446049250313e-16)
+`Number.MIN_SAFE_INTEGER`| Minimum safe integer in JavaScript (−253 + 1, or −9007199254740991)
+`Number.MAX_SAFE_INTEGER`| Maximum safe integer in JavaScript (+253 − 1, or +9007199254740991)
+
+Methods | Description
+------------ | ------------- 
+`Number.parseFloat()` | Parses a string argument and returns a floating point number.
+Same as the global `parseFloat()` function.
+`Number.parseInt()` | Parses a string argument and returns an integer of the specified radix or base.
+Same as the global `parseInt()` function.
+`Number.isFinite()` | Determines whether the passed value is a finite number.
+`Number.isInteger()` | Determines whether the passed value is an integer.
+`Number.isNaN()` | Determines whether the passed value is NaN. More robust version of the original global `isNaN()`.
+`Number.isSafeInteger()` | Determines whether the provided value is a number that is a safe integer.
+`toExponential()`| Returns a string representing the number in exponential notation.
+`toFixed()`| Returns a string representing the number in fixed-point notation.
+`toPrecision()`| Returns a string representing the number to a specified precision in fixed-point notation.
