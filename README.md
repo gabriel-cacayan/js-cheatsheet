@@ -153,24 +153,18 @@ Data Types | Example | Description
 
 # Operators
 
-Arithmetic | Assignment | Comparison
------------- | ------------- | -------------
-Remainder `%`| Assignment `=` | Equal to `==`
-Increment `++` | Addition assignment `+=` | Not equal `!=`
-Decrement `--`| Subtraction assignment `-=` | Strict equal `===`
-Unary negation `-` | Multiplication assignment `*=` | strict not equal `!==`
-Unary plus `+`| Division assignment `/=` | Greater than `>`
-Exponentiation operator `**` | Remainder assignment `%=` | Greater than or equal `>=`
+Arithmetic | Assignment | Comparison | Logical
+------------ | ------------- | ------------- | -------------
+Remainder `%`| Assignment `=` | Equal to `==` | Logical AND `&&`
+Increment `++` | Addition assignment `+=` | Not equal `!=` | Logical NOT `!`
+Decrement `--`| Subtraction assignment `-=` | Strict equal `===` | Logical OR `ll`
+Unary negation `-` | Multiplication assignment `*=` | strict not equal `!==` |
+Unary plus `+`| Division assignment `/=` | Greater than `>` |
+Exponentiation operator `**` | Remainder assignment `%=` | Greater than or equal `>=` |
 Addition `+` |  | Less than `<`
 Subtraction `-` |  | Less than or equal `<=`
 Multiplication `*` | |
 Division `/` | |
-
-Logical | Example | Description
------------- | ------------- | -------------
-Logical AND ```&&```| expr1 ```&&``` expr2 | Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, ```&&``` returns true if both operands are true; otherwise, returns false.
-Logical NOT ```!``` | ```!```expr | Returns false if its single operand that can be converted to true; otherwise, returns true.
-Logical OR `ll` | expr1 `ll` expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, `ll` returns true if either operand is true; if both are false, returns false.
 
 > **Note:** The logical OR syntax is double pipeline **`||`** and not in the table.
 
