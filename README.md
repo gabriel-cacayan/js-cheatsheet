@@ -196,22 +196,59 @@ var three = foo[2];
 // with destructuring
 var [one, two, three] = foo;
 
+// Skipping some element using comma
+var foo = ["A","B","C","D","E","F"];
+var [one,,, three] = foo; // D
+console.log(three);
+
+// Using spread operator(syntax)
+var foo = ["A","B","C","D","E","F"];
+var [one, ...rest] = foo; 
+console.log(rest); // ["B", "C", "D", "E", "F"]
+
+// Combining two arrays, also you can do this by using concat method.
+var foo = ["A","B","C","D","E","F"];
+var num = [1,2,3,4,5,6];
+var newArray = [...foo, ...num]; 
+
+console.log(newArray); // ["A", "B", "C", "D", "E", "F", 1, 2, 3, 4, 5, 6]
+
 // Object Example:
 const user = {
     id: 42,
-    is_verified: true
+    is_verified: true,
+    name: "Gabriel",
+    age: 20
 };
 
 const {id, is_verified} = user;
 
-console.log(id); // 42
-console.log(is_verified); // true 
+console.log(id; // 42
+console.log(is_verified); // true
+
+// Or you can pass the property value to another variable
+const {id:ID, is_verified:ID_V} = user;
+
+console.log(ID); // 42
+console.log(ID_V); // true
+
+// Using spread operator(syntax) to the objects
+const {id, ...rest} = user;
+
+console.log(rest); //  {is_verified: true, name: "Gabriel", age: 20}
 ```
 ## Spread Operator
 
 Spread syntax `...` allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
 ```javascript
+/*
+Rest parameter: collects all remaining elements into an array.
+
+Spread operator: allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements.
+
+The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments
+*/
 function sum(x, y, z) {
   return x + y + z;
 }

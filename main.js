@@ -264,8 +264,11 @@ const mathCeil = () => Math.ceil(5.10);
 const mathRandom = () => Math.random();
 // console.log(mathRandom()); // Random numbers between 0 to 1.
 
-const mathMin = math => Math.min(...math); // Using spread operator
+const mathMin = math => Math.min(...math); // Using spread operator (spread turns array into a list of arguments)
 // console.log(mathMin([10,69,2])); // 2
 
 const mathMax = math => Math.max(...math);
 // console.log(mathMax([10,69,2])); // 69
+
+
+
