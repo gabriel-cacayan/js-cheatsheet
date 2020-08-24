@@ -668,7 +668,7 @@ const num = 5;
 */
 ```
 
-# Array
+# Arrays
 
 Arrays are generally described as "list-like objects"; they are basically single objects that contain multiple values stored in a list.
 
@@ -977,10 +977,8 @@ Property | Description
 
 Methods | Description
 ------------ | ------------- 
-`Number.parseFloat()` | Parses a string argument and returns a floating point number.
-Same as the global `parseFloat()` function.
-`Number.parseInt()` | Parses a string argument and returns an integer of the specified radix or base.
-Same as the global `parseInt()` function.
+`Number.parseFloat()` | Parses a string argument and returns a floating point number.Same as the global `parseFloat()` function.
+`Number.parseInt()` | Parses a string argument and returns an integer of the specified radix or base. Same as the global `parseInt()` function.
 `Number.isFinite()` | Determines whether the passed value is a finite number.
 `Number.isInteger()` | Determines whether the passed value is an integer.
 `Number.isNaN()` | Determines whether the passed value is NaN. More robust version of the original global `isNaN()`.
