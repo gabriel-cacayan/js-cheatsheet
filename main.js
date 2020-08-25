@@ -231,44 +231,38 @@
 
  	 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 
+
+ // const math = () => ;
+// console.log(math());
+
 // MATH PROPERTIES AND METHODS
 
 // PROPERTIES
 
-const mathPI = () => Math.PI;
-// console.log(mathPI()); // 3.141592653589793
+const mathPI = () => Math.PI; // 3.141592653589793
+
 
 // METHODS
 
-const mathPow = () => Math.pow(4,2);
-// console.log(mathPow()); // 16
+const mathPow = () => Math.pow(4,2); // 16
 
-// const math = () => ;
-// console.log(math());
+const mathSqrt = () => Math.sqrt(16);  // 4
 
-const mathSqrt = () => Math.sqrt(16); 
-// console.log(mathSqrt()); // 4
+const mathCbrt = () => Math.cbrt(64); // 4	
 
-const mathCbrt = () => Math.cbrt(64);
-// console.log(mathCbrt()); // 4	
+const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
 
-const mathRound = () => Math.round(5.5);
-//console.log(mathRound()); // 6 Rounds off if the decimal is greater then 4.
+const mathFloor = () => Math.floor(5.95); // 5
 
-const mathFloor = () => Math.floor(5.95);
-// console.log(mathFloor()); // 5
+const mathCeil = () => Math.ceil(5.10); // 6
 
-const mathCeil = () => Math.ceil(5.10);
-// console.log(mathCeil()); // 6
+const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
 
-const mathRandom = () => Math.random();
-// console.log(mathRandom()); // Random numbers between 0 to 1.
+const mathMin = math => Math.min(...math); // 2, Using spread operator (spread turns array into a list of arguments).
 
-const mathMin = math => Math.min(...math); // Using spread operator (spread turns array into a list of arguments)
-// console.log(mathMin([10,69,2])); // 2
+const mathMax = math => Math.max(...math); // 69
 
-const mathMax = math => Math.max(...math);
-// console.log(mathMax([10,69,2])); // 69
+
 
 
 

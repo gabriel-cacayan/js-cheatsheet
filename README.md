@@ -4,7 +4,6 @@
 
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
-  - [Comments](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#comments)
   - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
   - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#scope)
   - [Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#hoisting)
@@ -53,15 +52,6 @@
     - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
   - [Math Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-object)
     - [Math Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-properties-and-methods)
-
-## Comments
-
-```javascript
-// This is an in-line comment.
-
-/* This is a
-multi-line comment */
-```
 
 ## Variables
 
@@ -833,7 +823,7 @@ console.log(checkPalindrome("racecar"));
 
 # Functions
 
-Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
+**_Functions_** are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
 
 ## Function Declaration
 
@@ -864,7 +854,7 @@ Starting with ECMAScript 2015, there are two new kinds of parameters: **_default
 
 In JavaScript, parameters of functions default to undefined. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.
 
-With default parameters, a manual check in the function body is no longer necessary. You can simply put 1 as the default value for b in the function head:
+With **_default parameters_**, a manual check in the function body is no longer necessary. You can simply put 1 as the default value for b in the function head:
 
 ```javascript
 function multiply(a, b = 1) {
@@ -875,7 +865,7 @@ multiply(5); // 5
 ```
 ### Rest parameters
 
-The rest parameter syntax allows us to represent an **indefinite** number of arguments as an array.
+The **_rest parameter syntax_** allows us to represent an **indefinite** number of arguments as an array.
 
 In the following example, the function multiply uses rest parameters to collect arguments from the second one to the end. The function then multiplies these by the first argument.
 
@@ -890,7 +880,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Arrow Function
 
-An Arrow Function Expression is a shorter syntax for writing function expressions. Arrow functions do not create their own value.
+An **_Arrow Function Expression_** is a shorter syntax for writing function expressions. Arrow functions do not create their own value.
 
 We can write the arrow function in multiple ways:
 
@@ -1008,5 +998,4 @@ Methods | Description
 `round()`,`fround()`,`trunc()`| Rounding and truncation functions.
 `sqrt()`,`cbrt()`,`hypot()`| Square root, cube root, Square root of the sum of square arguments.
 `sign()`| The sign of a number, indicating whether the number is positive, negative or zero.
-`clz32()`,`imul()`| Number of leading zero bits in the 32-bit binary representation.
-The result of the C-like 32-bit multiplication of the two arguments.
+`clz32()`,`imul()`| Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments.
