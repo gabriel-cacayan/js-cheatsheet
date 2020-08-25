@@ -23,7 +23,7 @@
       - [String Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods-example)
 - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
-  - [Examples](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
+  - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
 - [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statements)
   - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
   - [switch statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
@@ -39,7 +39,7 @@
 - [Arrays](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrays)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
       - [Array Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods-example)
-      - [Using some array methods for the given problems:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#using-some-array-methods-for-the-given-problems)
+      - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#using-some-array-methods-for-the-given-problems)
 - [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
@@ -96,7 +96,7 @@ const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError:
 
 Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
 
-This concept is known as **hoisting**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
+This concept is known as **_hoisting_**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
 
 ```javascript
 // Example 1
@@ -182,7 +182,7 @@ Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binar
 
 ## Destructuring
 
-The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+The **_destructuring assignment_** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
 ```javascript
 // Array Example:
@@ -242,13 +242,6 @@ console.log(rest); //  {is_verified: true, name: "Gabriel", age: 20}
 Spread syntax `...` allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
 ```javascript
-/*
-Rest parameter: collects all remaining elements into an array.
-
-Spread operator: allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements.
-
-The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments
-*/
 function sum(x, y, z) {
   return x + y + z;
 }
@@ -258,7 +251,7 @@ const numbers = [1, 2, 3];
 console.log(sum(...numbers));// expected output: 6
 ```
 
-> **Short Explanation:**  `Apply()` method can be replace by spread syntax and it is much better to use for less code. Also spread syntax can **copy** and **concatenate** array. 
+> **Short Explanation:** The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments.
 
 # Strings
 
@@ -452,7 +445,7 @@ Method	 | Description
 `match()`| Extract the actual matches found.
 `replace()`| Search and replace text in a string .
 
-### Examples
+### Sample Code
 
 ```javascript
 // test method returns true or false if the pattern match a string or not
@@ -933,7 +926,7 @@ multiply();        // 6
 
 ## Closures
 
-Closures are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to).
+**_Closures_** are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to).
 
 However, the outer function does not have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.
 
