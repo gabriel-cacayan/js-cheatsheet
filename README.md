@@ -39,7 +39,7 @@
 - [Arrays](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrays)
   - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods)
       - [Array Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#array-properties-and-methods-example)
-      - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#using-some-array-methods-for-the-given-problems)
+      - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sample-code-1)
 - [Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#functions)
   - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-declaration)
   - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#function-expression)
@@ -49,7 +49,10 @@
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
 - [Numbers](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#numbers)
-  - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
+  - [Number Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-object)
+    - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
+  - [Math Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-object)
+    - [Math Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-properties-and-methods)
 
 ## Comments
 
@@ -820,10 +823,9 @@ console.log(removeDuplicates); // [1, 2, 3, 4, 5, 6, 10]
 
 // Checking whether the word is palindrome
 function checkPalindrome(palindrome) {
-
-	const checked = palindrome.split("").reverse().join(""); // Checking whether the given variable is palindrome or not
-
-	return checked === palindrome ? "It is a palindrome!": "It is not palindrome!"; // Using ternary operator to check, if is it palindrome or not.
+  const checked = palindrome.split("").reverse().join(""); // Checking whether the given variable is palindrome or not
+  
+  return checked === palindrome ? "It is a palindrome!": "It is not palindrome!"; // Using ternary operator to check, if is it palindrome or not.
 }
 
 console.log(checkPalindrome("racecar"));
@@ -945,7 +947,9 @@ console.log(greetings); // "Hello, Oreo"
 ```
 ## Numbers
 
-## Number Properties and Methods
+### Number object
+
+### Number Properties and Methods
 
 The built-in Number object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:
 
@@ -979,3 +983,30 @@ Methods | Description
 `toExponential()`| Returns a string representing the number in exponential notation.
 `toFixed()`| Returns a string representing the number in fixed-point notation.
 `toPrecision()`| Returns a string representing the number to a specified precision in fixed-point notation.
+
+### Math object
+
+### Math Properties and Methods
+
+Property | Description
+------------ | ------------- 
+`Math.PI` | The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159.
+`Math.E`| Euler's constant and the base of natural logarithms; approximately 2.718.
+`Math.LN2`| Natural logarithm of 2; approximately 0.693.
+`Math.LN2`| Natural logarithm of 10; approximately 2.303.
+`Math.LOG2E`| Base-2 logarithm of E; approximately 1.443.
+`Math.LOG10E`| Base-10 logarithm of E; approximately 0.434.
+`Math.SQRT1_2`| Square root of ½ (or equivalently, 1/√2); approximately 0.707.
+`Math.SQRT2`| Square root of 2; approximately 1.414.
+
+Methods | Description
+------------ | ------------- 
+`pow()`,`exp()`,`expm1()`,`log10()`,`log1p()`,`log2()` | Exponential and logarithmic functions.
+`floor()`,`ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
+`min()`,`max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
+`random()`| Returns a random number between 0 and 1.
+`round()`,`fround()`,`trunc()`| Rounding and truncation functions.
+`sqrt()`,`cbrt()`,`hypot()`| Square root, cube root, Square root of the sum of square arguments.
+`sign()`| The sign of a number, indicating whether the number is positive, negative or zero.
+`clz32()`,`imul()`| Number of leading zero bits in the 32-bit binary representation.
+The result of the C-like 32-bit multiplication of the two arguments.
