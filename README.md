@@ -23,7 +23,7 @@
       - [String Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#string-properties-and-methods-example)
 - [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regular-expressions)
   - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#regex-methods)
-  - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#examples)
+  - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sample-code)
 - [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#conditional-statements)
   - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#ifelse-statements)
   - [switch statements](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#switch-statements)
@@ -806,7 +806,7 @@ const arrayKeys = arr => {
 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 
 ```
-### Using some array methods for the given problems:
+### Sample Code:
 
 ```javascript
 // Removing duplicates from array
