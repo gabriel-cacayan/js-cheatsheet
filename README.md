@@ -2,6 +2,8 @@
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 > Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
+* What does _Multi-paradigm_ means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
+
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
   - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#variables)
@@ -47,6 +49,8 @@
      - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#rest-parameters)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#closures)
+  - [Higher Order Functions](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#higher-order-functions)
+     - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sample-code-2)
 - [Numbers](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#numbers)
   - [Number Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-object)
     - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
@@ -89,7 +93,7 @@ const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError:
 
 Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
 
-This concept is known as **_hoisting_**. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
+This concept is known as **_hoisting_**. Variables in JavaScript are, in a sense, **_"hoisted"_** (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
 
 ```javascript
 // Example 1
@@ -125,7 +129,7 @@ var baz = function() {
 };
 ```
 
-> **Short Explanation:**  If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
+> **Explanation:**  If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
 # Data Types
 The latest ECMAScript standard defines eight data types:
@@ -232,7 +236,7 @@ console.log(rest); //  {is_verified: true, name: "Gabriel", age: 20}
 ```
 ## Spread Operator
 
-Spread syntax `...` allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+**_Spread syntax_** `...` allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
 ```javascript
 function sum(x, y, z) {
@@ -244,7 +248,7 @@ const numbers = [1, 2, 3];
 console.log(sum(...numbers));// expected output: 6
 ```
 
-> **Short Explanation:** The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments.
+> **Explanation:** The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments.
 
 # Strings
 
@@ -507,11 +511,11 @@ const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, '$1'); // 'H
 
 # Conditional Statements
 
-Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made.
+**_Conditional statements_** allow us to represent such decision making in JavaScript, from the choice that must be made.
 
 ## if...else statements
 
-Basic if...else syntax looks like the following in [pseudocode:](https://developer.mozilla.org/en-US/docs/Glossary/pseudocode)
+Basic **_if...else syntax_** looks like the following in [pseudocode:](https://developer.mozilla.org/en-US/docs/Glossary/pseudocode)
 
 ```javascript
 if (condition) {
@@ -523,7 +527,7 @@ if (condition) {
 
 ## switch statements
 
-Switch statements take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
+**_Switch statements_** take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
 ```javascript
 switch (expression) {
@@ -545,7 +549,7 @@ switch (expression) {
 
 ## Ternary Operator
 
-Ternary or conditional operator is a small bit of syntax that tests a condition and returns one value/expression if it is true, and another if it is false — this can be useful in some situations, and can take up a lot less code than an if...else block if you simply have two choices that are chosen between via a true/false condition. The pseudocode looks like this:
+**_Ternary_** or **_conditional operator_** is a small bit of syntax that tests a condition and returns one value/expression if it is true, and another if it is false — this can be useful in some situations, and can take up a lot less code than an if...else block if you simply have two choices that are chosen between via a true/false condition. The pseudocode looks like this:
 
 ```javascript
   ( condition ) ? run this code : run this code instead;
@@ -569,7 +573,7 @@ for (initializer; condition; final-expression) {
 
 ## for...of statement
 
-The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+The **_for...of statement_** creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
 
 ```javascript
 for (variable of iterable) {
@@ -579,7 +583,7 @@ for (variable of iterable) {
 
 ## for...in statement
 
-The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
+The **_for...in statement_** iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
 
 ```javascript
 for (variable in object) {
@@ -611,7 +615,7 @@ do {
 
 ## break
 
-The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
+The **_break statement_** terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
 
 Example:
 ```javascript
@@ -633,7 +637,7 @@ const num = 5;
 
 ## continue
 
-The continue statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
+The **_continue statement_** terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
 
 Example:
 ```javascript
@@ -656,7 +660,7 @@ const num = 5;
 
 # Arrays
 
-Arrays are generally described as "list-like objects"; they are basically single objects that contain multiple values stored in a list.
+**_Arrays_** are generally described as "list-like objects"; they are basically single objects that contain multiple values stored in a list.
 
 ## Array Properties and Methods
 
@@ -837,7 +841,7 @@ function validFunctionName(parameter) {
 
 ## Function Expression
 
-A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name.
+A **_Function Expressions_** defines a named or anonymous function. An anonymous function is a function that has no name.
 
 ```javascript
 const fullName = function(firstName, lastName) {
@@ -935,6 +939,23 @@ const pet = function(name) {   // This is the outer function
 const greetings = pet("Oreo")("Hello");
 console.log(greetings); // "Hello, Oreo"
 ```
+
+## Higher Order Functions
+
+A **_higher-order function_** is a function that can take another function as an argument, or that returns a function as a result.
+
+These are the array methods that take another function as an argument and returns a function as a result: **_map_**,**_filter_**,**_reduce_**,**_sort_**,**_some_**,**_every_**,**_find_**, and **_findIndex_** 
+
+### Sample Code 
+
+```javascript
+const numbers = [0, 1, 2, 3, 4, 5, 6];
+const doubledNumbers = numbers.map(n => n * 2); // [0, 2, 4, 6, 8, 10, 12]
+const evenNumbers = numbers.filter(n => n % 2 === 0); // [0, 2, 4, 6]
+const sum = numbers.reduce((prev, next) => prev + next, 0); // 21
+const greaterThanFour = numbers.find((n) => n>4); // 5
+```
+
 ## Numbers
 
 ### Number object
