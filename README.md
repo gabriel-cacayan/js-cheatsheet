@@ -2,7 +2,7 @@
 ![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 > Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
-* What does _Multi-paradigm_ means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
+* What does **_Multi-paradigm_** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
 
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
@@ -139,14 +139,14 @@ The 7 primitives data types are `undefined,string,boolean,bigint,null,object and
 
 Data Types | Example | Description
 ------------ | ------------- |  -------------
-`Undefined` | `let myName;` | A variable that has `not been assigned a value is of type undefined`. 
-`String` | `let greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
-`Number` | `const MATH_PI = 3.14159;` | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.
+`undefined` | `let myName;` | A variable that has `not been assigned a value is of type undefined`. 
+`string` | `let greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
+`number` | `const MATH_PI = 3.14159;` | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.
 `Boolean` | `const bool = true;` | `True` or `False`.
-`BigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.
-`Null` | `let noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
-`Symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
-`Object` | `let arr = ["123"];` | A object is a collection of properties.
+`bigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.
+`null` | `let noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
+`symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
+`object` | `let arr = ["123"];` | A object is a collection of properties.
 
 # Operators
 
@@ -810,7 +810,7 @@ const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 
 const arr = [1,2,2,3,4,5,6,10,10];
 
-const removeDuplicates = Array.from(new Set(arr));
+const removeDuplicates = [...new Set(arr)];
 
 console.log(removeDuplicates); // [1, 2, 3, 4, 5, 6, 10]
 
@@ -944,7 +944,7 @@ console.log(greetings); // "Hello, Oreo"
 
 A **_higher-order function_** is a function that can take another function as an argument, or that returns a function as a result.
 
-These are the array methods that take another function as an argument and returns a function as a result: **_map_**,**_filter_**,**_reduce_**,**_sort_**,**_some_**,**_every_**,**_find_**, and **_findIndex_** 
+These are the array methods that take another function as an argument and returns a function as a result: **_forEach_**,**_map_**,**_filter_**,**_reduce_**,**_sort_**,**_some_**,**_every_**,**_find_**, and **_findIndex_** 
 
 ### Sample Code 
 
@@ -953,7 +953,7 @@ const numbers = [0, 1, 2, 3, 4, 5, 6];
 const doubledNumbers = numbers.map(n => n * 2); // [0, 2, 4, 6, 8, 10, 12]
 const evenNumbers = numbers.filter(n => n % 2 === 0); // [0, 2, 4, 6]
 const sum = numbers.reduce((prev, next) => prev + next, 0); // 21
-const greaterThanFour = numbers.find((n) => n>4); // 5
+const greaterThanFour = numbers.find(n => n > 4); // 5
 ```
 
 ## Numbers

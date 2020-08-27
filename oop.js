@@ -1,6 +1,6 @@
 document.writeln(Date() + "<br />");
 
-// OBJECT LITERALS
+/* Part 1: Object Literal
 
 const person1 = {
 	name: "Gabriel",
@@ -19,6 +19,11 @@ person2.age = 17;
 
 // console.log(person2.greet());
 
+*/
+
+
+// Part 2: Constructor
+
 // CONSTRUCTOR
 function Person(first,last,age,gender) {
 	this.first = first;
@@ -32,12 +37,31 @@ function Person(first,last,age,gender) {
 
 // INSTANTIATION
 
-/*
-	When an object instance is created the contructor function is run to create it;
-*/
+/*	When an object instance is created the contructor function is run to create it; */
 const person5 = new Person("Elle","Menopi",20,"Female"); // OBJECT INSTANCE
 const person6 = new Person("Monkey D.","Luffy",18,"Male");
-
-// console.log(person5.bio());
 // console.log(person6.bio());
 
+// Part 3: Prototypes
+Person.prototype.fullName = function(){
+	return `${this.first} ${this.last}`;
+}
+// console.log(person5.fullName()); // Elle Menopi
+
+
+// Part 4: Inheritance
+function Teacher(first,last,age,gender,subject){
+	Person.call(this,first,last,age,gender);
+	
+	this.subject = subject;
+}
+
+Teacher.prototype = Object.create(Person.prototype);
+
+Teacher.prototype.greeting = function() {
+	return this.subject;
+}
+
+let teacher1 = new Teacher("Elle","Menopi",20,"Female","Math");
+
+console.log(teacher1.greeting());

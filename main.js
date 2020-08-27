@@ -262,7 +262,3 @@ const mathMin = math => Math.min(...math); // 2, Using spread operator (spread t
 
 const mathMax = math => Math.max(...math); // 69
 
-
-
-
-
