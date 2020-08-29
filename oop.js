@@ -64,4 +64,4 @@ Teacher.prototype.greeting = function() {
 
 let teacher1 = new Teacher("Elle","Menopi",20,"Female","Math");
 
-console.log(teacher1.greeting());
+// console.log(teacher1.greeting());

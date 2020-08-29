@@ -105,8 +105,6 @@
 
 	// Note: All string methods return a new value. They do not change the original variable.
 
-
-
 	// matchAll() (Returns an iterator of all results matching a string against a regular expression, including capturing groups.)
 	// const stringMatchAll = str => str.matchAll(/(cats|dogs|bird)/g); console.log(stringMatchAll("These are my pets - cats,dogs and bird."));
 
@@ -126,17 +124,11 @@
 // ARRAY METHODS
 
 /*
-
 	New
 		flatMap
-
 	Basic
 		toLocaleString
-
-
-	Higher order arrays
-		
-
+	
 */
 	// ARRAY PROPERTIES
 	const arrayLength = () =>["javascript", "is", "a", "programming", "language"].length; // 5

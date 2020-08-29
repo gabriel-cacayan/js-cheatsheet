@@ -56,6 +56,7 @@
     - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
   - [Math Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-object)
     - [Math Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-properties-and-methods)
+    - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sample-code-3)
 
 ## Variables
 
@@ -142,7 +143,7 @@ Data Types | Example | Description
 `undefined` | `let myName;` | A variable that has `not been assigned a value is of type undefined`. 
 `string` | `let greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
 `number` | `const MATH_PI = 3.14159;` | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.
-`Boolean` | `const bool = true;` | `True` or `False`.
+`boolean` | `const bool = true;` | `True` or `False`.
 `bigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.
 `null` | `let noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
@@ -628,11 +629,7 @@ const num = 5;
     console.log(i);  
   }
 
-/*
-    0 
-    1
-    2
-*/
+// 0 1 2
 ```
 
 ## continue
@@ -650,12 +647,7 @@ const num = 5;
     console.log(i);  
   }
 
-/*
-    0 
-    1
-    2
-    4
-*/
+// 0 1 2 4
 ```
 
 # Arrays
@@ -817,9 +809,12 @@ console.log(removeDuplicates); // [1, 2, 3, 4, 5, 6, 10]
 
 // Checking whether the word is palindrome
 function checkPalindrome(palindrome) {
-  const checked = palindrome.split("").reverse().join(""); // Checking whether the given variable is palindrome or not
-  
-  return checked === palindrome ? "It is a palindrome!": "It is not palindrome!"; // Using ternary operator to check, if is it palindrome or not.
+
+  // Checking whether the given variable is palindrome or not
+  const checked = palindrome.split("").reverse().join(""); 
+
+  // Using ternary operator to check, if is it palindrome or not.
+  return checked === palindrome ? "It is a palindrome!": "It is not palindrome!"; 
 }
 
 console.log(checkPalindrome("racecar"));
@@ -950,12 +945,22 @@ These are the array methods that take another function as an argument and return
 
 ```javascript
 const numbers = [0, 1, 2, 3, 4, 5, 6];
+const returnElement = numbers.forEach(x => console.log(x)); // 0 1 2 3..
 const doubledNumbers = numbers.map(n => n * 2); // [0, 2, 4, 6, 8, 10, 12]
 const evenNumbers = numbers.filter(n => n % 2 === 0); // [0, 2, 4, 6]
 const sum = numbers.reduce((prev, next) => prev + next, 0); // 21
 const greaterThanFour = numbers.find(n => n > 4); // 5
 ```
 
+```javascript
+// Returning the name's property from the hash table;
+const rooms = [
+	{name: "Room1", description: "Clean", completed: "2020"},
+	{name: "Room2", description: "Big", completed: "2021"},
+	{name: "Room3", description: "Small", completed: "2022"} ];
+  
+console.log(rooms.map(room => room.name)); // ["Room1", "Room2", "Room3"]
+```
 ## Numbers
 
 ### Number object
@@ -1020,3 +1025,25 @@ Methods | Description
 `sqrt()`,`cbrt()`,`hypot()`| Square root, cube root, Square root of the sum of square arguments.
 `sign()`| The sign of a number, indicating whether the number is positive, negative or zero.
 `clz32()`,`imul()`| Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments.
+
+### Sample Code
+
+```javascript
+const mathPow = () => Math.pow(4,2); // 16
+
+const mathSqrt = () => Math.sqrt(16);  // 4
+
+const mathCbrt = () => Math.cbrt(64); // 4	
+
+const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
+
+const mathFloor = () => Math.floor(5.95); // 5
+
+const mathCeil = () => Math.ceil(5.10); // 6
+
+const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
+
+const mathMin = math => Math.min(...math); // 2, Using spread operator (spread turns array into a list of arguments).
+
+const mathMax = math => Math.max(...math); // 69
+```
