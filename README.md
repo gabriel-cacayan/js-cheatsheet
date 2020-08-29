@@ -253,7 +253,7 @@ console.log(sum(...numbers));// expected output: 6
 
 # Strings
 
-String is a sequence of characters.
+**_String_** is a sequence of characters.
 
 ## Basics
 
@@ -279,7 +279,7 @@ ourStr += anAdjective; // freeCodeCamp is awesome!
 ```
 ## Template String
 
-**Template string** is new to JavaScript, it is introduced to ES6. Syntax: ``` `${variable}` ``` 
+**_Template string_** is new to JavaScript, it is introduced to ES6. Syntax: ``` `${variable}` ``` 
 
 ```javascript
 const BIRTHDAY = "January 7, 2000";
@@ -404,7 +404,7 @@ const stringValueOf = () => "Hello, World!".valueOf(); // Hello, World!
 ```
 # Regular Expressions
 
-Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
+**_Regular expressions_** are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
 
 Character classes | Description
 ------------ | -------------
@@ -742,26 +742,6 @@ const arrayValues = arr => {
   }
 // console.log(arrayValues(["a","b","c","d"])); // "abcd"
 
-const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
-
-const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0); // true
-
-const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0); // true
-
-const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));  // [1, 4, 9, 16, 25, 36]
-
-const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);  // [2, 4, 6]
-
-const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0); // 21
-
-const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0); // 21
-
-const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1); // 1
-
-const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6); // 5
-
-const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
-
 const arrayFrom = () => Array.from("foo"); // ["f", "o", "o"]
 
 const arrayIsArray = () => Array.isArray([1,2,3]); // true
@@ -793,7 +773,20 @@ const arrayKeys = arr => {
 // console.log(arrayKeys(['a', 'b', 'c'])); // 012
 
 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
+```
+These are the array methods that takes a function as an argument.[Higher Order Functions:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#higher-order-functions)
 
+```javascript
+const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
+const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0); // true
+const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0); // true
+const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));  // [1, 4, 9, 16, 25, 36]
+const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);  // [2, 4, 6]
+const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0); // 21
+const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0); // 21
+const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1); // 1
+const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6); // 5
+const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
 ```
 ### Sample Code:
 
@@ -999,6 +992,78 @@ Methods | Description
 `toExponential()`| Returns a string representing the number in exponential notation.
 `toFixed()`| Returns a string representing the number in fixed-point notation.
 `toPrecision()`| Returns a string representing the number to a specified precision in fixed-point notation.
+
+### Using Number.isFinite
+
+```javascript
+Number.isFinite(Infinity);  // false
+Number.isFinite(NaN);       // false
+Number.isFinite(-Infinity); // false
+
+Number.isFinite(0);         // true
+Number.isFinite(2e64);      // true
+
+Number.isFinite('0');       // false, would've been true with
+                            // global isFinite('0')
+Number.isFinite(null);      // false, would've been true with
+                            // global isFinite(null)
+```
+### Using Number.isInteger
+```javascript
+Number.isInteger(0);         // true
+Number.isInteger(1);         // true
+Number.isInteger(-100000);   // true
+Number.isInteger(99999999999999999999999); // true
+
+Number.isInteger(0.1);       // false
+Number.isInteger(Math.PI);   // false
+
+Number.isInteger(NaN);       // false
+Number.isInteger(Infinity);  // false
+Number.isInteger(-Infinity); // false
+Number.isInteger('10');      // false
+Number.isInteger(true);      // false
+Number.isInteger(false);     // false
+Number.isInteger([1]);       // false
+
+Number.isInteger(5.0);       // true
+Number.isInteger(5.000000000000001); // false
+Number.isInteger(5.0000000000000001); // true
+```
+### Using Number.isNaN
+
+```javascript
+Number.isNaN(NaN);        // true
+Number.isNaN(Number.NaN); // true
+Number.isNaN(0 / 0);      // true
+
+// e.g. these would have been true with global isNaN()
+Number.isNaN('NaN');      // false
+Number.isNaN(undefined);  // false
+Number.isNaN({});         // false
+Number.isNaN('blabla');   // false
+
+// These all return false
+Number.isNaN(true);
+Number.isNaN(null);
+Number.isNaN(37);
+Number.isNaN('37');
+Number.isNaN('37.37');
+Number.isNaN('');
+Number.isNaN(' ');
+```
+### Using Number.isSafeInteger
+
+```javascript
+Number.isSafeInteger(3);                    // true
+Number.isSafeInteger(Math.pow(2, 53));      // false
+Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
+Number.isSafeInteger(NaN);                  // false
+Number.isSafeInteger(Infinity);             // false
+Number.isSafeInteger('3');                  // false
+Number.isSafeInteger(3.1);                  // false
+Number.isSafeInteger(3.0);                  // true
+```
 
 ### Math object
 
