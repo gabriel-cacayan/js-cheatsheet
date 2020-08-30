@@ -57,7 +57,9 @@
   - [Math Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-object)
     - [Math Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-properties-and-methods)
     - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sample-code-3)
-
+- [Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object)
+    - [Object Literal](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-literal)
+    - [Object-Oriented Programming](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-oriented-programming)
 ## Variables
 
 * `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
@@ -1119,25 +1121,79 @@ const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
 
 An **_object_** is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.)
 
+### Object Literal
+
 ```javascript
 // Part 1: Object Literal
-
 const person1 = {
 	name: "Gabriel",
 	age: 20,
 	progLang: "javascript",
-	greet: function(){
+	greet: function() {
 		return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}.`
-	}
+	};
+}
+console.log(person1.greet()); // My name is Gabriel and I'm 20 yrs old and my programming langugae is javascript.
+```
+
+### Object-Oriented Programming
+
+The basic idea of OOP is that we use objects to model real world things that we want to represent inside our programs, and/or provide a simple way to access functionality that would otherwise be hard or impossible to make use of.
+
+1. **Encapsulation** — Object data (and often, functions too) can be stored neatly.
+2. **Abstraction** — creating a simple model of a more complex thing
+3. **Object instances** — objects that contain the data and functionality defined in the class. 
+
+```javascript
+// CONSTRUCTOR
+function Person(first,last,age,gender) {
+	this.first = first;
+	this.last = last;
+	this.age = age;
+	this.gender = gender;
+	this.bio = function() {
+		return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old, and my gender is ${this.gender}.`
+	};
 }
 
-console.log(person1.greet()); // My name is Gabriel and I'm 20 yrs old and my programming langugae is javascript.
+// INSTANTIATION
 
+/*	When an object instance is created the contructor function is run to create it. */
+const person5 = new Person("Mikasa","Ackerman",19,"Female"); // This is called (OBJECT INSTANCE)
+console.log(person5.bio()); // Hello, my name is Mikasa Ackerman and I'm 19 yrs old, and my gender is Female.
+
+const person6 = new Person("Monkey D.","Luffy",18,"Male");
+console.log(person6.bio()); // Hello, my name is Monkey D. Luffy and I'm 18 yrs old, and my gender is Male.
+```
+> **Explanation:** When an object instance is created from a class, the class's constructor function is run to create it. This process of creating an object instance from a class is called instantiation — the object instance is instantiated from the class.
+
+### Other ways to create object instances
+
+So far we've seen two different ways to create an object instance — declaring an object literal, and using a constructor function (see above).
+
+These make sense, but there are other ways — we want to make you familiar with these in case you come across them in your travels around the Web.
+
+* The **Object()** constructor
+
+First of all, you can use the **_Object()_** constructor to create a new object. Yes, even generic objects have a constructor, which generates an empty object.
+
+```javascript
+let person1 = new Object();
+
+person1.name = 'Chris';
+person1.age = 38;
+person1.greeting = function() {
+	return `Hi, I'm ${this.name} and I'm ${this.age}`;
+};
+console.log(person1.greeting()); // Hi, I'm Chris and I'm 38
+```
+
+* Using the **create()** method
+```javascript
 const person2 = Object.create(person1);
 person2.name = "Mikasa";
 person2.age = 17;
-
 // console.log(person2.greet());
-
-
 ```
+
+
