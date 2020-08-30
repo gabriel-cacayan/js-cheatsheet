@@ -1081,7 +1081,9 @@ Property | Description
 
 Methods | Description
 ------------ | ------------- 
-`Math.pow()`,`Math.exp()`,`Math.expm1()`,`Math.log10()`,`Math.log1p()`,`Math.log2()` | Exponential and logarithmic functions.
+`Math.pow()`,`Math.exp()`,| Exponential and logarithmic functions.
+`Math.expm1()`,`Math.log10()`, |
+`Math.log1p()`,`Math.log2()` | 
 `Math.floor()`,`Math.ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
 `Math.min()`,`Math.max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
 `Math.random()`| Returns a random number between 0 and 1.
