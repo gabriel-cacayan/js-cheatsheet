@@ -60,7 +60,7 @@
 - [Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object)
     - [Object Literal](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-literal)
     - [Object-Oriented Programming](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-oriented-programming)
-       -[Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#other-ways-to-create-object-instances)
+      -[Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#other-ways-to-create-object-instances)
     - [Object Prototypes](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-prototypes)
 
 ## Variables
