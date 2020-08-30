@@ -2,7 +2,7 @@
 
 ### Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
-* What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
+* What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** **_functional programming_**,**_object oriented programming_** and **_procedural programming_**.
 
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
@@ -60,7 +60,7 @@
 - [Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object)
     - [Object Literal](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-literal)
     - [Object-Oriented Programming](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-oriented-programming)
-          -[Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#other-ways-to-create-object-instances)
+        - [Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#other-ways-to-create-object-instances)
     - [Object Prototypes](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-prototypes)
 
 ## Variables
