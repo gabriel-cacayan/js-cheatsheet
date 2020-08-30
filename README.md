@@ -1,5 +1,6 @@
 # :fire: JS-Cheatsheet :octocat:
-> Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
+
+### Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
 * What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
 
@@ -1081,9 +1082,13 @@ Property | Description
 
 Methods | Description
 ------------ | ------------- 
-`Math.pow()`,`Math.exp()`,| Exponential and logarithmic functions.
-`Math.expm1()`,`Math.log10()`, |
-`Math.log1p()`,`Math.log2()` | 
+`Math.abs()`| Absolute value
+`Math.sin()`,`Math.cos()`|`Math.tan()`| Standard trigonometric functions; with the argument in radians.
+`Math.asin()`,`Math.acos()`,`Math.atan()`,`Math.atan2()`| Inverse trigonometric functions; return values in radians.
+`Math.sinh`,`Math.acosh`,`Math.atanh`| Hyperbolic functions; argument in hyperbolic angle.
+`Math.asinh`,`Math.acosh`,`Math.atanh`| Inverse hyperbolic functions; return values in hyperbolic angle.
+`Math.pow()`,`Math.exp()`,`Math.expm1()`, | Exponential and logarithmic functions.
+`Math.log10()`,`Math.log1p()`,`Math.log2()` | 
 `Math.floor()`,`Math.ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
 `Math.min()`,`Math.max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
 `Math.random()`| Returns a random number between 0 and 1.
@@ -1096,12 +1101,16 @@ Methods | Description
 
 ```javascript
 const mathPow = () => Math.pow(4,2); // 16
-const mathSqrt = () => Math.sqrt(16);  // 4
-const mathCbrt = () => Math.cbrt(64); // 4	
-const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
 const mathFloor = () => Math.floor(5.95); // 5
 const mathCeil = () => Math.ceil(5.10); // 6
-const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
-const mathMin = math => Math.min(...math); // 2, Using spread operator (spread turns array into a list of arguments).
+const mathMin = math => Math.min(...math); // 1, Using spread operator (spread turns array into a list of arguments).
+// console.log(mathMin([1,3,5,7,2,10]));
 const mathMax = math => Math.max(...math); // 69
+// console.log(mathMax([1,3,5,7,69,10]));
+const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
+const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
+const mathSqrt = () => Math.sqrt(16);  // 4
+const mathCbrt = () => Math.cbrt(64); // 4	
+const mathSign = () => Math.sign(30); // 1
+const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
 ```

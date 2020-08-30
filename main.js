@@ -238,22 +238,28 @@ const mathPI = () => Math.PI; // 3.141592653589793
 
 const mathPow = () => Math.pow(4,2); // 16
 
-const mathSqrt = () => Math.sqrt(16);  // 4
-
-const mathCbrt = () => Math.cbrt(64); // 4	
-
-const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
-
 const mathFloor = () => Math.floor(5.95); // 5
 
 const mathCeil = () => Math.ceil(5.10); // 6
 
-const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
-
-const mathMin = math => Math.min(...math); // 2, Using spread operator (spread turns array into a list of arguments).
+const mathMin = math => Math.min(...math); // 1, Using spread operator (spread turns array into a list of arguments).
+// console.log(mathMin([1,3,5,7,2,10]));
 
 const mathMax = math => Math.max(...math); // 69
+// console.log(mathMax([1,3,5,7,69,10]));
 
+const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
+
+const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
+
+const mathSqrt = () => Math.sqrt(16);  // 4
+
+const mathCbrt = () => Math.cbrt(64); // 4	
+
+const mathSign = () => Math.sign(30); // 1
+
+const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
+console.log(mathImul());
 
 /* 
 
