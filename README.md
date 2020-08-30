@@ -60,6 +60,9 @@
 - [Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object)
     - [Object Literal](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-literal)
     - [Object-Oriented Programming](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-oriented-programming)
+       -[Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#other-ways-to-create-object-instances)
+    - [Object Prototypes](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-prototypes)
+
 ## Variables
 
 * `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
@@ -956,9 +959,9 @@ const rooms = [
   
 console.log(rooms.map(room => room.name)); // ["Room1", "Room2", "Room3"]
 ```
-## Numbers
+# Numbers
 
-### Number object
+## Number object
 
 ### Number Properties and Methods
 
@@ -1067,7 +1070,7 @@ Number.isSafeInteger(3.1);                  // false
 Number.isSafeInteger(3.0);                  // true
 ```
 
-### Math object
+## Math object
 
 ### Math Properties and Methods
 
@@ -1117,11 +1120,11 @@ const mathSign = () => Math.sign(30); // 1
 const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
 ```
 
-## Object
+# Object
 
-An **_object_** is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.)
+An **_object_** is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called **properties** and **methods** when they are inside objects.)
 
-### Object Literal
+## Object Literal
 
 ```javascript
 // Part 1: Object Literal
@@ -1136,7 +1139,7 @@ const person1 = {
 console.log(person1.greet()); // My name is Gabriel and I'm 20 yrs old and my programming langugae is javascript.
 ```
 
-### Object-Oriented Programming
+## Object-Oriented Programming
 
 The basic idea of OOP is that we use objects to model real world things that we want to represent inside our programs, and/or provide a simple way to access functionality that would otherwise be hard or impossible to make use of.
 
@@ -1145,7 +1148,9 @@ The basic idea of OOP is that we use objects to model real world things that we 
 3. **Object instances** — objects that contain the data and functionality defined in the class. 
 
 ```javascript
-// CONSTRUCTOR
+// Part 2: Constructor
+
+// This is called (CONSTRUCTOR)
 function Person(first,last,age,gender) {
 	this.first = first;
 	this.last = last;
@@ -1158,7 +1163,7 @@ function Person(first,last,age,gender) {
 
 // INSTANTIATION
 
-/*	When an object instance is created the contructor function is run to create it. */
+//	When an object instance is created the contructor function is run to create it.
 const person5 = new Person("Mikasa","Ackerman",19,"Female"); // This is called (OBJECT INSTANCE)
 console.log(person5.bio()); // Hello, my name is Mikasa Ackerman and I'm 19 yrs old, and my gender is Female.
 
@@ -1189,6 +1194,9 @@ console.log(person1.greeting()); // Hi, I'm Chris and I'm 38
 ```
 
 * Using the **create()** method
+
+Constructors can help you give your code order—you can create constructors in one place, then create instances as needed, and it is clear where they came from.
+
 ```javascript
 const person2 = Object.create(person1);
 person2.name = "Mikasa";
@@ -1196,4 +1204,23 @@ person2.age = 17;
 // console.log(person2.greet());
 ```
 
+## Object Prototypes
 
+**_Prototypes_** are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain how prototype chains work and look at how the prototype property can be used to add methods to existing constructors.
+
+```javascript
+// Part 3: Prototypes
+function Person(first,last,age,gender) {
+	this.first = first;
+	this.last = last;
+	this.age = age;
+	this.gender = gender;
+}
+
+const person5 = new Person("Mikasa","Ackerman",19,"Female");
+
+Person.prototype.fullName = function(){
+	return `${this.first} ${this.last}`;
+}
+console.log(person5.fullName()); // Mikasa Ackerman
+```
