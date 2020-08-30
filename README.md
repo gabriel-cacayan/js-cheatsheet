@@ -1114,3 +1114,30 @@ const mathCbrt = () => Math.cbrt(64); // 4
 const mathSign = () => Math.sign(30); // 1
 const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
 ```
+
+## Object
+
+An **_object_** is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.)
+
+```javascript
+// Part 1: Object Literal
+
+const person1 = {
+	name: "Gabriel",
+	age: 20,
+	progLang: "javascript",
+	greet: function(){
+		return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}.`
+	}
+}
+
+console.log(person1.greet()); // My name is Gabriel and I'm 20 yrs old and my programming langugae is javascript.
+
+const person2 = Object.create(person1);
+person2.name = "Mikasa";
+person2.age = 17;
+
+// console.log(person2.greet());
+
+
+```

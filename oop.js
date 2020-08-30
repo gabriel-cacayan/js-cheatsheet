@@ -1,17 +1,17 @@
 document.writeln(Date() + "<br />");
 
-/* Part 1: Object Literal
+ // Part 1: Object Literal
 
 const person1 = {
 	name: "Gabriel",
 	age: 20,
 	progLang: "javascript",
 	greet: function(){
-		return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}`
+		return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}.`
 	}
 }
 
-// console.log(person1.greet());
+console.log(person1.greet());
 
 const person2 = Object.create(person1);
 person2.name = "Mikasa";
@@ -19,7 +19,7 @@ person2.age = 17;
 
 // console.log(person2.greet());
 
-*/
+
 
 
 // Part 2: Constructor

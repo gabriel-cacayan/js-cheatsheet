@@ -259,7 +259,7 @@ const mathCbrt = () => Math.cbrt(64); // 4
 const mathSign = () => Math.sign(30); // 1
 
 const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
-console.log(mathImul());
+
 
 /* 
 
