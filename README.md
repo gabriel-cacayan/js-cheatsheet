@@ -1,8 +1,7 @@
 # :fire: JS-Cheatsheet :octocat:
-![Javascript picture](https://miro.medium.com/max/668/1*hcws3Wa6u9IqaEZ_4X04uw.jpeg)
 > Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
-* What does **_Multi-paradigm_** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
+* What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** _functional programming_,_object oriented programming_ and _procedural programming_.
 
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#fire-js-cheatsheet-octocat)
@@ -1082,7 +1081,8 @@ Property | Description
 
 Methods | Description
 ------------ | ------------- 
-`pow()`,`exp()`,`expm1()`,`log10()`,`log1p()`,`log2()` | Exponential and logarithmic functions.
+`pow()`,`exp()`,`expm1()`
+,`log10()`,`log1p()`,`log2()` | Exponential and logarithmic functions.
 `floor()`,`ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
 `min()`,`max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
 `random()`| Returns a random number between 0 and 1.
@@ -1095,20 +1095,12 @@ Methods | Description
 
 ```javascript
 const mathPow = () => Math.pow(4,2); // 16
-
 const mathSqrt = () => Math.sqrt(16);  // 4
-
 const mathCbrt = () => Math.cbrt(64); // 4	
-
 const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
-
 const mathFloor = () => Math.floor(5.95); // 5
-
 const mathCeil = () => Math.ceil(5.10); // 6
-
 const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
-
 const mathMin = math => Math.min(...math); // 2, Using spread operator (spread turns array into a list of arguments).
-
 const mathMax = math => Math.max(...math); // 69
 ```
