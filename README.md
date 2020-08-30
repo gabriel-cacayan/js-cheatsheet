@@ -1088,7 +1088,7 @@ Property | Description
 Methods | Description
 ------------ | ------------- 
 `Math.abs()`| Absolute value
-`Math.sin()`,`Math.cos()`|`Math.tan()`| Standard trigonometric functions; with the argument in radians.
+`Math.sin()`,`Math.cos()`,`Math.tan()`| Standard trigonometric functions; with the argument in radians.
 `Math.asin()`,`Math.acos()`,`Math.atan()`,`Math.atan2()`| Inverse trigonometric functions; return values in radians.
 `Math.sinh`,`Math.acosh`,`Math.atanh`| Hyperbolic functions; argument in hyperbolic angle.
 `Math.asinh`,`Math.acosh`,`Math.atanh`| Inverse hyperbolic functions; return values in hyperbolic angle.
@@ -1163,7 +1163,7 @@ function Person(first,last,age,gender) {
 
 // INSTANTIATION
 
-//	When an object instance is created the contructor function is run to create it.
+// When an object instance is created the contructor function is run to create it.
 const person5 = new Person("Mikasa","Ackerman",19,"Female"); // This is called (OBJECT INSTANCE)
 console.log(person5.bio()); // Hello, my name is Mikasa Ackerman and I'm 19 yrs old, and my gender is Female.
 
