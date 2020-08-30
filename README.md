@@ -1081,15 +1081,14 @@ Property | Description
 
 Methods | Description
 ------------ | ------------- 
-`pow()`,`exp()`,`expm1()`
-,`log10()`,`log1p()`,`log2()` | Exponential and logarithmic functions.
-`floor()`,`ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
-`min()`,`max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
-`random()`| Returns a random number between 0 and 1.
-`round()`,`fround()`,`trunc()`| Rounding and truncation functions.
-`sqrt()`,`cbrt()`,`hypot()`| Square root, cube root, Square root of the sum of square arguments.
-`sign()`| The sign of a number, indicating whether the number is positive, negative or zero.
-`clz32()`,`imul()`| Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments.
+`Math.pow()`,`Math.exp()`,`Math.expm1()`,`Math.log10()`,`Math.log1p()`,`Math.log2()` | Exponential and logarithmic functions.
+`Math.floor()`,`Math.ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
+`Math.min()`,`Math.max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
+`Math.random()`| Returns a random number between 0 and 1.
+`Math.round()`,`Math.fround()`,`Math.trunc()`| Rounding and truncation functions.
+`Math.sqrt()`,`Math.cbrt()`,`Math.hypot()`| Square root, cube root, Square root of the sum of square arguments.
+`Math.sign()`| The sign of a number, indicating whether the number is positive, negative or zero.
+`Math.clz32()`,`Math.imul()`| Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments.
 
 ### Sample Code
 
