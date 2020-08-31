@@ -1132,12 +1132,12 @@ An **_object_** is a collection of related data and/or functionality (which usua
 ```javascript
 // Part 1: Object Literal
 const person1 = {
-	name: "Gabriel",
-	age: 20,
-	progLang: "javascript",
-	greet: function() {
-		return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}.`
-	};
+  name: "Gabriel",
+  age: 20,
+  progLang: "javascript",
+  greet: function() {
+    return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}.`
+  };
 }
 console.log(person1.greet()); // My name is Gabriel and I'm 20 yrs old and my programming langugae is javascript.
 ```
@@ -1155,13 +1155,13 @@ The basic idea of OOP is that we use objects to model real world things that we 
 
 // This is called (CONSTRUCTOR)
 function Person(first,last,age,gender) {
-	this.first = first;
-	this.last = last;
-	this.age = age;
-	this.gender = gender;
-	this.bio = function() {
-		return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old, and my gender is ${this.gender}.`
-	};
+  this.first = first;
+  this.last = last;
+  this.age = age;
+  this.gender = gender;
+  this.bio = function() {
+    return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old, and my gender is ${this.gender}.`
+  };
 }
 
 // INSTANTIATION
@@ -1188,7 +1188,7 @@ let person1 = new Object();
 person1.name = 'Chris';
 person1.age = 38;
 person1.greeting = function() {
-	return `Hi, I'm ${this.name} and I'm ${this.age}`;
+  return `Hi, I'm ${this.name} and I'm ${this.age}`;
 };
 console.log(person1.greeting()); // Hi, I'm Chris and I'm 38
 ```
@@ -1203,7 +1203,7 @@ let person1 = new Object();
 person1.name = 'Chris';
 person1.age = 38;
 person1.greeting = function() {
-	return `Hi, I'm ${this.name} and I'm ${this.age}`; // Hi, I'm Mikasa and I'm 17
+  return `Hi, I'm ${this.name} and I'm ${this.age}`; // Hi, I'm Mikasa and I'm 17
 };
 
 const person2 = Object.create(person1);
@@ -1219,16 +1219,16 @@ console.log(person2.greeting());
 ```javascript
 // Part 3: Prototypes
 function Person(first,last,age,gender) {
-	this.first = first;
-	this.last = last;
-	this.age = age;
-	this.gender = gender;
+  this.first = first;
+  this.last = last;
+  this.age = age;
+  this.gender = gender;
 }
 
 const person5 = new Person("Mikasa","Ackerman",19,"Female");
 
 Person.prototype.fullName = function(){
-	return `${this.first} ${this.last}`;
+  return `${this.first} ${this.last}`;
 }
 console.log(person5.fullName()); // Mikasa Ackerman
 ```
@@ -1240,22 +1240,22 @@ console.log(person5.fullName()); // Mikasa Ackerman
 ```javascript
 // Part 4: Inheritance
 function Person(first,last,age,gender) {
-	this.first = first;
-	this.last = last;
-	this.age = age;
-	this.gender = gender;
+  this.first = first;
+  this.last = last;
+  this.age = age;
+  this.gender = gender;
 }
 
 function Teacher(first,last,age,gender,subject){
-	Person.call(this,first,last,age,gender);
-	
-	this.subject = subject;
+  Person.call(this,first,last,age,gender);
+  
+  this.subject = subject;
 }
 
 Teacher.prototype = Object.create(Person.prototype);
 
 Teacher.prototype.greeting = function() {
-	return `My name is ${this.first + " " + this.last} and my favorite subject is ${this.subject}.`;
+  return `My name is ${this.first + " " + this.last} and my favorite subject is ${this.subject}.`;
 }
 
 let teacher1 = new Teacher("Mikasa","Ackerman",19,"Female","Math");
@@ -1265,19 +1265,19 @@ console.log(teacher1.greeting()); // My name is Mikasa Ackerman and my favorite 
 
 ## Classes
 
-Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 classalike semantics.
+**_Classes_** are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 classalike semantics.
 
 ```javascript
 // Part 5: Classes (ES6) Javascript version 2015
 class Person {
-    constructor(first,last,age) {
-        this.first = first;
-        this.last = last;
-        this.age = age;
-    }
-
-    greeting() {
-        return `Hi my name is ${this.first + " " + this.last} and i'm ${this.age}`;
+  constructor(first,last,age) {
+    this.first = first;
+    this.last = last;
+    this.age = age;
+  }
+  
+  greeting() {
+    return `Hi my name is ${this.first + " " + this.last} and i'm ${this.age}`;
     };
 }
 
@@ -1290,15 +1290,15 @@ console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19
 ```javascript
 // Part 6: Sub-Classes
 class Person {
-    constructor(first,last,age) {
-        this.first = first;
-        this.last = last;
-        this.age = age;
-    }
-
-    greeting() {
-        return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age}`;
-    };
+  constructor(first,last,age) {
+    this.first = first;
+    this.last = last;
+    this.age = age;
+  }
+  
+  greeting() {
+    return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age}`;
+  };
 }
 
 const person1 = new Person("Mikasa","Ackerman",19);
@@ -1307,16 +1307,16 @@ const person1 = new Person("Mikasa","Ackerman",19);
 
 // Inheritance in class
 class Teacher extends Person {
-    constructor(first,last,age,subject, grade) {
-        super(first,last,age); // Now 'this' is initialized by calling the parent constructor.
-
-         // subject and grade are specific to Teacher
-        this.subject = subject;
-        this.grade = grade;
-     }
-
+  constructor(first,last,age,subject, grade) {
+    super(first,last,age); // Now 'this' is initialized by calling the parent constructor.
+    
+    // subject and grade are specific to Teacher
+    this.subject = subject;
+    this.grade = grade;
+    }
+    
     lecture() {
-        return `Hello class, I'm ${this.first + " " + this.last} and I'm ${this.age} yrs old. My subject is ${this.subject} and you need atleast ${this.grade} to pass.`;
+      return `Hello class, I'm ${this.first + " " + this.last} and I'm ${this.age} yrs old. My subject is ${this.subject} and you need atleast ${this.grade} to pass.`;
     };
 }
 
