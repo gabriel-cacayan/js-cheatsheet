@@ -62,6 +62,9 @@
     - [Object-Oriented Programming](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-oriented-programming)
         - [Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#other-ways-to-create-object-instances)
     - [Object Prototypes](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-prototypes)
+    - [Inheritance](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#inheritance)
+    - [Classes](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#classes)
+        - [Sub-classes](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sub-classes)
 
 ## Variables
 
@@ -1166,9 +1169,6 @@ function Person(first,last,age,gender) {
 // When an object instance is created the contructor function is run to create it.
 const person5 = new Person("Mikasa","Ackerman",19,"Female"); // This is called (OBJECT INSTANCE)
 console.log(person5.bio()); // Hello, my name is Mikasa Ackerman and I'm 19 yrs old, and my gender is Female.
-
-const person6 = new Person("Monkey D.","Luffy",18,"Male");
-console.log(person6.bio()); // Hello, my name is Monkey D. Luffy and I'm 18 yrs old, and my gender is Male.
 ```
 > **Explanation:** When an object instance is created from a class, the class's constructor function is run to create it. This process of creating an object instance from a class is called instantiation — the object instance is instantiated from the class.
 
@@ -1198,10 +1198,18 @@ console.log(person1.greeting()); // Hi, I'm Chris and I'm 38
 Constructors can help you give your code order—you can create constructors in one place, then create instances as needed, and it is clear where they came from.
 
 ```javascript
+let person1 = new Object();
+
+person1.name = 'Chris';
+person1.age = 38;
+person1.greeting = function() {
+	return `Hi, I'm ${this.name} and I'm ${this.age}`; // Hi, I'm Mikasa and I'm 17
+};
+
 const person2 = Object.create(person1);
 person2.name = "Mikasa";
 person2.age = 17;
-// console.log(person2.greet());
+console.log(person2.greeting());
 ```
 
 ## Object Prototypes
@@ -1223,4 +1231,95 @@ Person.prototype.fullName = function(){
 	return `${this.first} ${this.last}`;
 }
 console.log(person5.fullName()); // Mikasa Ackerman
+```
+
+## Inheritance
+
+**_Inheritance_** create a "child" object classes (constructors) that inherit features from their "parent" classes.
+
+```javascript
+// Part 4: Inheritance
+function Person(first,last,age,gender) {
+	this.first = first;
+	this.last = last;
+	this.age = age;
+	this.gender = gender;
+}
+
+function Teacher(first,last,age,gender,subject){
+	Person.call(this,first,last,age,gender);
+	
+	this.subject = subject;
+}
+
+Teacher.prototype = Object.create(Person.prototype);
+
+Teacher.prototype.greeting = function() {
+	return `My name is ${this.first + " " + this.last} and my favorite subject is ${this.subject}.`;
+}
+
+let teacher1 = new Teacher("Mikasa","Ackerman",19,"Female","Math");
+
+console.log(teacher1.greeting()); // My name is Mikasa Ackerman and my favorite subject is Math.
+```
+
+## Classes
+
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 classalike semantics.
+
+```javascript
+// Part 5: Classes (ES6) Javascript version 2015
+class Person {
+    constructor(first,last,age) {
+        this.first = first;
+        this.last = last;
+        this.age = age;
+    }
+
+    greeting() {
+        return `Hi my name is ${this.first + " " + this.last} and i'm ${this.age}`;
+    };
+}
+
+const person1 = new Person("Mikasa","Ackerman",19);
+console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19
+```
+
+### Sub-classes
+
+```javascript
+// Part 6: Sub-Classes
+class Person {
+    constructor(first,last,age) {
+        this.first = first;
+        this.last = last;
+        this.age = age;
+    }
+
+    greeting() {
+        return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age}`;
+    };
+}
+
+const person1 = new Person("Mikasa","Ackerman",19);
+// console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19
+
+
+// Inheritance in class
+class Teacher extends Person {
+    constructor(first,last,age,subject, grade) {
+        super(first,last,age); // Now 'this' is initialized by calling the parent constructor.
+
+         // subject and grade are specific to Teacher
+        this.subject = subject;
+        this.grade = grade;
+     }
+
+    lecture() {
+        return `Hello class, I'm ${this.first + " " + this.last} and I'm ${this.age} yrs old. My subject is ${this.subject} and you need atleast ${this.grade} to pass.`;
+    };
+}
+
+const teacher1 = new Teacher("Monkey D.","Luffy",20,"Math",94);
+console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 yrs old. My subject is Math and you need atleast 94 to pass.
 ```

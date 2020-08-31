@@ -261,29 +261,6 @@ const mathSign = () => Math.sign(30); // 1
 const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
 
 
-/* 
-
-Number.isNaN(NaN);        // true
-Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0);      // true
-
-// e.g. these would have been true with global isNaN()
-Number.isNaN('NaN');      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN('blabla');   // false
-
-// These all return false
-Number.isNaN(true);
-Number.isNaN(null);
-Number.isNaN(37);
-Number.isNaN('37');
-Number.isNaN('37.37');
-Number.isNaN('');
-Number.isNaN(' ');
-
-*/
-
 /*
 
 isNaN(NaN);       // true
@@ -311,3 +288,4 @@ isNaN('blabla');   // true: "blabla" is converted to a number.
                    // Parsing this as a number fails and returns NaN
 
 */
+
