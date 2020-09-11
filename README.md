@@ -56,6 +56,8 @@
     - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#number-properties-and-methods)
   - [Math Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-object)
     - [Math Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#math-properties-and-methods)
+  - [Date Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#date-object)
+    - [Methods of the Date object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#methods-of-the-date-object)
     - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#sample-code-3)
 - [Object](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object)
     - [Object Literal](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#object-literal)
