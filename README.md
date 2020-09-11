@@ -1123,6 +1123,40 @@ const mathSign = () => Math.sign(30); // 1
 const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
 ```
 
+## Date Object
+
+JavaScript does not have a date data type. However, you can use the Date object and its methods to work with dates and times in your applications. The **_Date object_** has a large number of methods for setting, getting, and manipulating dates. It does not have any properties.
+
+Calling Date without the `new` keyword returns a string representing the current date and time.
+
+The parameters in the preceding syntax can be any of the following:
+
+* Nothing: creates today's date and time. For example, `today = new Date();`.
+* A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
+* A set of integer values for year, month, and day. For example, `var Xmas95 = new Date(1995, 11, 25)`.
+* A set of integer values for year, month, day, hour, minute, and seconds. For example, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+
+### Methods of the Date object
+
+The **_Date object methods_** for handling dates and times fall into these broad categories:
+
+* "set" methods, for setting date and time values in Date objects.
+* "get" methods, for getting date and time values from Date objects.
+* "to" methods, for returning string values from Date objects.
+* parse and UTC methods, for parsing Date strings.
+
+```javascript
+const DATE = new Date(); // Fri Sep 11 2020 11:30:36 GMT+0800 (Taipei Standard Time)
+const TODAY = DATE.getDate(); // 11
+const DAY = DATE.getDay(); // 5 // Today is friday
+const MONTH = DATE.getMonth(); // 8
+const FULL_YEAR = DATE.getFullYear(); // 2020
+const HOURS = DATE.getHours(); // 11
+const MINUTES = DATE.getMinutes(); // 38
+const SECONDS = DATE.getSeconds(); // 53
+const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
+```
+
 # Object
 
 An **_object_** is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called **properties** and **methods** when they are inside objects.)
