@@ -1,8 +1,8 @@
 # :fire: JS-Cheatsheet :octocat:
 
-### Javascript is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
+**Javascript** is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
-* What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** **_functional programming_**,**_object oriented programming_** and **_procedural programming_**.
+* What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** **functional programming**,**object oriented programming** and **procedural programming**.
 
 # Table of Contents
 - [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat)
@@ -67,7 +67,8 @@
     - [Inheritance](https://github.com/GabrielCode-Full/js-cheatsheet#inheritance)
     - [Classes](https://github.com/GabrielCode-Full/js-cheatsheet#classes)
         - [Sub-classes](https://github.com/GabrielCode-Full/js-cheatsheet#sub-classes)
-
+- [DOM](https://github.com/GabrielCode-Full/js-cheatsheet#dom)
+    - [Events](https://github.com/GabrielCode-Full/js-cheatsheet#events)
 ## Variables
 
 * `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
@@ -563,14 +564,16 @@ switch (expression) {
 **_Ternary_** or **_conditional operator_** is a small bit of syntax that tests a condition and returns one value/expression if it is true, and another if it is false — this can be useful in some situations, and can take up a lot less code than an if...else block if you simply have two choices that are chosen between via a true/false condition. The pseudocode looks like this:
 
 ```javascript
-  ( condition ) ? run this code : run this code instead;
-```
+( condition ) ? run this code : run this code instead;
 
-```javascript
-var status = (age >= 18) ? 'adult' : 'minor';
+let age = 18;
+
+let status = (age >= 18) ? 'adult' : 'minor';
+
+console.log(status); // adult
 ````
 
-# Loop
+# Loops and Iteration
 
 Programming loops are all to do with doing the same thing over and over again — which is termed iteration in programming speak.
 
@@ -590,6 +593,14 @@ The **_for...of statement_** creates a loop iterating over iterable objects, inc
 for (variable of iterable) {
   //statement
 }
+
+const VOWELS = ["A","E","I","O","U"]
+
+for (let vowel of VOWELS) {
+  console.log(vowel);
+}
+
+// A E I O U
 ```
 
 ## for...in statement
@@ -600,6 +611,17 @@ The **_for...in statement_** iterates over all enumerable properties of an objec
 for (variable in object) {
   //statement
 }
+
+const dog = {
+  name: "Snoopy",
+  numOfLegs: 4
+}
+
+for (let d in dog) {
+  console.log(d);
+}
+
+// name numOfLegs
 ```
 
 ## while loop
@@ -611,6 +633,16 @@ while (condition) {
 
   final-expression
 }
+
+let i = 0;
+let num = 5;
+
+while(i < num) {
+  console.log(i);
+  i++
+}
+
+// 0 1 2 3 4
 ```
 
 ## do...while
@@ -622,6 +654,17 @@ do {
 
   final-expression
 } while (condition)
+
+
+let i = 0;
+let num = 5;
+
+do {
+  i++
+  console.log(i);
+} while (i < num);
+
+// 1 2 3 4 5
 ```
 
 ## break
@@ -1359,3 +1402,97 @@ class Teacher extends Person {
 const teacher1 = new Teacher("Monkey D.","Luffy",20,"Math",94);
 console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 yrs old. My subject is Math and you need atleast 94 to pass.
 ```
+
+# DOM
+
+The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+
+code snippets:
+
+```javascript
+
+// Get HTML objects.
+document.getElementById("value");
+document.getElementsByClassName("value");
+document.querySelector(".value"); // Get the first element matching the selector
+document.querySelectorAll(".value"); // Get all the elements matching the selector
+
+// Syntax for modifying css content
+element.style.cssProperties = "value";
+
+// Syntax for adding text to an element.
+element.innerHTML = "value";
+element.textContent = "value";
+element.innerText = "value"; // It can overide the textContent.
+
+// Syntax for setting attribute to an element.
+element.setAttribute(attributeName, attributeValue); // Attribute example: class, id, src, href etc...
+
+// Syntax for setting event listener to an element.
+element.addEventListener(event, function, useCapture);
+
+element.addEventListener("click", () => {
+  
+
+});
+
+// Create a div
+const newDiv =  document.createElement('div');
+
+// Add class
+newDiv.className= 'hello';
+
+// Add id
+newDiv.id = 'hello1';
+
+// Add attr
+newDiv.setAttribute('title', 'Hello Div');
+
+// Create text node
+var newDivText = document.createTextNode('Hello World');
+
+// Add text to div
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '30px';
+
+container.insertBefore(newDiv, h1);
+
+
+element.classList.add(""); // Add existing class to an element.
+element.classList.add("foo","bar"); //add multiple classes
+element.classList.remove("");
+element.classList.toggle("");
+
+
+// To be continue: append child, remove attribute, has attribute.
+```
+
+## Events
+
+Most used events.
+
+* click
+* mouseenter
+* mouseleave
+* dblclick
+* mousedown
+* mouseup
+* mouseover
+* mouseout
+* mousemove
+* keydown
+* keyup
+* keypress
+* focus
+* blur
+* cut
+* paste
+* input
+* change
+* input

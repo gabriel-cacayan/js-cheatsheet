@@ -304,4 +304,4 @@ const MINUTES = DATE.getMinutes(); // 38
 const SECONDS = DATE.getSeconds(); // 53
 const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
 
-// console.log(TIME_ZONE); 
+// console.log(TIME_ZONE);
