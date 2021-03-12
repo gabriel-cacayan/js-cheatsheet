@@ -143,6 +143,12 @@ var baz = function() {
 
 > **Explanation:**  If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
 # Data Types
 The latest ECMAScript standard defines eight data types:
 
@@ -159,6 +165,12 @@ Data Types | Example | Description
 `null` | `let noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
 `symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
 `object` | `let arr = ["123"];` | A object is a collection of properties.
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
 
 # Operators
 
@@ -261,6 +273,12 @@ console.log(sum(...numbers));// expected output: 6
 ```
 
 > **Explanation:** The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments.
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
 
 # Strings
 
@@ -413,6 +431,13 @@ const stringTrim = () => "      Hello".trim(); // Hello
 
 const stringValueOf = () => "Hello, World!".valueOf(); // Hello, World!
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
 # Regular Expressions
 
 **_Regular expressions_** are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
@@ -521,6 +546,12 @@ const groups = /^(\d+)\s\1\s\1$/.test("42 42 42"); // true
 const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, '$1'); // 'Hello, World!'
 ```
 
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
 # Conditional Statements
 
 **_Conditional statements_** allow us to represent such decision making in JavaScript, from the choice that must be made.
@@ -572,6 +603,12 @@ let status = (age >= 18) ? 'adult' : 'minor';
 
 console.log(status); // adult
 ````
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
 
 # Loops and Iteration
 
@@ -702,6 +739,12 @@ const num = 5;
 
 // 0 1 2 4
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
 
 # Arrays
 
@@ -866,6 +909,12 @@ function checkPalindrome(palindrome) {
 console.log(checkPalindrome("racecar"));
 ```
 
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
 # Functions
 
 **_Functions_** are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
@@ -1007,6 +1056,13 @@ const rooms = [
   
 console.log(rooms.map(room => room.name)); // ["Room1", "Room2", "Room3"]
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
 # Numbers
 
 ## Number object
@@ -1201,6 +1257,12 @@ const MINUTES = DATE.getMinutes(); // 38
 const SECONDS = DATE.getSeconds(); // 53
 const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
 ```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
 
 # Object
 
@@ -1403,6 +1465,12 @@ const teacher1 = new Teacher("Monkey D.","Luffy",20,"Math",94);
 console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 yrs old. My subject is Math and you need atleast 94 to pass.
 ```
 
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
 # DOM
 
 The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
@@ -1496,3 +1564,9 @@ Most used events.
 * input
 * change
 * input
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
