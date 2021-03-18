@@ -49,6 +49,8 @@
      - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet#rest-parameters)
   - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet#arrow-function)
   - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet#closures)
+  - [Recursion](https://github.com/GabrielCode-Full/js-cheatsheet#recursion)
+  - [Immediately Invoked Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet#immediately-invoked-function-expression)
   - [Higher Order Functions](https://github.com/GabrielCode-Full/js-cheatsheet#higher-order-functions)
      - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet#sample-code-2)
 - [Numbers](https://github.com/GabrielCode-Full/js-cheatsheet#numbers)
@@ -919,6 +921,8 @@ console.log(checkPalindrome("racecar"));
 
 **_Functions_** are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
 
+Different types of functions: **anonymous function**, **named function**, **inner function(Closures)**, **recursive function**, and **Immediately Invoked Function Expressions**.
+
 ## Function Declaration
 
 A function can have multiple parameters or no parameters at all.
@@ -936,7 +940,12 @@ A **_Function Expressions_** defines a named or anonymous function. An anonymous
 ```javascript
 const fullName = function(firstName, lastName) {
  return `${firstName} ${lastName}`;
-}
+} // anonymous function
+
+function fullName(firstName, lastName) {
+ return `${firstName} ${lastName}`;
+} // named function
+
 fullName("Mikasa", "Ackerman"); // Mikasa Ackerman
 ```
 
@@ -1028,6 +1037,48 @@ const pet = function(name) {   // This is the outer function
 
 const greetings = pet("Oreo")("Hello");
 console.log(greetings); // "Hello, Oreo"
+```
+
+## Recursion 
+
+The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
+
+```javascript
+function countdown(value) {
+    if (value > 0) {
+        console.log(value);
+        return countdown(value - 1);
+    } else {
+        return value;
+    }
+};
+
+countdown(10); // 10 9 8 ... 0
+```
+
+## Immediately Invoked Function Expression
+
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+
+```javascript
+(function () {
+    statements
+})();
+
+
+(function () {
+    var aName = "Barry";
+})();
+// Variable aName is not accessible from the outside scope
+aName // throws "Uncaught ReferenceError: aName is not defined"
+
+
+var result = (function () {
+    var name = "Barry";
+    return name;
+})();
+// Immediately creates the output:
+result; // "Barry"
 ```
 
 ## Higher Order Functions
@@ -1491,7 +1542,7 @@ element.style.cssProperties = "value";
 // Syntax for adding text to an element.
 element.innerHTML = "value";
 element.textContent = "value";
-element.innerText = "value"; // It can overide the textContent.
+element.innerText = "value"; // It can override the textContent.
 
 // Syntax for setting attribute to an element.
 element.setAttribute(attributeName, attributeValue); // Attribute example: class, id, src, href etc...
