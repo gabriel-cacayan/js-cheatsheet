@@ -69,6 +69,7 @@
     - [Inheritance](https://github.com/GabrielCode-Full/js-cheatsheet#inheritance)
     - [Classes](https://github.com/GabrielCode-Full/js-cheatsheet#classes)
         - [Sub-classes](https://github.com/GabrielCode-Full/js-cheatsheet#sub-classes)
+- [Asynchronous](https://github.com/GabrielCode-Full/js-cheatsheet#asynchronous)
 - [DOM](https://github.com/GabrielCode-Full/js-cheatsheet#dom)
     - [Events](https://github.com/GabrielCode-Full/js-cheatsheet#events)
 ## Variables
@@ -81,16 +82,29 @@
 
 ```javascript
 var myProgLanguage = "Javascript";
+console.log(myProgLanguage); // Javascript
+
 myProgLanguage = "Python"; // Can be reassigned
+console.log(myProgLanguage); // Python
+
 var myProgLanguage = "Python"; // Can be redeclared
+console.log(myProgLanguage); // Python
 
 let age = 20;
 age = 19; // Can be reassigned
-let age = 19; // Uncaught SyntaxError: Identifier 'name' has already been declared
+console.log(age); // 19
+
+let age = 19;
+console.log(age); // Uncaught SyntaxError: Identifier 'age' has already been declared
 
 const FIRST_PHILIPPINES_PRESIDENT = "Emilio Aguinaldo";
-FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught TypeError: Assignment to constant variable.
-const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; // Uncaught SyntaxError: Identifier 'FIRST_PHILIPPINES_PRESIDENT' has already been declared
+console.log(FIRST_PHILIPPINES_PRESIDENT); // Emilio Aguinaldo
+
+FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; 
+console.log(FIRST_PHILIPPINES_PRESIDENT); // Uncaught TypeError: Assignment to constant variable.
+
+const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; 
+console.log(FIRST_PHILIPPINES_PRESIDENT); // Uncaught SyntaxError: Identifier 'FIRST_PHILIPPINES_PRESIDENT' has already been declared
 ```
 
 ## Scope
@@ -209,7 +223,7 @@ The **_destructuring assignment_** syntax is a JavaScript expression that makes 
 
 ```javascript
 // Array Example:
-var foo = ['one', 'two', 'three'];
+var foo = [1, 2, 3];
 
 // without destructuring
 var one   = foo[0];
@@ -218,13 +232,14 @@ var three = foo[2];
 
 // with destructuring
 var [one, two, three] = foo;
+console.log(one); // 1
 
 // Skipping some element using comma
 var foo = ["A","B","C","D","E","F"];
-var [one,,, three] = foo; // D
-console.log(three);
+var [one,,, three] = foo; 
+console.log(three); // D
 
-// Using spread operator(syntax)
+// Using spread operator syntax (...)
 var foo = ["A","B","C","D","E","F"];
 var [one, ...rest] = foo; 
 console.log(rest); // ["B", "C", "D", "E", "F"]
@@ -233,20 +248,19 @@ console.log(rest); // ["B", "C", "D", "E", "F"]
 var foo = ["A","B","C","D","E","F"];
 var num = [1,2,3,4,5,6];
 var newArray = [...foo, ...num]; 
-
 console.log(newArray); // ["A", "B", "C", "D", "E", "F", 1, 2, 3, 4, 5, 6]
 
 // Object Example:
-const user = {
+let user = {
     id: 42,
     is_verified: true,
     name: "Gabriel",
     age: 20
 };
 
-const {id, is_verified} = user;
+let {id, is_verified} = user;
 
-console.log(id; // 42
+console.log(id); // 42
 console.log(is_verified); // true
 
 // Or you can pass the property value to another variable
@@ -255,10 +269,9 @@ const {id:ID, is_verified:ID_V} = user;
 console.log(ID); // 42
 console.log(ID_V); // true
 
-// Using spread operator(syntax) to the objects
-const {id, ...rest} = user;
-
-console.log(rest); //  {is_verified: true, name: "Gabriel", age: 20}
+// Using spread operator syntax to the objects
+let {id:myID, ...REST} = user;
+console.log(REST); //  {is_verified: true, name: "Gabriel", age: 20}
 ```
 ## Spread Operator
 
@@ -290,23 +303,28 @@ console.log(sum(...numbers));// expected output: 6
 
 ```javascript
 // escape literal quotes
-var sentence = 'Mikasa said, "Gabriel is learning JavaScript".'; // Mikasa said, "Gabriel is learning JavaScript".
+let sentence = 'Mikasa said, "Gabriel is learning JavaScript".';
+console.log(sentence); // Mikasa said, "Gabriel is learning JavaScript".
 
 // concatenating strings
-var ourStr = "I come first. " + "I come second."; // I come first. I come second.
+let sequence = "I come first. " + "I come second."; 
+console.log(sequence); // I come first. I come second.
 
 // concatenating strings with +=
-var ourStr = "I come first. ";
-ourStr += "I come second."; // I come first. I come second.
+let ourStr = "I come first. ";
+ourStr += "I come second."; 
+console.log(ourStr); // I come first. I come second.
 
 // constructing strings with variables
-var myName = "Mikasa";
-var myStr = "Hello, my name is " + myName + ", how are you?"; // Hello, my name is Mikasa, how are you?
+let myName = "Mikasa";
+let greetings = "Hello, my name is " + myName + ", how are you?"; 
+console.log(greetings); // Hello, my name is Mikasa, how are you?
 
 // appending variables to strings
-var anAdjective = "awesome!";
-var ourStr = "freeCodeCamp is ";
-ourStr += anAdjective; // freeCodeCamp is awesome!
+let anAdjective = "awesome!";
+let myStr = "freeCodeCamp is ";
+myStr += anAdjective; 
+console.log(myStr);// freeCodeCamp is awesome!
 ```
 ## Template String
 
@@ -890,7 +908,6 @@ const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6,
 
 ```javascript
 // Removing duplicates from array
-
 const arr = [1,2,2,3,4,5,6,10,10];
 
 const removeDuplicates = [...new Set(arr)];
@@ -1324,14 +1341,13 @@ An **_object_** is a collection of related data and/or functionality (which usua
 ```javascript
 // Part 1: Object Literal
 const person1 = {
-  name: "Gabriel",
-  age: 20,
-  progLang: "javascript",
+  name: "John Doe",
+  age: 38,
   greet: function() {
-    return `My name is ${this.name} and I'm ${this.age} yrs old and my programming langugae is ${this.progLang}.`
-  };
+    return `My name is ${this.name} and I'm ${this.age} yrs old.`
+  }
 }
-console.log(person1.greet()); // My name is Gabriel and I'm 20 yrs old and my programming langugae is javascript.
+console.log(person1.greet()); // My name is John Doe and I'm 38 yrs old.
 ```
 
 ## Object-Oriented Programming
@@ -1350,17 +1366,16 @@ function Person(first,last,age,gender) {
   this.first = first;
   this.last = last;
   this.age = age;
-  this.gender = gender;
   this.bio = function() {
-    return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old, and my gender is ${this.gender}.`
+    return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old.`
   };
 }
 
 // INSTANTIATION
 
 // When an object instance is created the contructor function is run to create it.
-const person5 = new Person("Mikasa","Ackerman",19,"Female"); // This is called (OBJECT INSTANCE)
-console.log(person5.bio()); // Hello, my name is Mikasa Ackerman and I'm 19 yrs old, and my gender is Female.
+const person5 = new Person("John","Doe",38); // This is called (OBJECT INSTANCE)
+console.log(person5.bio()); // Hello, my name is John Doe and I'm 38 yrs old.
 ```
 > **Explanation:** When an object instance is created from a class, the class's constructor function is run to create it. This process of creating an object instance from a class is called instantiation — the object instance is instantiated from the class.
 
@@ -1380,9 +1395,9 @@ let person1 = new Object();
 person1.name = 'Chris';
 person1.age = 38;
 person1.greeting = function() {
-  return `Hi, I'm ${this.name} and I'm ${this.age}`;
+  return `Hi, my name is ${this.name} and I'm ${this.age} yrs old.`;
 };
-console.log(person1.greeting()); // Hi, I'm Chris and I'm 38
+console.log(person1.greeting()); // Hi, my name is Chris and I'm 38 yrs old.
 ```
 
 * Using the **create()** method
@@ -1395,13 +1410,13 @@ let person1 = new Object();
 person1.name = 'Chris';
 person1.age = 38;
 person1.greeting = function() {
-  return `Hi, I'm ${this.name} and I'm ${this.age}`; // Hi, I'm Mikasa and I'm 17
+  return `Hi, my name is ${this.name} and I'm ${this.age} yrs old.`;
 };
 
 const person2 = Object.create(person1);
-person2.name = "Mikasa";
-person2.age = 17;
-console.log(person2.greeting());
+person2.name = "Jane Doe";
+person2.age = 36;
+console.log(person2.greeting()); // Hi, my name is Jane Doe and I'm 36 yrs old.
 ```
 
 ## Object Prototypes
@@ -1413,11 +1428,9 @@ console.log(person2.greeting());
 function Person(first,last,age,gender) {
   this.first = first;
   this.last = last;
-  this.age = age;
-  this.gender = gender;
 }
 
-const person5 = new Person("Mikasa","Ackerman",19,"Female");
+const person5 = new Person("Mikasa","Ackerman");
 
 Person.prototype.fullName = function(){
   return `${this.first} ${this.last}`;
@@ -1469,11 +1482,11 @@ class Person {
   }
   
   greeting() {
-    return `Hi my name is ${this.first + " " + this.last} and i'm ${this.age}`;
+    return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age} yrs old.`;
     };
 }
 
-const person1 = new Person("Mikasa","Ackerman",19);
+const person1 = new Person("Mikasa", "Ackerman", 19);
 console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19
 ```
 
@@ -1489,12 +1502,12 @@ class Person {
   }
   
   greeting() {
-    return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age}`;
+    return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age} yrs old.`;
   };
 }
 
 const person1 = new Person("Mikasa","Ackerman",19);
-// console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19
+console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19 yrs old.
 
 
 // Inheritance in class
@@ -1508,12 +1521,45 @@ class Teacher extends Person {
     }
     
     lecture() {
-      return `Hello class, I'm ${this.first + " " + this.last} and I'm ${this.age} yrs old. My subject is ${this.subject} and you need atleast ${this.grade} to pass.`;
+      return `Hello class, I'm ${this.first + " " + this.last} and I'm ${this.age} yrs old. My subject is ${this.subject} and you need atleast ${this.grade} to pass this subject.`;
     };
 }
 
 const teacher1 = new Teacher("Monkey D.","Luffy",20,"Math",94);
-console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 yrs old. My subject is Math and you need atleast 94 to pass.
+console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 yrs old. My subject is Math and you need atleast 94 to pass this subject.
+```
+
+<p align="right">
+  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <strong><span>&#8613;</span> Back To Top</a></strong>
+</p>
+<hr>
+
+# Asynchronous
+
+The term asynchronous refers to two or more objects or events **not** existing or happening at the same time (or multiple related things happening without waiting for the previous one to complete). In computing, the word "asynchronous" is used in two major contexts.
+
+[Promise Terminology](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#promise_terminology_recap)
+
+```javascript
+const getData = async (url) => {
+
+    try {
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+       return data;
+
+    } catch (err) {
+
+       return err;
+    }
+    
+}
+
+getData("https://jsonplaceholder.typicode.com/todos/1")
+.then(data => console.log(data)); //{userId: 1, id: 1, title: "delectus aut autem", completed: false}
 ```
 
 <p align="right">
@@ -1529,8 +1575,7 @@ The Document Object Model (DOM) is a programming interface for HTML and XML docu
 code snippets:
 
 ```javascript
-
-// Get HTML objects.
+// Get HTML objects
 document.getElementById("value");
 document.getElementsByClassName("value");
 document.querySelector(".value"); // Get the first element matching the selector
@@ -1539,15 +1584,15 @@ document.querySelectorAll(".value"); // Get all the elements matching the select
 // Syntax for modifying css content
 element.style.cssProperties = "value";
 
-// Syntax for adding text to an element.
+// Syntax for adding text to an element
 element.innerHTML = "value";
 element.textContent = "value";
 element.innerText = "value"; // It can override the textContent.
 
-// Syntax for setting attribute to an element.
+// Syntax for setting attribute to an element
 element.setAttribute(attributeName, attributeValue); // Attribute example: class, id, src, href etc...
 
-// Syntax for setting event listener to an element.
+// Syntax for setting event listener to an element
 element.addEventListener(event, function, useCapture);
 
 element.addEventListener("click", () => {
@@ -1587,9 +1632,6 @@ element.classList.add(""); // Add existing class to an element.
 element.classList.add("foo","bar"); //add multiple classes
 element.classList.remove("");
 element.classList.toggle("");
-
-
-// To be continue: append child, remove attribute, has attribute.
 ```
 
 ## Events

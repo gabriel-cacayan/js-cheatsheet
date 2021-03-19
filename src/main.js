@@ -305,21 +305,3 @@ const SECONDS = DATE.getSeconds(); // 53
 const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
 
 // console.log(TIME_ZONE);
-
-// Types of functions: anonymous function, named function, inner function, recursive function, 
-// and Immediately Invoked Function Expressions
-
-// (() => console.log("Hello, World!")
-// )();
-
-function countdown(value) {
-    if (value > 0) {
-        console.log(value);
-        return countdown(value - 1);
-    } else {
-        return value;
-    }
-};
-
-console.log(countdown(10));
-
