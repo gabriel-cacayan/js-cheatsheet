@@ -5,73 +5,73 @@
 * What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** **functional programming**,**object oriented programming** and **procedural programming**.
 
 # Table of Contents
-- [Introduction](https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat)
-  - [Variables](https://github.com/GabrielCode-Full/js-cheatsheet#variables)
-  - [Scope](https://github.com/GabrielCode-Full/js-cheatsheet#scope)
-  - [Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet#hoisting)
-      - [Variable Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet#variable-hoisting)
-      - [Function Hoisting](https://github.com/GabrielCode-Full/js-cheatsheet#function-hoisting)
-- [Data Types](https://github.com/GabrielCode-Full/js-cheatsheet#data-types)
-  - [Primitives](https://github.com/GabrielCode-Full/js-cheatsheet#primitives)
-- [Operators](https://github.com/GabrielCode-Full/js-cheatsheet#operators)
-  - [Destructuring](https://github.com/GabrielCode-Full/js-cheatsheet#destructuring)
-  - [Spread Operator](https://github.com/GabrielCode-Full/js-cheatsheet#spread-operator)
-- [Strings](https://github.com/GabrielCode-Full/js-cheatsheet#strings)
-  - [Basics](https://github.com/GabrielCode-Full/js-cheatsheet#basics)
-  - [Template String](https://github.com/GabrielCode-Full/js-cheatsheet#template-string)
-  - [Escape Sequences](https://github.com/GabrielCode-Full/js-cheatsheet#escape-sequences)
-  - [String Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet#string-properties-and-methods)
-      - [String Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet#string-properties-and-methods-example)
-- [Regular Expressions](https://github.com/GabrielCode-Full/js-cheatsheet#regular-expressions)
-  - [Regex Methods](https://github.com/GabrielCode-Full/js-cheatsheet#regex-methods)
-  - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet#sample-code)
-- [Conditional Statements](https://github.com/GabrielCode-Full/js-cheatsheet#conditional-statements)
-  - [if..else statements](https://github.com/GabrielCode-Full/js-cheatsheet#ifelse-statements)
-  - [switch statements](https://github.com/GabrielCode-Full/js-cheatsheet#switch-statements)
-  - [Ternary Operator](https://github.com/GabrielCode-Full/js-cheatsheet#ternary-operator)
-- [Loops and Iteration](https://github.com/GabrielCode-Full/js-cheatsheet#loops-and-iteration)
-  - [for loop](https://github.com/GabrielCode-Full/js-cheatsheet#for-loop)
-  - [for...of statement](https://github.com/GabrielCode-Full/js-cheatsheet#forof-statement) 
-  - [for...in statement](https://github.com/GabrielCode-Full/js-cheatsheet#forin-statement) 
-  - [while loop](https://github.com/GabrielCode-Full/js-cheatsheet#while-loop)
-  - [do...while](https://github.com/GabrielCode-Full/js-cheatsheet#dowhile)
-  - [break](https://github.com/GabrielCode-Full/js-cheatsheet#break)
-  - [continue](https://github.com/GabrielCode-Full/js-cheatsheet#continue)
-- [Arrays](https://github.com/GabrielCode-Full/js-cheatsheet#arrays)
-  - [Array Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet#array-properties-and-methods)
-      - [Array Properties and Methods Example:](https://github.com/GabrielCode-Full/js-cheatsheet#array-properties-and-methods-example)
-      - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet#sample-code-1)
-- [Functions](https://github.com/GabrielCode-Full/js-cheatsheet#functions)
-  - [Function Declaration](https://github.com/GabrielCode-Full/js-cheatsheet#function-declaration)
-  - [Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet#function-expression)
-  - [Function parameters](https://github.com/GabrielCode-Full/js-cheatsheet#function-parameters)
-     - [Default parameters](https://github.com/GabrielCode-Full/js-cheatsheet#default-parameters)
-     - [Rest parameters](https://github.com/GabrielCode-Full/js-cheatsheet#rest-parameters)
-  - [Arrow Function](https://github.com/GabrielCode-Full/js-cheatsheet#arrow-function)
-  - [Closures](https://github.com/GabrielCode-Full/js-cheatsheet#closures)
-  - [Recursion](https://github.com/GabrielCode-Full/js-cheatsheet#recursion)
-  - [Immediately Invoked Function Expression](https://github.com/GabrielCode-Full/js-cheatsheet#immediately-invoked-function-expression)
-  - [Higher Order Functions](https://github.com/GabrielCode-Full/js-cheatsheet#higher-order-functions)
-     - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet#sample-code-2)
-- [Numbers](https://github.com/GabrielCode-Full/js-cheatsheet#numbers)
-  - [Number Object](https://github.com/GabrielCode-Full/js-cheatsheet#number-object)
-    - [Number Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet#number-properties-and-methods)
-  - [Math Object](https://github.com/GabrielCode-Full/js-cheatsheet#math-object)
-    - [Math Properties and Methods](https://github.com/GabrielCode-Full/js-cheatsheet#math-properties-and-methods)
-    - [Sample Code](https://github.com/GabrielCode-Full/js-cheatsheet#sample-code-3)
-  - [Date Object](https://github.com/GabrielCode-Full/js-cheatsheet#date-object)
-    - [Methods of the Date object](https://github.com/GabrielCode-Full/js-cheatsheet#methods-of-the-date-object)
-- [Object](https://github.com/GabrielCode-Full/js-cheatsheet#object)
-    - [Object Literal](https://github.com/GabrielCode-Full/js-cheatsheet#object-literal)
-    - [Object-Oriented Programming](https://github.com/GabrielCode-Full/js-cheatsheet#object-oriented-programming)
-        - [Other ways to create object instances](https://github.com/GabrielCode-Full/js-cheatsheet#other-ways-to-create-object-instances)
-    - [Object Prototypes](https://github.com/GabrielCode-Full/js-cheatsheet#object-prototypes)
-    - [Inheritance](https://github.com/GabrielCode-Full/js-cheatsheet#inheritance)
-    - [Classes](https://github.com/GabrielCode-Full/js-cheatsheet#classes)
-        - [Sub-classes](https://github.com/GabrielCode-Full/js-cheatsheet#sub-classes)
-- [Asynchronous](https://github.com/GabrielCode-Full/js-cheatsheet#asynchronous)
-- [DOM](https://github.com/GabrielCode-Full/js-cheatsheet#dom)
-    - [Events](https://github.com/GabrielCode-Full/js-cheatsheet#events)
+- [Introduction](https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat)
+  - [Variables](https://github.com/gabriel-cacayan/js-cheatsheet#variables)
+  - [Scope](https://github.com/gabriel-cacayan/js-cheatsheet#scope)
+  - [Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#hoisting)
+      - [Variable Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#variable-hoisting)
+      - [Function Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#function-hoisting)
+- [Data Types](https://github.com/gabriel-cacayan/js-cheatsheet#data-types)
+  - [Primitives](https://github.com/gabriel-cacayan/js-cheatsheet#primitives)
+- [Operators](https://github.com/gabriel-cacayan/js-cheatsheet#operators)
+  - [Destructuring](https://github.com/gabriel-cacayan/js-cheatsheet#destructuring)
+  - [Spread Operator](https://github.com/gabriel-cacayan/js-cheatsheet#spread-operator)
+- [Strings](https://github.com/gabriel-cacayan/js-cheatsheet#strings)
+  - [Basics](https://github.com/gabriel-cacayan/js-cheatsheet#basics)
+  - [Template String](https://github.com/gabriel-cacayan/js-cheatsheet#template-string)
+  - [Escape Sequences](https://github.com/gabriel-cacayan/js-cheatsheet#escape-sequences)
+  - [String Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#string-properties-and-methods)
+      - [String Properties and Methods Example:](https://github.com/gabriel-cacayan/js-cheatsheet#string-properties-and-methods-example)
+- [Regular Expressions](https://github.com/gabriel-cacayan/js-cheatsheet#regular-expressions)
+  - [Regex Methods](https://github.com/gabriel-cacayan/js-cheatsheet#regex-methods)
+  - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code)
+- [Conditional Statements](https://github.com/gabriel-cacayan/js-cheatsheet#conditional-statements)
+  - [if..else statements](https://github.com/gabriel-cacayan/js-cheatsheet#ifelse-statements)
+  - [switch statements](https://github.com/gabriel-cacayan/js-cheatsheet#switch-statements)
+  - [Ternary Operator](https://github.com/gabriel-cacayan/js-cheatsheet#ternary-operator)
+- [Loops and Iteration](https://github.com/gabriel-cacayan/js-cheatsheet#loops-and-iteration)
+  - [for loop](https://github.com/gabriel-cacayan/js-cheatsheet#for-loop)
+  - [for...of statement](https://github.com/gabriel-cacayan/js-cheatsheet#forof-statement) 
+  - [for...in statement](https://github.com/gabriel-cacayan/js-cheatsheet#forin-statement) 
+  - [while loop](https://github.com/gabriel-cacayan/js-cheatsheet#while-loop)
+  - [do...while](https://github.com/gabriel-cacayan/js-cheatsheet#dowhile)
+  - [break](https://github.com/gabriel-cacayan/js-cheatsheet#break)
+  - [continue](https://github.com/gabriel-cacayan/js-cheatsheet#continue)
+- [Arrays](https://github.com/gabriel-cacayan/js-cheatsheet#arrays)
+  - [Array Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#array-properties-and-methods)
+      - [Array Properties and Methods Example:](https://github.com/gabriel-cacayan/js-cheatsheet#array-properties-and-methods-example)
+      - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-1)
+- [Functions](https://github.com/gabriel-cacayan/js-cheatsheet#functions)
+  - [Function Declaration](https://github.com/gabriel-cacayan/js-cheatsheet#function-declaration)
+  - [Function Expression](https://github.com/gabriel-cacayan/js-cheatsheet#function-expression)
+  - [Function parameters](https://github.com/gabriel-cacayan/js-cheatsheet#function-parameters)
+     - [Default parameters](https://github.com/gabriel-cacayan/js-cheatsheet#default-parameters)
+     - [Rest parameters](https://github.com/gabriel-cacayan/js-cheatsheet#rest-parameters)
+  - [Arrow Function](https://github.com/gabriel-cacayan/js-cheatsheet#arrow-function)
+  - [Closures](https://github.com/gabriel-cacayan/js-cheatsheet#closures)
+  - [Recursion](https://github.com/gabriel-cacayan/js-cheatsheet#recursion)
+  - [Immediately Invoked Function Expression](https://github.com/gabriel-cacayan/js-cheatsheet#immediately-invoked-function-expression)
+  - [Higher Order Functions](https://github.com/gabriel-cacayan/js-cheatsheet#higher-order-functions)
+     - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-2)
+- [Numbers](https://github.com/gabriel-cacayan/js-cheatsheet#numbers)
+  - [Number Object](https://github.com/gabriel-cacayan/js-cheatsheet#number-object)
+    - [Number Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#number-properties-and-methods)
+  - [Math Object](https://github.com/gabriel-cacayan/js-cheatsheet#math-object)
+    - [Math Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#math-properties-and-methods)
+    - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-3)
+  - [Date Object](https://github.com/gabriel-cacayan/js-cheatsheet#date-object)
+    - [Methods of the Date object](https://github.com/gabriel-cacayan/js-cheatsheet#methods-of-the-date-object)
+- [Object](https://github.com/gabriel-cacayan/js-cheatsheet#object)
+    - [Object Literal](https://github.com/gabriel-cacayan/js-cheatsheet#object-literal)
+    - [Object-Oriented Programming](https://github.com/gabriel-cacayan/js-cheatsheet#object-oriented-programming)
+        - [Other ways to create object instances](https://github.com/gabriel-cacayan/js-cheatsheet#other-ways-to-create-object-instances)
+    - [Object Prototypes](https://github.com/gabriel-cacayan/js-cheatsheet#object-prototypes)
+    - [Inheritance](https://github.com/gabriel-cacayan/js-cheatsheet#inheritance)
+    - [Classes](https://github.com/gabriel-cacayan/js-cheatsheet#classes)
+        - [Sub-classes](https://github.com/gabriel-cacayan/js-cheatsheet#sub-classes)
+- [Asynchronous](https://github.com/gabriel-cacayan/js-cheatsheet#asynchronous)
+- [DOM](https://github.com/gabriel-cacayan/js-cheatsheet#dom)
+    - [Events](https://github.com/gabriel-cacayan/js-cheatsheet#events)
 ## Variables
 
 * `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
@@ -160,7 +160,7 @@ var baz = function() {
 > **Explanation:**  If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -183,7 +183,7 @@ Data Types | Example | Description
 `object` | `let arr = ["123"];` | A object is a collection of properties.
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -290,7 +290,7 @@ console.log(sum(...numbers));// expected output: 6
 > **Explanation:** The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments.
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -453,7 +453,7 @@ const stringValueOf = () => "Hello, World!".valueOf(); // Hello, World!
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -567,7 +567,7 @@ const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, '$1'); // 'H
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -625,7 +625,7 @@ console.log(status); // adult
 ````
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -761,7 +761,7 @@ const num = 5;
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -890,7 +890,7 @@ const arrayKeys = arr => {
 
 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 ```
-These are the array methods that takes a function as an argument.[Higher Order Functions:](https://github.com/GabrielCode-Full/js-cheatsheet/blob/master/README.md#higher-order-functions)
+These are the array methods that takes a function as an argument.[Higher Order Functions:](https://github.com/gabriel-cacayan/js-cheatsheet/blob/master/README.md#higher-order-functions)
 
 ```javascript
 const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
@@ -929,7 +929,7 @@ console.log(checkPalindrome("racecar"));
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -1126,7 +1126,7 @@ console.log(rooms.map(room => room.name)); // ["Room1", "Room2", "Room3"]
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -1327,7 +1327,7 @@ const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -1530,7 +1530,7 @@ console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -1563,7 +1563,7 @@ getData("https://jsonplaceholder.typicode.com/todos/1")
 ```
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
@@ -1659,7 +1659,7 @@ Most used events.
 * input
 
 <p align="right">
-  <a href="https://github.com/GabrielCode-Full/js-cheatsheet#fire-js-cheatsheet-octocat"> 
+  <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
 <hr>
