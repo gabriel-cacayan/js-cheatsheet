@@ -163,7 +163,6 @@ var baz = function() {
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Data Types
 The latest ECMAScript standard defines eight data types:
@@ -186,7 +185,6 @@ Data Types | Example | Description
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Operators
 
@@ -293,7 +291,6 @@ console.log(sum(...numbers));// expected output: 6
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Strings
 
@@ -456,7 +453,6 @@ const stringValueOf = () => "Hello, World!".valueOf(); // Hello, World!
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Regular Expressions
 
@@ -570,7 +566,6 @@ const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, '$1'); // 'H
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Conditional Statements
 
@@ -628,7 +623,6 @@ console.log(status); // adult
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Loops and Iteration
 
@@ -764,7 +758,6 @@ const num = 5;
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Arrays
 
@@ -932,7 +925,6 @@ console.log(checkPalindrome("racecar"));
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Functions
 
@@ -1129,7 +1121,6 @@ console.log(rooms.map(room => room.name)); // ["Room1", "Room2", "Room3"]
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Numbers
 
@@ -1330,7 +1321,6 @@ const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Object
 
@@ -1533,7 +1523,6 @@ console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # Asynchronous
 
@@ -1566,7 +1555,6 @@ getData("https://jsonplaceholder.typicode.com/todos/1")
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
 
 # DOM
 
@@ -1662,4 +1650,3 @@ Most used events.
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
   <strong><span>&#8613;</span> Back To Top</a></strong>
 </p>
-<hr>
