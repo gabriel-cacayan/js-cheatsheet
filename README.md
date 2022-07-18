@@ -1,16 +1,17 @@
 # :fire: JS-Cheatsheet :octocat:
 
-**Javascript** is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled),  prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
+**Javascript** is a "high-level single-threaded, garbage-collected, interpreted (or just-in-time compiled), prototype-based, multi-paradigm, dynamic language with a non-blocking event loop"
 
-* What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** **functional programming**,**object oriented programming** and **procedural programming**.
+- What does **Multi-paradigm** means ? it is a way of thinking about software construction based on some fundamental, defining principles. **Example:** **functional programming**,**object oriented programming** and **procedural programming**.
 
 # Table of Contents
+
 - [Introduction](https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat)
   - [Variables](https://github.com/gabriel-cacayan/js-cheatsheet#variables)
   - [Scope](https://github.com/gabriel-cacayan/js-cheatsheet#scope)
   - [Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#hoisting)
-      - [Variable Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#variable-hoisting)
-      - [Function Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#function-hoisting)
+    - [Variable Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#variable-hoisting)
+    - [Function Hoisting](https://github.com/gabriel-cacayan/js-cheatsheet#function-hoisting)
 - [Data Types](https://github.com/gabriel-cacayan/js-cheatsheet#data-types)
   - [Primitives](https://github.com/gabriel-cacayan/js-cheatsheet#primitives)
 - [Operators](https://github.com/gabriel-cacayan/js-cheatsheet#operators)
@@ -21,7 +22,7 @@
   - [Template String](https://github.com/gabriel-cacayan/js-cheatsheet#template-string)
   - [Escape Sequences](https://github.com/gabriel-cacayan/js-cheatsheet#escape-sequences)
   - [String Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#string-properties-and-methods)
-      - [String Properties and Methods Example:](https://github.com/gabriel-cacayan/js-cheatsheet#string-properties-and-methods-example)
+    - [String Properties and Methods Example:](https://github.com/gabriel-cacayan/js-cheatsheet#string-properties-and-methods-example)
 - [Regular Expressions](https://github.com/gabriel-cacayan/js-cheatsheet#regular-expressions)
   - [Regex Methods](https://github.com/gabriel-cacayan/js-cheatsheet#regex-methods)
   - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code)
@@ -31,28 +32,28 @@
   - [Ternary Operator](https://github.com/gabriel-cacayan/js-cheatsheet#ternary-operator)
 - [Loops and Iteration](https://github.com/gabriel-cacayan/js-cheatsheet#loops-and-iteration)
   - [for loop](https://github.com/gabriel-cacayan/js-cheatsheet#for-loop)
-  - [for...of statement](https://github.com/gabriel-cacayan/js-cheatsheet#forof-statement) 
-  - [for...in statement](https://github.com/gabriel-cacayan/js-cheatsheet#forin-statement) 
+  - [for...of statement](https://github.com/gabriel-cacayan/js-cheatsheet#forof-statement)
+  - [for...in statement](https://github.com/gabriel-cacayan/js-cheatsheet#forin-statement)
   - [while loop](https://github.com/gabriel-cacayan/js-cheatsheet#while-loop)
   - [do...while](https://github.com/gabriel-cacayan/js-cheatsheet#dowhile)
   - [break](https://github.com/gabriel-cacayan/js-cheatsheet#break)
   - [continue](https://github.com/gabriel-cacayan/js-cheatsheet#continue)
 - [Arrays](https://github.com/gabriel-cacayan/js-cheatsheet#arrays)
   - [Array Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#array-properties-and-methods)
-      - [Array Properties and Methods Example:](https://github.com/gabriel-cacayan/js-cheatsheet#array-properties-and-methods-example)
-      - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-1)
+    - [Array Properties and Methods Example:](https://github.com/gabriel-cacayan/js-cheatsheet#array-properties-and-methods-example)
+    - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-1)
 - [Functions](https://github.com/gabriel-cacayan/js-cheatsheet#functions)
   - [Function Declaration](https://github.com/gabriel-cacayan/js-cheatsheet#function-declaration)
   - [Function Expression](https://github.com/gabriel-cacayan/js-cheatsheet#function-expression)
   - [Function parameters](https://github.com/gabriel-cacayan/js-cheatsheet#function-parameters)
-     - [Default parameters](https://github.com/gabriel-cacayan/js-cheatsheet#default-parameters)
-     - [Rest parameters](https://github.com/gabriel-cacayan/js-cheatsheet#rest-parameters)
+    - [Default parameters](https://github.com/gabriel-cacayan/js-cheatsheet#default-parameters)
+    - [Rest parameters](https://github.com/gabriel-cacayan/js-cheatsheet#rest-parameters)
   - [Arrow Function](https://github.com/gabriel-cacayan/js-cheatsheet#arrow-function)
   - [Closures](https://github.com/gabriel-cacayan/js-cheatsheet#closures)
   - [Recursion](https://github.com/gabriel-cacayan/js-cheatsheet#recursion)
   - [Immediately Invoked Function Expression](https://github.com/gabriel-cacayan/js-cheatsheet#immediately-invoked-function-expression)
   - [Higher Order Functions](https://github.com/gabriel-cacayan/js-cheatsheet#higher-order-functions)
-     - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-2)
+    - [Sample Code](https://github.com/gabriel-cacayan/js-cheatsheet#sample-code-2)
 - [Numbers](https://github.com/gabriel-cacayan/js-cheatsheet#numbers)
   - [Number Object](https://github.com/gabriel-cacayan/js-cheatsheet#number-object)
     - [Number Properties and Methods](https://github.com/gabriel-cacayan/js-cheatsheet#number-properties-and-methods)
@@ -62,21 +63,24 @@
   - [Date Object](https://github.com/gabriel-cacayan/js-cheatsheet#date-object)
     - [Methods of the Date object](https://github.com/gabriel-cacayan/js-cheatsheet#methods-of-the-date-object)
 - [Object](https://github.com/gabriel-cacayan/js-cheatsheet#object)
-    - [Object Literal](https://github.com/gabriel-cacayan/js-cheatsheet#object-literal)
-    - [Object-Oriented Programming](https://github.com/gabriel-cacayan/js-cheatsheet#object-oriented-programming)
-        - [Other ways to create object instances](https://github.com/gabriel-cacayan/js-cheatsheet#other-ways-to-create-object-instances)
-    - [Object Prototypes](https://github.com/gabriel-cacayan/js-cheatsheet#object-prototypes)
-    - [Inheritance](https://github.com/gabriel-cacayan/js-cheatsheet#inheritance)
-    - [Classes](https://github.com/gabriel-cacayan/js-cheatsheet#classes)
-        - [Sub-classes](https://github.com/gabriel-cacayan/js-cheatsheet#sub-classes)
+  - [Object Literal](https://github.com/gabriel-cacayan/js-cheatsheet#object-literal)
+  - [Object-Oriented Programming](https://github.com/gabriel-cacayan/js-cheatsheet#object-oriented-programming)
+    - [Other ways to create object instances](https://github.com/gabriel-cacayan/js-cheatsheet#other-ways-to-create-object-instances)
+  - [Object Prototypes](https://github.com/gabriel-cacayan/js-cheatsheet#object-prototypes)
+  - [Inheritance](https://github.com/gabriel-cacayan/js-cheatsheet#inheritance)
+  - [Classes](https://github.com/gabriel-cacayan/js-cheatsheet#classes)
+    - [Sub-classes](https://github.com/gabriel-cacayan/js-cheatsheet#sub-classes)
 - [Asynchronous](https://github.com/gabriel-cacayan/js-cheatsheet#asynchronous)
+  - [Promises](https://github.com/gabriel-cacayan/js-cheatsheet#promises)
+  - [Async and Await](https://github.com/gabriel-cacayan/js-cheatsheet#async-and-await)
 - [DOM](https://github.com/gabriel-cacayan/js-cheatsheet#dom)
-    - [Events](https://github.com/gabriel-cacayan/js-cheatsheet#events)
+  - [Events](https://github.com/gabriel-cacayan/js-cheatsheet#events)
+
 ## Variables
 
-* `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
-* `let` statement declares a block-scoped local variable, can't be redeclared but it can reassigned. 
-* `const` are block-scoped, much like variables defined using the `let` keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
+- `var` statement declares a function-scoped or globally-scoped variable, can be redeclared or reassigned.
+- `let` statement declares a block-scoped local variable, can't be redeclared but it can reassigned.
+- `const` are block-scoped, much like variables defined using the `let` keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.
 
 > **Note**: It is convention that `const` must be declared all UPPERCASE.
 
@@ -100,20 +104,20 @@ console.log(age); // Uncaught SyntaxError: Identifier 'age' has already been dec
 const FIRST_PHILIPPINES_PRESIDENT = "Emilio Aguinaldo";
 console.log(FIRST_PHILIPPINES_PRESIDENT); // Emilio Aguinaldo
 
-FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; 
+FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio";
 console.log(FIRST_PHILIPPINES_PRESIDENT); // Uncaught TypeError: Assignment to constant variable.
 
-const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio"; 
+const FIRST_PHILIPPINES_PRESIDENT = "Andres Bonifacio";
 console.log(FIRST_PHILIPPINES_PRESIDENT); // Uncaught SyntaxError: Identifier 'FIRST_PHILIPPINES_PRESIDENT' has already been declared
 ```
 
 ## Scope
 
-* **Global scoped:** occurred when the variable declared outside the function. The variable is accessible anywhere.
+- **Global scoped:** occurred when the variable declared outside the function. The variable is accessible anywhere.
 
-* **Function** or **Local scoped:** occurred when the variable declared within the function. The variable declared within the function is accessible only inside the function.
+- **Function** or **Local scoped:** occurred when the variable declared within the function. The variable declared within the function is accessible only inside the function.
 
-* **Block scoped:** occurred when the variable declared within the curly braces `{}` For example: if..else or for loop. The variable is accessible only inside the curly braces.
+- **Block scoped:** occurred when the variable declared within the curly braces `{}` For example: if..else or for loop. The variable is accessible only inside the curly braces.
 
 ## Hoisting
 
@@ -129,9 +133,9 @@ console.log(x === undefined); // true
 var x = 3;
 
 // Example 2
-(function() {
+(function () {
   console.log(myvar); // undefined
-  var myvar = 'local value';
+  var myvar = "local value";
 })();
 ```
 
@@ -146,18 +150,18 @@ In the case of functions, only function declarations are hoisted—but not the f
 foo(); // "bar"
 
 function foo() {
-  console.log('bar');
+  console.log("bar");
 }
 
 /* Function expression */
 baz(); // TypeError: baz is not a function
 
-var baz = function() {
-  console.log('bar2');
+var baz = function () {
+  console.log("bar2");
 };
 ```
 
-> **Explanation:**  If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
+> **Explanation:** If you hoist (call) your variable before defining it, it will say undefined.It's first needs to be defined and then called. But functions by themselves can be hoisted at the top (not in case of being declared in a variable) so if you call a function before declaring it it will work. But not in variable AT ANY CASE.
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
@@ -165,21 +169,23 @@ var baz = function() {
 </p>
 
 # Data Types
+
 The latest ECMAScript standard defines eight data types:
 
-## Primitives 
+## Primitives
+
 The 7 primitives data types are `undefined,string,boolean,bigint,null,object and symbol.`
 
-Data Types | Example | Description
------------- | ------------- |  -------------
-`undefined` | `let myName;` | A variable that has `not been assigned a value is of type undefined`. 
-`string` | `let greet = "Hello, World!";` | The String object is `used to represent and manipulate a sequence of characters`.
-`number` | `const MATH_PI = 3.14159;` | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.
-`boolean` | `const bool = true;` | `True` or `False`.
-`bigInt` | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.
-`null` | `let noValue = "";` | Special primitive type having additional usage for its value: if object is not inherited, then null is shown;
-`symbol` | Represents a unique identifier. | (new in ECMAScript 2015). A data type whose instances are unique and immutable
-`object` | `let arr = ["123"];` | A object is a collection of properties.
+| Data Types  | Example                                    | Description                                                                                                   |
+| ----------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| `undefined` | `let myName;`                              | A variable that has `not been assigned a value is of type undefined`.                                         |
+| `string`    | `let greet = "Hello, World!";`             | The String object is `used to represent and manipulate a sequence of characters`.                             |
+| `number`    | `const MATH_PI = 3.14159;`                 | Number is a primitive wrapper object `used to represent and manipulate numbers like 37 or -9.25`.             |
+| `boolean`   | `const bool = true;`                       | `True` or `False`.                                                                                            |
+| `bigInt`    | `const theBiggestInt = 9007199254740991n;` | BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,.              |
+| `null`      | `let noValue = "";`                        | Special primitive type having additional usage for its value: if object is not inherited, then null is shown; |
+| `symbol`    | Represents a unique identifier.            | (new in ECMAScript 2015). A data type whose instances are unique and immutable                                |
+| `object`    | `let arr = ["123"];`                       | A object is a collection of properties.                                                                       |
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
@@ -188,30 +194,30 @@ Data Types | Example | Description
 
 # Operators
 
-Arithmetic | Assignment | Comparison | Logical
------------- | ------------- | ------------- | -------------
-Remainder `%`| Assignment `=` | Equal to `==` | Logical AND `&&`
-Increment `++` | Addition assignment `+=` | Not equal `!=` | Logical NOT `!`
-Decrement `--`| Subtraction assignment `-=` | Strict equal `===` | Logical OR `ll`
-Unary negation `-` | Multiplication assignment `*=` | strict not equal `!==` |
-Unary plus `+`| Division assignment `/=` | Greater than `>` |
-Exponentiation operator `**` | Remainder assignment `%=` | Greater than or equal `>=` |
-Addition `+` |  | Less than `<`
-Subtraction `-` |  | Less than or equal `<=`
-Multiplication `*` | |
-Division `/` | |
+| Arithmetic                   | Assignment                     | Comparison                 | Logical          |
+| ---------------------------- | ------------------------------ | -------------------------- | ---------------- |
+| Remainder `%`                | Assignment `=`                 | Equal to `==`              | Logical AND `&&` |
+| Increment `++`               | Addition assignment `+=`       | Not equal `!=`             | Logical NOT `!`  |
+| Decrement `--`               | Subtraction assignment `-=`    | Strict equal `===`         | Logical OR `ll`  |
+| Unary negation `-`           | Multiplication assignment `*=` | strict not equal `!==`     |
+| Unary plus `+`               | Division assignment `/=`       | Greater than `>`           |
+| Exponentiation operator `**` | Remainder assignment `%=`      | Greater than or equal `>=` |
+| Addition `+`                 |                                | Less than `<`              |
+| Subtraction `-`              |                                | Less than or equal `<=`    |
+| Multiplication `*`           |                                |
+| Division `/`                 |                                |
 
 > **Note:** The logical OR syntax is double pipeline **`||`** and not in the table.
 
-Bitwise | Example | Description
------------- | ------------- | -------------
-Bitwise AND `&` | a `&` b | Returns 0 if the corresponding bits of both sides of the bitwise operator are 1, at least one of them is 0.
-Bitwise OR `l` | a `l` b | Returns 1 if at least one of the corresponding bits of both sides of the bitwise operator is 1.
-Bitwise XOR `^` | a `^` b | Returns 1 if only one of the corresponding bits of both sides of the bitwise operator is 1.
-Bitwise NOT `~` | `~` a | Reverses the bits of the operand.
-Left shift `<<` | a `<<` b | ab Adding bit 0 to the  right (<32) of the binary number  shifts to the left.
-Sign-propagating right shift `>>` | a `>>` b | a The binary state bof the number (<32) shifts to the right by one bit. Shifts by adding b 0s for positive numbers and 1 for negative numbers.
-Zero-fill right shift `>>>` | a `>>>` b | ab(<32) bit to the right  of the binary representation  of the a number , badds 0s to the left of the number regardless of whether the number is positive or negative  .
+| Bitwise                           | Example   | Description                                                                                                                                                           |
+| --------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitwise AND `&`                   | a `&` b   | Returns 0 if the corresponding bits of both sides of the bitwise operator are 1, at least one of them is 0.                                                           |
+| Bitwise OR `l`                    | a `l` b   | Returns 1 if at least one of the corresponding bits of both sides of the bitwise operator is 1.                                                                       |
+| Bitwise XOR `^`                   | a `^` b   | Returns 1 if only one of the corresponding bits of both sides of the bitwise operator is 1.                                                                           |
+| Bitwise NOT `~`                   | `~` a     | Reverses the bits of the operand.                                                                                                                                     |
+| Left shift `<<`                   | a `<<` b  | ab Adding bit 0 to the right (<32) of the binary number shifts to the left.                                                                                           |
+| Sign-propagating right shift `>>` | a `>>` b  | a The binary state bof the number (<32) shifts to the right by one bit. Shifts by adding b 0s for positive numbers and 1 for negative numbers.                        |
+| Zero-fill right shift `>>>`       | a `>>>` b | ab(<32) bit to the right of the binary representation of the a number , badds 0s to the left of the number regardless of whether the number is positive or negative . |
 
 > **Note:** The Bitwise OR syntax is single pipeline **`|`** and not in the table.
 
@@ -224,8 +230,8 @@ The **_destructuring assignment_** syntax is a JavaScript expression that makes 
 var foo = [1, 2, 3];
 
 // without destructuring
-var one   = foo[0];
-var two   = foo[1];
+var one = foo[0];
+var two = foo[1];
 var three = foo[2];
 
 // with destructuring
@@ -233,44 +239,45 @@ var [one, two, three] = foo;
 console.log(one); // 1
 
 // Skipping some element using comma
-var foo = ["A","B","C","D","E","F"];
-var [one,,, three] = foo; 
+var foo = ["A", "B", "C", "D", "E", "F"];
+var [one, , , three] = foo;
 console.log(three); // D
 
 // Using spread operator syntax (...)
-var foo = ["A","B","C","D","E","F"];
-var [one, ...rest] = foo; 
+var foo = ["A", "B", "C", "D", "E", "F"];
+var [one, ...rest] = foo;
 console.log(rest); // ["B", "C", "D", "E", "F"]
 
 // Combining two arrays, also you can do this by using concat method.
-var foo = ["A","B","C","D","E","F"];
-var num = [1,2,3,4,5,6];
-var newArray = [...foo, ...num]; 
+var foo = ["A", "B", "C", "D", "E", "F"];
+var num = [1, 2, 3, 4, 5, 6];
+var newArray = [...foo, ...num];
 console.log(newArray); // ["A", "B", "C", "D", "E", "F", 1, 2, 3, 4, 5, 6]
 
 // Object Example:
 let user = {
-    id: 42,
-    is_verified: true,
-    name: "Gabriel",
-    age: 20
+  id: 42,
+  is_verified: true,
+  name: "Gabriel",
+  age: 20,
 };
 
-let {id, is_verified} = user;
+let { id, is_verified } = user;
 
 console.log(id); // 42
 console.log(is_verified); // true
 
 // Or you can pass the property value to another variable
-const {id:ID, is_verified:ID_V} = user;
+const { id: ID, is_verified: ID_V } = user;
 
 console.log(ID); // 42
 console.log(ID_V); // true
 
 // Using spread operator syntax to the objects
-let {id:myID, ...REST} = user;
+let { id: myID, ...REST } = user;
 console.log(REST); //  {is_verified: true, name: "Gabriel", age: 20}
 ```
+
 ## Spread Operator
 
 **_Spread syntax_** `...` allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
@@ -282,7 +289,7 @@ function sum(x, y, z) {
 
 const numbers = [1, 2, 3];
 
-console.log(sum(...numbers));// expected output: 6
+console.log(sum(...numbers)); // expected output: 6
 ```
 
 > **Explanation:** The spread operator allows us to expand elements. With rest parameters we were able to get a list of arguments into an array. spread operators however, let us unpack elements in an array to single/individual arguments.
@@ -304,81 +311,83 @@ let sentence = 'Mikasa said, "Gabriel is learning JavaScript".';
 console.log(sentence); // Mikasa said, "Gabriel is learning JavaScript".
 
 // concatenating strings
-let sequence = "I come first. " + "I come second."; 
+let sequence = "I come first. " + "I come second.";
 console.log(sequence); // I come first. I come second.
 
 // concatenating strings with +=
 let ourStr = "I come first. ";
-ourStr += "I come second."; 
+ourStr += "I come second.";
 console.log(ourStr); // I come first. I come second.
 
 // constructing strings with variables
 let myName = "Mikasa";
-let greetings = "Hello, my name is " + myName + ", how are you?"; 
+let greetings = "Hello, my name is " + myName + ", how are you?";
 console.log(greetings); // Hello, my name is Mikasa, how are you?
 
 // appending variables to strings
 let anAdjective = "awesome!";
 let myStr = "freeCodeCamp is ";
-myStr += anAdjective; 
-console.log(myStr);// freeCodeCamp is awesome!
+myStr += anAdjective;
+console.log(myStr); // freeCodeCamp is awesome!
 ```
+
 ## Template String
 
-**_Template string_** is new to JavaScript, it is introduced to ES6. Syntax: ``` `${variable}` ``` 
+**_Template string_** is new to JavaScript, it is introduced to ES6. Syntax: `` `${variable}` ``
 
 ```javascript
 const BIRTHDAY = "January 7, 2000";
 const sentence = `Hi there! my birthday is ${BIRTHDAY}.`; // Hi there! my birthday is January 7, 2000.
 ```
-##  Escape sequences
 
-Data Types | Example
------------- | ------------- 
-``` \' ``` | Single quote (')
-``` \" ``` | Double quote (")
-``` \\ ``` | Backslash (\)
-``` \n ``` | Newline
-``` \r ``` | Carriage return
-``` \t ``` | Tab
-``` \b ``` | Backspace
-``` \f ``` | Form feed
+## Escape sequences
+
+| Data Types | Example          |
+| ---------- | ---------------- |
+| `\'`       | Single quote (') |
+| `\"`       | Double quote (") |
+| `\\`       | Backslash (\)    |
+| `\n`       | Newline          |
+| `\r`       | Carriage return  |
+| `\t`       | Tab              |
+| `\b`       | Backspace        |
+| `\f`       | Form feed        |
 
 ## String Properties and Methods
 
-Properties | Description
------------- | -------------
- `length`|  Returns the length of a string
- 
-Methods | Description
------------- | -------------
- `split()`|  Splits a string into an array of substrings
- `charAt()` |  Returns the character at the specified index
- `charCodeAt()` | Returns the Unicode of the character at the specified index
- `codePointAt()` | Returns a non-negative integer that is the Unicode code point value.
- `String.fromCharCode()` | Converts Unicode values to characters
- `String.fromCodePoint()` | Returns a string created by using the specified sequence of code points.
- `concat()` | Joins two or more strings, and returns a new joined strings
- `startsWith()` | Checks whether a string begins with specified characters
- `endsWith()` | Checks whether a string ends with specified string/characters
- `includes()` | Checks whether a string contains the specified string/characters
- `indexOf()` | Returns the position of the first found occurrence of a specified value in a string
- `lastIndexOf()` | Returns the position of the last found occurrence of a specified value in a string
- `match()` | Searches a string for a match against a regular expression, and returns the matches
- `replace()` | Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
- `repeat()` | Returns a new string with a specified number of copies of an existing string
- `search()` | Searches a string for a specified value, or regular expression, and returns the position of the match
- `slice()` | Extracts a part of a string and returns a new string
- `substr()` | Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
- `substring()` | Extracts the characters from a string, between two specified indices
- `localCompare()` | method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.
- `toLocaleLowerCase()` | Converts a string to lowercase letters, according to the host's locale
- `toLocaleUpperCase()` | Converts a string to uppercase letters, according to the host's locale
- `toLowerCase()` | Converts a string to lowercase letters
- `toUpperCase()` | Converts a string to uppercase letters
- `toString()` | Returns the value of a String object
- `trim()` | Removes whitespace from both ends of a string
- `valueOf()` | Returns the primitive value of a String object
+| Properties | Description                    |
+| ---------- | ------------------------------ |
+| `length`   | Returns the length of a string |
+
+| Methods                  | Description                                                                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `split()`                | Splits a string into an array of substrings                                                                                             |
+| `charAt()`               | Returns the character at the specified index                                                                                            |
+| `charCodeAt()`           | Returns the Unicode of the character at the specified index                                                                             |
+| `codePointAt()`          | Returns a non-negative integer that is the Unicode code point value.                                                                    |
+| `String.fromCharCode()`  | Converts Unicode values to characters                                                                                                   |
+| `String.fromCodePoint()` | Returns a string created by using the specified sequence of code points.                                                                |
+| `concat()`               | Joins two or more strings, and returns a new joined strings                                                                             |
+| `startsWith()`           | Checks whether a string begins with specified characters                                                                                |
+| `endsWith()`             | Checks whether a string ends with specified string/characters                                                                           |
+| `includes()`             | Checks whether a string contains the specified string/characters                                                                        |
+| `indexOf()`              | Returns the position of the first found occurrence of a specified value in a string                                                     |
+| `lastIndexOf()`          | Returns the position of the last found occurrence of a specified value in a string                                                      |
+| `match()`                | Searches a string for a match against a regular expression, and returns the matches                                                     |
+| `replace()`              | Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced      |
+| `repeat()`               | Returns a new string with a specified number of copies of an existing string                                                            |
+| `search()`               | Searches a string for a specified value, or regular expression, and returns the position of the match                                   |
+| `slice()`                | Extracts a part of a string and returns a new string                                                                                    |
+| `substr()`               | Extracts the characters from a string, beginning at a specified start position, and through the specified number of character           |
+| `substring()`            | Extracts the characters from a string, between two specified indices                                                                    |
+| `localCompare()`         | method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. |
+| `toLocaleLowerCase()`    | Converts a string to lowercase letters, according to the host's locale                                                                  |
+| `toLocaleUpperCase()`    | Converts a string to uppercase letters, according to the host's locale                                                                  |
+| `toLowerCase()`          | Converts a string to lowercase letters                                                                                                  |
+| `toUpperCase()`          | Converts a string to uppercase letters                                                                                                  |
+| `toString()`             | Returns the value of a String object                                                                                                    |
+| `trim()`                 | Removes whitespace from both ends of a string                                                                                           |
+| `valueOf()`              | Returns the primitive value of a String object                                                                                          |
 
 > **Note:** All string methods return a new value. They do not change the original variable.
 
@@ -391,24 +400,24 @@ Methods | Description
 const stringLength = () => "Javascript".length; //10
 
 // Returns first index
-const stringFirstIndex = str => str[0]; 
+const stringFirstIndex = (str) => str[0];
 // console.log(stringFirstIndex("Hello, World!")); //H
 
-// Returns last index 
-const stringLastIndex = str => str[str.length - 1]; 
+// Returns last index
+const stringLastIndex = (str) => str[str.length - 1];
 // console.log(stringLastIndex("Hello, World!")); //!
 
 // STRING METHODS
-const stringSplit = () => "string".split(""); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​ 
+const stringSplit = () => "string".split(""); // ​​​​​[ 's', 't', 'r', 'i', 'n', 'g' ]​​​​​
 
 const stringConcat = () => "Hello, ".concat("Gabriel"); // Hello, Gabriel
 
-const stringRepeat = ()=> "Javascript".repeat(3); //JavascriptJavascriptJavascript
+const stringRepeat = () => "Javascript".repeat(3); //JavascriptJavascriptJavascript
 
 const stringSlice = () => "Javascript is lit".slice(0, 10); //Javascript
 
 //Return the character or character code at the specified position in string.
-const stringCharAt = str => str.charAt(0); // console.log(stringCharAt("Hello, World!")); // H
+const stringCharAt = (str) => str.charAt(0); // console.log(stringCharAt("Hello, World!")); // H
 const stringCharCodeAt = () => "A".charCodeAt(str); // 65
 const stringCodePointAt = () => "B".codePointAt(0); // 66
 
@@ -418,15 +427,17 @@ const stringFromCodePoint = () => String.fromCodePoint(65); // A
 
 // Returns whether or not the string starts, ends or contains a specified string.
 const stringStartsWith = () => "Hello, Gabriel!".startsWith("Hello"); //true
-const stringEndsWith = () => "Hello, Gabriel!".endsWith("Gabriel!");  //true
+const stringEndsWith = () => "Hello, Gabriel!".endsWith("Gabriel!"); //true
 const stringIncludes = () => "Javascript is easy to learn".includes("Python"); //false
 
 // Return the position of specified substring in the string or last position of specified substring, respectively.
 const stringIndexOf = () => "This is a javascript cheatsheet".indexOf("is"); //2
-const stringLastIndexOf = () => "This is a javascript cheatsheet".lastIndexOf("is"); //5
+const stringLastIndexOf = () =>
+  "This is a javascript cheatsheet".lastIndexOf("is"); //5
 
 // Work with regular expressions.
-const stringMatch = () => "This is a javascript cheatsheet made by Gabriel on July 31".match(/\d/g); //["3", "1"]
+const stringMatch = () =>
+  "This is a javascript cheatsheet made by Gabriel on July 31".match(/\d/g); //["3", "1"]
 const stringReplace = () => "July 31".replace(/\d/g, "5"); // July 55
 const stringSearch = () => "Javascript is lit".search("lit"); //14
 
@@ -440,9 +451,9 @@ const stringToLocaleUpperCase = () => "Javascript is LIT".toLocaleUpperCase(); /
 const stringToLowerCase = () => "Javascript is LIT".toLowerCase(); // javascript is lit
 const stringToUpperCase = () => "Javascript is LIT".toUpperCase(); // JAVASCRIPT IS LIT
 
-const stringLocaleCompare = () => "Hello".localeCompare("c");  // -1
+const stringLocaleCompare = () => "Hello".localeCompare("c"); // -1
 
-const stringToString = () => ["j","s"].toString();  // js
+const stringToString = () => ["j", "s"].toString(); // js
 
 const stringTrim = () => "      Hello".trim(); // Hello
 
@@ -458,42 +469,43 @@ const stringValueOf = () => "Hello, World!".valueOf(); // Hello, World!
 
 **_Regular expressions_** are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
 
-Character classes | Description
------------- | -------------
-`\` | Escapes a special character
-`l` | OR
-`.` | The wildcard character . will match any character except new lines.
-`i` | This flag is used to ignore upper and lowercase. `/ignorecase/i.`
-`g` | Search or extract a pattern more than once.
-`[]` | Allow you to define the characters to match.` /b[au]g/` will match "bag", "bug" but not "bog".
-`[a-z]` | Match all the characters between a and z.
-`[1-9]` | Match all the numbers between 1 and 9.
-`[a-z1-9]` | Match all the character between a and z, and the numbers between 1 and 9.
-`[^]` | Match the characters not in the set. [^a-e] match all other characters except A, B, C, D, and E.
-`+` | Match 1 or more occurrences of the previous character in a row.
-`*` | Match 0 or more occurrences of the previous character.
-`?` | Match 0 or 1 occurrence of the previous character. Useful for Lazy matching.
-`^` | Search for patterns at the beginning of strings.
-`$` | Search for patterns at the end of a string.
-`\w`| Equal to [A-Za-z0-9_]. Matches upper, lowercase, numbers the and underscore character (-).
-`\W`| Matches any nonword character. Equivalent to [^a-za-z0-9_].
-`\d`| Equal to [0-9]. Match one digit.
-`\D`| Equal to [^0-9]. Match one non digit.
-`\s	`| Match a whitespace.
-`\S	`| Match everything except whitespace.
-`a{2,5}	`| Match the letter a between 3 and 5 times.
-`a{2,}`| Specify only the lower number of matches.
-`a{5}`| Specify the exact number of matches.
-`(...)`| Specify a group that can be acceded with number (from 1).
+| Character classes | Description                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| `\`               | Escapes a special character                                                                      |
+| `l`               | OR                                                                                               |
+| `.`               | The wildcard character . will match any character except new lines.                              |
+| `i`               | This flag is used to ignore upper and lowercase. `/ignorecase/i.`                                |
+| `g`               | Search or extract a pattern more than once.                                                      |
+| `[]`              | Allow you to define the characters to match.` /b[au]g/` will match "bag", "bug" but not "bog".   |
+| `[a-z]`           | Match all the characters between a and z.                                                        |
+| `[1-9]`           | Match all the numbers between 1 and 9.                                                           |
+| `[a-z1-9]`        | Match all the character between a and z, and the numbers between 1 and 9.                        |
+| `[^]`             | Match the characters not in the set. [^a-e] match all other characters except A, B, C, D, and E. |
+| `+`               | Match 1 or more occurrences of the previous character in a row.                                  |
+| `*`               | Match 0 or more occurrences of the previous character.                                           |
+| `?`               | Match 0 or 1 occurrence of the previous character. Useful for Lazy matching.                     |
+| `^`               | Search for patterns at the beginning of strings.                                                 |
+| `$`               | Search for patterns at the end of a string.                                                      |
+| `\w`              | Equal to [A-Za-z0-9_]. Matches upper, lowercase, numbers the and underscore character (-).       |
+| `\W`              | Matches any nonword character. Equivalent to [^a-za-z0-9_].                                      |
+| `\d`              | Equal to [0-9]. Match one digit.                                                                 |
+| `\D`              | Equal to [^0-9]. Match one non digit.                                                            |
+| `\s `             | Match a whitespace.                                                                              |
+| `\S `             | Match everything except whitespace.                                                              |
+| `a{2,5} `         | Match the letter a between 3 and 5 times.                                                        |
+| `a{2,}`           | Specify only the lower number of matches.                                                        |
+| `a{5}`            | Specify the exact number of matches.                                                             |
+| `(...)`           | Specify a group that can be acceded with number (from 1).                                        |
 
 > **Note:** The OR syntax is single pipeline **`|`** and not in the table.
 
 ## Regex Methods
-Method	 | Description
------------- | -------------
-`test()`| Returns true or false if the pattern match a string or not.
-`match()`| Extract the actual matches found.
-`replace()`| Search and replace text in a string .
+
+| Method      | Description                                                 |
+| ----------- | ----------------------------------------------------------- |
+| `test()`    | Returns true or false if the pattern match a string or not. |
+| `match()`   | Extract the actual matches found.                           |
+| `replace()` | Search and replace text in a string .                       |
 
 ### Sample Code
 
@@ -520,7 +532,10 @@ const twinkle = "Twinkle, twinkle, little star".match(/Twinkle/gi); // ["Twinkle
 const wildCard = /.un/.test("Let's have fun with regular expressions!"); // true
 
 // define the characters to match, in this example all the vowels in quoteSample
-const bugs =  "Beware of bugs in the above code; I have only proved it correct, not tried it.".match(/[aeiou]/gi);
+const bugs =
+  "Beware of bugs in the above code; I have only proved it correct, not tried it.".match(
+    /[aeiou]/gi
+  );
 // ["e", "a", "e", "o", "u", "i", "e", "a", "o", "e", "o", "e", "I", "a", "e", "o", "o", "e", "i", "o", "e", "o", "i", "e", "i"]
 
 // Match all the characters in quoteSample (between a and z)
@@ -559,7 +574,7 @@ const fav = /favou?rite/.test("favorite"); // true
 const groups = /^(\d+)\s\1\s\1$/.test("42 42 42"); // true
 
 // Remove all the spaces at the beginning an end of a string
-const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, '$1'); // 'Hello, World!'
+const removeSpaces = "   Hello, World!  ".replace(/^\s+(.*\S)\s+$/, "$1"); // 'Hello, World!'
 ```
 
 <p align="right">
@@ -596,7 +611,7 @@ switch (expression) {
   case choice2:
     run this code instead
     break;
-    
+
   // include as many cases as you like
 
   default:
@@ -617,7 +632,7 @@ let age = 18;
 let status = (age >= 18) ? 'adult' : 'minor';
 
 console.log(status); // adult
-````
+```
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
@@ -631,7 +646,7 @@ Programming loops are all to do with doing the same thing over and over again �
 ## for loop
 
 ```javascript
-for (initializer; condition; final-expression) {
+for (initializer; condition; final - expression) {
   // code to run
 }
 ```
@@ -645,7 +660,7 @@ for (variable of iterable) {
   //statement
 }
 
-const VOWELS = ["A","E","I","O","U"]
+const VOWELS = ["A", "E", "I", "O", "U"];
 
 for (let vowel of VOWELS) {
   console.log(vowel);
@@ -665,8 +680,8 @@ for (variable in object) {
 
 const dog = {
   name: "Snoopy",
-  numOfLegs: 4
-}
+  numOfLegs: 4,
+};
 
 for (let d in dog) {
   console.log(d);
@@ -678,19 +693,19 @@ for (let d in dog) {
 ## while loop
 
 ```javascript
-initializer
+initializer;
 while (condition) {
   // code to run
 
-  final-expression
+  final - expression;
 }
 
 let i = 0;
 let num = 5;
 
-while(i < num) {
+while (i < num) {
   console.log(i);
-  i++
+  i++;
 }
 
 // 0 1 2 3 4
@@ -699,19 +714,18 @@ while(i < num) {
 ## do...while
 
 ```javascript
-initializer
+initializer;
 do {
   // code to run
 
-  final-expression
-} while (condition)
-
+  final - expression;
+} while (condition);
 
 let i = 0;
 let num = 5;
 
 do {
-  i++
+  i++;
   console.log(i);
 } while (i < num);
 
@@ -723,15 +737,16 @@ do {
 The **_break statement_** terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
 
 Example:
+
 ```javascript
 const num = 5;
 
-  for (let i = 0; i < num; i++) {
-    if (i === 3) {
-      break;
-    }
-    console.log(i);  
+for (let i = 0; i < num; i++) {
+  if (i === 3) {
+    break;
   }
+  console.log(i);
+}
 
 // 0 1 2
 ```
@@ -741,15 +756,16 @@ const num = 5;
 The **_continue statement_** terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
 
 Example:
+
 ```javascript
 const num = 5;
 
-  for (let i = 0; i < num; i++) {
-    if (i === 3) {
-      continue;
-    }
-    console.log(i);  
+for (let i = 0; i < num; i++) {
+  if (i === 3) {
+    continue;
   }
+  console.log(i);
+}
 
 // 0 1 2 4
 ```
@@ -765,157 +781,166 @@ const num = 5;
 
 ## Array Properties and Methods
 
-Properties | Description
------------- | -------------
-`length` | The length property of an object which is an instance of type Array sets or returns the number of elements in that array.
+| Properties | Description                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `length`   | The length property of an object which is an instance of type Array sets or returns the number of elements in that array. |
 
-Methods | Description
------------- | -------------
-`concat()` | The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
-`includes()` | The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
-`join()` | The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
-`pop()` | The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
-`push()` | The push() method adds one or more elements to the end of an array and returns the new length of the array.
-`shift()` | The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
-`unshift()` | The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
-`indexOf()` | The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
-`lastIndexOf()` | The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
-`reverse()` | The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
-`slice()` | The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
-`splice()` | The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
-`fill()` | The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
-`toString()` | The toString() method returns a string representing the specified array and its elements.
-`values()` | The values() method returns a new Array Iterator object that contains the values for each index in the array.
-`forEach()` | The forEach() method executes a provided function once for each array element.
-`every()` | The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
-`some()` | The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
-`map()` | The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
-`filter()` | The filter() method creates a new array with all elements that pass the test implemented by the provided function.
-`reduce()` | The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.
-`reduceRight()` | The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
-`find()` | The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
-`findIndex()` | The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
-`sort()` | The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
-`Array.from()` | The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
-`Array.isArray()` | The Array.isArray() method determines whether the passed value is an Array.
-`Array.of()` | The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
-`copyWithin()` | The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
-`entries()` | The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
-`keys()` | The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
-`flat()` | The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+| Methods           | Description                                                                                                                                                                                                                                                                                                                                   |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `concat()`        | The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.                                                                                                                                                                                                    |
+| `includes()`      | The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.                                                                                                                                                                                                         |
+| `join()`          | The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.                                                              |
+| `pop()`           | The pop() method removes the last element from an array and returns that element. This method changes the length of the array.                                                                                                                                                                                                                |
+| `push()`          | The push() method adds one or more elements to the end of an array and returns the new length of the array.                                                                                                                                                                                                                                   |
+| `shift()`         | The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.                                                                                                                                                                                                     |
+| `unshift()`       | The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.                                                                                                                                                                                                                          |
+| `indexOf()`       | The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.                                                                                                                                                                                                                  |
+| `lastIndexOf()`   | The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.                                                                                                                                                       |
+| `reverse()`       | The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.                                                                                                                                                                                                      |
+| `slice()`         | The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.                                                                                             |
+| `splice()`        | The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.                                                                                                                                                                                                          |
+| `fill()`          | The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.                                                                                                                                                                   |
+| `toString()`      | The toString() method returns a string representing the specified array and its elements.                                                                                                                                                                                                                                                     |
+| `values()`        | The values() method returns a new Array Iterator object that contains the values for each index in the array.                                                                                                                                                                                                                                 |
+| `forEach()`       | The forEach() method executes a provided function once for each array element.                                                                                                                                                                                                                                                                |
+| `every()`         | The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.                                                                                                                                                                                                    |
+| `some()`          | The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.                                                                                                                                                                                           |
+| `map()`           | The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.                                                                                                                                                                                                         |
+| `filter()`        | The filter() method creates a new array with all elements that pass the test implemented by the provided function.                                                                                                                                                                                                                            |
+| `reduce()`        | The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.                                                                                                                                                                                                            |
+| `reduceRight()`   | The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.                                                                                                                                                                                           |
+| `find()`          | The find() method returns the value of the first element in the provided array that satisfies the provided testing function.                                                                                                                                                                                                                  |
+| `findIndex()`     | The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.                                                                                                                                                |
+| `sort()`          | The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The time and space complexity of the sort cannot be guaranteed as it depends on the implementation. |
+| `Array.from()`    | The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.                                                                                                                                                                                                                            |
+| `Array.isArray()` | The Array.isArray() method determines whether the passed value is an Array.                                                                                                                                                                                                                                                                   |
+| `Array.of()`      | The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.                                                                                                                                                                                                        |
+| `copyWithin()`    | The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.                                                                                                                                                                                                    |
+| `entries()`       | The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.                                                                                                                                                                                                                       |
+| `keys()`          | The keys() method returns a new Array Iterator object that contains the keys for each index in the array.                                                                                                                                                                                                                                     |
+| `flat()`          | The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.                                                                                                                                                                                                                 |
 
 ### Array Properties and Methods Example:
 
 ```javascript
 // ARRAY PROPERTIES
-const arrayLength = () =>["javascript", "is", "a", "programming", "language"].length; // 5
+const arrayLength = () =>
+  ["javascript", "is", "a", "programming", "language"].length; // 5
 
 // ARRAY METHODS
-const arrayConcat = arr => [1,2,3].concat(arr);
+const arrayConcat = (arr) => [1, 2, 3].concat(arr);
 // console.log(arrayConcat([4,5,6])); // [1, 2, 3, 4, 5, 6]
 
-const arrayIncludes = () => [1,2,3,4,5,6].includes(2); // true
+const arrayIncludes = () => [1, 2, 3, 4, 5, 6].includes(2); // true
 
 const arrayJoin = () => ["javascript", "is", "cool"].join(" "); // javascript is cool
 
 // Add or Remove a value to the last index;
-const arrayPop = () => [1,2,3].pop(); // 3
-const arrayPush = () =>  ["Hello"].push("Gabriel"); // 2
+const arrayPop = () => [1, 2, 3].pop(); // 3
+const arrayPush = () => ["Hello"].push("Gabriel"); // 2
 
 // Add or Remove a value to the first index;
-const arrayShift = () => [10,2,3,4,5,6].shift(); // 10
-const arrayUnShift = () => [1,2,3,4,5,6].unshift(7,8,9); // 9
+const arrayShift = () => [10, 2, 3, 4, 5, 6].shift(); // 10
+const arrayUnShift = () => [1, 2, 3, 4, 5, 6].unshift(7, 8, 9); // 9
 
 // Search for the index
-const arrayIndexOf = () => ["javascript", "is", "a", "programming", "language"].indexOf("language"); // 4
-const arrayLastIndexOf = () => ["javascript", "is", "a", "programming", "language"].lastIndexOf("language"); // 4
+const arrayIndexOf = () =>
+  ["javascript", "is", "a", "programming", "language"].indexOf("language"); // 4
+const arrayLastIndexOf = () =>
+  ["javascript", "is", "a", "programming", "language"].lastIndexOf("language"); // 4
 
-const arrayReverse = () => ["javascript", "is", "a", "programming", "language"].reverse(); 
+const arrayReverse = () =>
+  ["javascript", "is", "a", "programming", "language"].reverse();
 //  ["language", "programming", "a", "is", "javascript"]
 
-const arraySlice = () => ["javascript", "is", "a", "programming", "language"].slice(0,1); // ["javascript"]
+const arraySlice = () =>
+  ["javascript", "is", "a", "programming", "language"].slice(0, 1); // ["javascript"]
 
-const arraySplice = () => ["Java","C","C++"].splice(1,2); // ["C", "C++"]
+const arraySplice = () => ["Java", "C", "C++"].splice(1, 2); // ["C", "C++"]
 
-const arrayFill = () => [1,2,3,4,5,6].fill(6); // [6, 6, 6, 6, 6, 6]
+const arrayFill = () => [1, 2, 3, 4, 5, 6].fill(6); // [6, 6, 6, 6, 6, 6]
 
-const arrayToString = () => [1,2,3,4,5,6].toString(); // "1,2,3,4,5,6"
+const arrayToString = () => [1, 2, 3, 4, 5, 6].toString(); // "1,2,3,4,5,6"
 
-const arrayValues = arr => {
+const arrayValues = (arr) => {
   const iterator = arr.values();
   let val = "";
-      for (const value of iterator) {
-        val += value;
-      }
-      return val;
+  for (const value of iterator) {
+    val += value;
   }
+  return val;
+};
 // console.log(arrayValues(["a","b","c","d"])); // "abcd"
 
 const arrayFrom = () => Array.from("foo"); // ["f", "o", "o"]
 
-const arrayIsArray = () => Array.isArray([1,2,3]); // true
+const arrayIsArray = () => Array.isArray([1, 2, 3]); // true
 
-const arrayOf = () => Array.of(10);  // [10]
+const arrayOf = () => Array.of(10); // [10]
 
-const arrayCopyWithin = () => ['a', 'b', 'c', 'd', 'e'].copyWithin(4,0); // ["a", "b", "c", "d", "a"]
+const arrayCopyWithin = () => ["a", "b", "c", "d", "e"].copyWithin(4, 0); // ["a", "b", "c", "d", "a"]
 
-const arrayEntries = arr => {
+const arrayEntries = (arr) => {
   let iterator = arr.entries();
   let ent = "";
-    for (const key of iterator) {
-      ent += key;
-      }
-      return ent;
-    }
+  for (const key of iterator) {
+    ent += key;
+  }
+  return ent;
+};
 
 // console.log(arrayEntries(['a', 'b', 'c'])); // 0,a1,b2,c
 
-const arrayKeys = arr => {
+const arrayKeys = (arr) => {
   let iterator = arr.keys();
   let keys = "";
-    for (const key of iterator) {
-      keys += key;
+  for (const key of iterator) {
+    keys += key;
   }
   return keys;
-}
+};
 
 // console.log(arrayKeys(['a', 'b', 'c'])); // 012
 
 const arrayFlat = () => [0, 1, 2, [3, 4]].flat(); // [0, 1, 2, 3, 4]
 ```
+
 These are the array methods that takes a function as an argument.[Higher Order Functions:](https://github.com/gabriel-cacayan/js-cheatsheet/blob/master/README.md#higher-order-functions)
 
 ```javascript
-const arrayForEach = () => ["A","B","C","D"].forEach(element => console.log(element)); // A\nB\nC\nD
-const arrayEvery = () => [1,2,3,4,5,6].every(x => x > 0); // true
-const arraySome = () => [1,2,3,4,5,6].some(x => x%2 === 0); // true
-const arrayMap = () => [1,2,3,4,5,6].map(x => Math.pow(x,2));  // [1, 4, 9, 16, 25, 36]
-const arrayFilter = () => [1,2,3,4,5,6].filter(x => x%2 === 0);  // [2, 4, 6]
-const arrayReduce = () => [1,2,3,4,5,6].reduce((x,y) => x + y ,0); // 21
-const arrayReduceRight = () => [1,2,3,4,5,6].reduceRight((x,y) => x + y ,0); // 21
-const arrayFind = () => [1,2,3,4,5,6].find(x => x === 1); // 1
-const arrayFindIndex = () => [1,2,3,4,5,6].findIndex(x => x === 6); // 5
-const arraySort = () => [14,29,37,1,5,6,2].sort((x,y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
+const arrayForEach = () =>
+  ["A", "B", "C", "D"].forEach((element) => console.log(element)); // A\nB\nC\nD
+const arrayEvery = () => [1, 2, 3, 4, 5, 6].every((x) => x > 0); // true
+const arraySome = () => [1, 2, 3, 4, 5, 6].some((x) => x % 2 === 0); // true
+const arrayMap = () => [1, 2, 3, 4, 5, 6].map((x) => Math.pow(x, 2)); // [1, 4, 9, 16, 25, 36]
+const arrayFilter = () => [1, 2, 3, 4, 5, 6].filter((x) => x % 2 === 0); // [2, 4, 6]
+const arrayReduce = () => [1, 2, 3, 4, 5, 6].reduce((x, y) => x + y, 0); // 21
+const arrayReduceRight = () =>
+  [1, 2, 3, 4, 5, 6].reduceRight((x, y) => x + y, 0); // 21
+const arrayFind = () => [1, 2, 3, 4, 5, 6].find((x) => x === 1); // 1
+const arrayFindIndex = () => [1, 2, 3, 4, 5, 6].findIndex((x) => x === 6); // 5
+const arraySort = () => [14, 29, 37, 1, 5, 6, 2].sort((x, y) => x - y); // [1, 2, 5, 6, 14, 29, 37]
 ```
+
 ### Sample Code:
 
 ```javascript
 // Removing duplicates from array
-const arr = [1,2,2,3,4,5,6,10,10];
+const arr = [1, 2, 2, 3, 4, 5, 6, 10, 10];
 
 const removeDuplicates = [...new Set(arr)];
 
 console.log(removeDuplicates); // [1, 2, 3, 4, 5, 6, 10]
 
-
 // Checking whether the word is palindrome
 function checkPalindrome(palindrome) {
-
   // Checking whether the given variable is palindrome or not
-  const checked = palindrome.split("").reverse().join(""); 
+  const checked = palindrome.split("").reverse().join("");
 
   // Using ternary operator to check, if is it palindrome or not.
-  return checked === palindrome ? "It is a palindrome!": "It is not palindrome!"; 
+  return checked === palindrome
+    ? "It is a palindrome!"
+    : "It is not palindrome!";
 }
 
 console.log(checkPalindrome("racecar"));
@@ -947,18 +972,18 @@ function validFunctionName(parameter) {
 A **_Function Expressions_** defines a named or anonymous function. An anonymous function is a function that has no name.
 
 ```javascript
-const fullName = function(firstName, lastName) {
- return `${firstName} ${lastName}`;
-} // anonymous function
+const fullName = function (firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}; // anonymous function
 
 function fullName(firstName, lastName) {
- return `${firstName} ${lastName}`;
+  return `${firstName} ${lastName}`;
 } // named function
 
 fullName("Mikasa", "Ackerman"); // Mikasa Ackerman
 ```
 
-## Function parameters 
+## Function parameters
 
 Starting with ECMAScript 2015, there are two new kinds of parameters: **_default parameters_** and **_rest parameters_**.
 
@@ -975,6 +1000,7 @@ function multiply(a, b = 1) {
 
 multiply(5); // 5
 ```
+
 ### Rest parameters
 
 The **_rest parameter syntax_** allows us to represent an **indefinite** number of arguments as an array.
@@ -983,7 +1009,7 @@ In the following example, the function multiply uses rest parameters to collect 
 
 ```javascript
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
@@ -999,12 +1025,12 @@ We can write the arrow function in multiple ways:
 ```javascript
 // First: it just looks like a regular function expression but have arrow (=>) key.
 const double = (value) => {
-  return value * 2
-}
+  return value * 2;
+};
 double(10); // 20
 
 // Second: Omit the return keyword
-const double2 = value => value * 2;
+const double2 = (value) => value * 2;
 double2(10); // 20
 
 // Third: If our function has no parameter
@@ -1013,19 +1039,19 @@ noise(); // Pling
 
 // or
 
-const noise2 = _ => console.log("Pling");
+const noise2 = (_) => console.log("Pling");
 noise2(); // Pling
 
 // Fourth: If we have two or more parameter, you must use parenthesis.
 const addAll = (x, y, z) => x + y + z;
 addAll(10, 20, 30); // 60
 
-// Fifth: We can use default value in our 
+// Fifth: We can use default value in our
 const multiply = (a = 2, b = 3, c = 1) => a * b * c;
 multiply(2, 2, 2); // 8
-multiply(2, 2);    // 4
-multiply(3);       // 9
-multiply();        // 6
+multiply(2, 2); // 4
+multiply(3); // 9
+multiply(); // 6
 ```
 
 ## Closures
@@ -1035,32 +1061,34 @@ multiply();        // 6
 However, the outer function does not have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.
 
 ```javascript
-const pet = function(name) {   // This is the outer function
+const pet = function (name) {
+  // This is the outer function
 
-  const greetPet = function(greet) { // This is the inner function
+  const greetPet = function (greet) {
+    // This is the inner function
 
-    return `${greet}, ${name}`;    // The inner function has access to the outer's variable.     
-  }
-  return greetPet;            // calling the inner function
-}
+    return `${greet}, ${name}`; // The inner function has access to the outer's variable.
+  };
+  return greetPet; // calling the inner function
+};
 
 const greetings = pet("Oreo")("Hello");
 console.log(greetings); // "Hello, Oreo"
 ```
 
-## Recursion 
+## Recursion
 
 The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
 
 ```javascript
 function countdown(value) {
-    if (value > 0) {
-        console.log(value);
-        return countdown(value - 1);
-    } else {
-        return value;
-    }
-};
+  if (value > 0) {
+    console.log(value);
+    return countdown(value - 1);
+  } else {
+    return value;
+  }
+}
 
 countdown(10); // 10 9 8 ... 0
 ```
@@ -1071,20 +1099,18 @@ An IIFE (Immediately Invoked Function Expression) is a JavaScript function that 
 
 ```javascript
 (function () {
-    statements
+  statements;
 })();
-
 
 (function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 // Variable aName is not accessible from the outside scope
-aName // throws "Uncaught ReferenceError: aName is not defined"
-
+aName; // throws "Uncaught ReferenceError: aName is not defined"
 
 var result = (function () {
-    var name = "Barry";
-    return name;
+  var name = "Barry";
+  return name;
 })();
 // Immediately creates the output:
 result; // "Barry"
@@ -1094,27 +1120,28 @@ result; // "Barry"
 
 A **_higher-order function_** is a function that can take another function as an argument, or that returns a function as a result.
 
-These are the array methods that take another function as an argument and returns a function as a result: **_forEach_**,**_map_**,**_filter_**,**_reduce_**,**_sort_**,**_some_**,**_every_**,**_find_**, and **_findIndex_** 
+These are the array methods that take another function as an argument and returns a function as a result: **_forEach_**,**_map_**,**_filter_**,**_reduce_**,**_sort_**,**_some_**,**_every_**,**_find_**, and **_findIndex_**
 
-### Sample Code 
+### Sample Code
 
 ```javascript
 const numbers = [0, 1, 2, 3, 4, 5, 6];
-const returnElement = numbers.forEach(x => console.log(x)); // 0 1 2 3..
-const doubledNumbers = numbers.map(n => n * 2); // [0, 2, 4, 6, 8, 10, 12]
-const evenNumbers = numbers.filter(n => n % 2 === 0); // [0, 2, 4, 6]
+const returnElement = numbers.forEach((x) => console.log(x)); // 0 1 2 3..
+const doubledNumbers = numbers.map((n) => n * 2); // [0, 2, 4, 6, 8, 10, 12]
+const evenNumbers = numbers.filter((n) => n % 2 === 0); // [0, 2, 4, 6]
 const sum = numbers.reduce((prev, next) => prev + next, 0); // 21
-const greaterThanFour = numbers.find(n => n > 4); // 5
+const greaterThanFour = numbers.find((n) => n > 4); // 5
 ```
 
 ```javascript
 // Returning the name's property from the hash table;
 const rooms = [
-	{name: "Room1", description: "Clean", completed: "2020"},
-	{name: "Room2", description: "Big", completed: "2021"},
-	{name: "Room3", description: "Small", completed: "2022"} ];
-  
-console.log(rooms.map(room => room.name)); // ["Room1", "Room2", "Room3"]
+  { name: "Room1", description: "Clean", completed: "2020" },
+  { name: "Room2", description: "Big", completed: "2021" },
+  { name: "Room3", description: "Small", completed: "2022" },
+];
+
+console.log(rooms.map((room) => room.name)); // ["Room1", "Room2", "Room3"]
 ```
 
 <p align="right">
@@ -1138,149 +1165,153 @@ const NEG_INFINITE_NUM = Number.NEGATIVE_INFINITY;
 const NOT_A_NUMBER = Number.NaN;
 ```
 
-Property | Description
------------- | ------------- 
-`Number.MAX_VALUE` | The largest representable number (±1.7976931348623157e+308)
-`Number.MIN_VALUE`| The smallest representable number (±5e-324)
-`Number.NaN`| Special "not a number" value
-`Number.NEGATIVE_INFINITY`| Special negative infinite value; returned on overflow
-`Number.POSITIVE_INFINITY`| Special positive infinite value; returned on overflow
-`Number.EPSILON`| Difference between 1 and the smallest value greater than 1 that can be represented as a Number (2.220446049250313e-16)
-`Number.MIN_SAFE_INTEGER`| Minimum safe integer in JavaScript (−253 + 1, or −9007199254740991)
-`Number.MAX_SAFE_INTEGER`| Maximum safe integer in JavaScript (+253 − 1, or +9007199254740991)
+| Property                   | Description                                                                                                            |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `Number.MAX_VALUE`         | The largest representable number (±1.7976931348623157e+308)                                                            |
+| `Number.MIN_VALUE`         | The smallest representable number (±5e-324)                                                                            |
+| `Number.NaN`               | Special "not a number" value                                                                                           |
+| `Number.NEGATIVE_INFINITY` | Special negative infinite value; returned on overflow                                                                  |
+| `Number.POSITIVE_INFINITY` | Special positive infinite value; returned on overflow                                                                  |
+| `Number.EPSILON`           | Difference between 1 and the smallest value greater than 1 that can be represented as a Number (2.220446049250313e-16) |
+| `Number.MIN_SAFE_INTEGER`  | Minimum safe integer in JavaScript (−253 + 1, or −9007199254740991)                                                    |
+| `Number.MAX_SAFE_INTEGER`  | Maximum safe integer in JavaScript (+253 − 1, or +9007199254740991)                                                    |
 
-Methods | Description
------------- | ------------- 
-`Number.parseFloat()` | Parses a string argument and returns a floating point number.Same as the global `parseFloat()` function.
-`Number.parseInt()` | Parses a string argument and returns an integer of the specified radix or base. Same as the global `parseInt()` function.
-`Number.isFinite()` | Determines whether the passed value is a finite number.
-`Number.isInteger()` | Determines whether the passed value is an integer.
-`Number.isNaN()` | Determines whether the passed value is NaN. More robust version of the original global `isNaN()`.
-`Number.isSafeInteger()` | Determines whether the provided value is a number that is a safe integer.
-`toExponential()`| Returns a string representing the number in exponential notation.
-`toFixed()`| Returns a string representing the number in fixed-point notation.
-`toPrecision()`| Returns a string representing the number to a specified precision in fixed-point notation.
+| Methods                  | Description                                                                                                               |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| `Number.parseFloat()`    | Parses a string argument and returns a floating point number.Same as the global `parseFloat()` function.                  |
+| `Number.parseInt()`      | Parses a string argument and returns an integer of the specified radix or base. Same as the global `parseInt()` function. |
+| `Number.isFinite()`      | Determines whether the passed value is a finite number.                                                                   |
+| `Number.isInteger()`     | Determines whether the passed value is an integer.                                                                        |
+| `Number.isNaN()`         | Determines whether the passed value is NaN. More robust version of the original global `isNaN()`.                         |
+| `Number.isSafeInteger()` | Determines whether the provided value is a number that is a safe integer.                                                 |
+| `toExponential()`        | Returns a string representing the number in exponential notation.                                                         |
+| `toFixed()`              | Returns a string representing the number in fixed-point notation.                                                         |
+| `toPrecision()`          | Returns a string representing the number to a specified precision in fixed-point notation.                                |
 
 ### Using Number.isFinite
 
 ```javascript
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, would've been true with
-                            // global isFinite('0')
-Number.isFinite(null);      // false, would've been true with
-                            // global isFinite(null)
+Number.isFinite("0"); // false, would've been true with
+// global isFinite('0')
+Number.isFinite(null); // false, would've been true with
+// global isFinite(null)
 ```
+
 ### Using Number.isInteger
+
 ```javascript
-Number.isInteger(0);         // true
-Number.isInteger(1);         // true
-Number.isInteger(-100000);   // true
+Number.isInteger(0); // true
+Number.isInteger(1); // true
+Number.isInteger(-100000); // true
 Number.isInteger(99999999999999999999999); // true
 
-Number.isInteger(0.1);       // false
-Number.isInteger(Math.PI);   // false
+Number.isInteger(0.1); // false
+Number.isInteger(Math.PI); // false
 
-Number.isInteger(NaN);       // false
-Number.isInteger(Infinity);  // false
+Number.isInteger(NaN); // false
+Number.isInteger(Infinity); // false
 Number.isInteger(-Infinity); // false
-Number.isInteger('10');      // false
-Number.isInteger(true);      // false
-Number.isInteger(false);     // false
-Number.isInteger([1]);       // false
+Number.isInteger("10"); // false
+Number.isInteger(true); // false
+Number.isInteger(false); // false
+Number.isInteger([1]); // false
 
-Number.isInteger(5.0);       // true
+Number.isInteger(5.0); // true
 Number.isInteger(5.000000000000001); // false
 Number.isInteger(5.0000000000000001); // true
 ```
+
 ### Using Number.isNaN
 
 ```javascript
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0);      // true
+Number.isNaN(0 / 0); // true
 
 // e.g. these would have been true with global isNaN()
-Number.isNaN('NaN');      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN('blabla');   // false
+Number.isNaN("NaN"); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // These all return false
 Number.isNaN(true);
 Number.isNaN(null);
 Number.isNaN(37);
-Number.isNaN('37');
-Number.isNaN('37.37');
-Number.isNaN('');
-Number.isNaN(' ');
+Number.isNaN("37");
+Number.isNaN("37.37");
+Number.isNaN("");
+Number.isNaN(" ");
 ```
+
 ### Using Number.isSafeInteger
 
 ```javascript
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53));      // false
-Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger('3');                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## Math object
 
 ### Math Properties and Methods
 
-Property | Description
------------- | ------------- 
-`Math.PI` | The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159.
-`Math.E`| Euler's constant and the base of natural logarithms; approximately 2.718.
-`Math.LN2`| Natural logarithm of 2; approximately 0.693.
-`Math.LN2`| Natural logarithm of 10; approximately 2.303.
-`Math.LOG2E`| Base-2 logarithm of E; approximately 1.443.
-`Math.LOG10E`| Base-10 logarithm of E; approximately 0.434.
-`Math.SQRT1_2`| Square root of ½ (or equivalently, 1/√2); approximately 0.707.
-`Math.SQRT2`| Square root of 2; approximately 1.414.
+| Property       | Description                                                                                                        |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `Math.PI`      | The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159. |
+| `Math.E`       | Euler's constant and the base of natural logarithms; approximately 2.718.                                          |
+| `Math.LN2`     | Natural logarithm of 2; approximately 0.693.                                                                       |
+| `Math.LN2`     | Natural logarithm of 10; approximately 2.303.                                                                      |
+| `Math.LOG2E`   | Base-2 logarithm of E; approximately 1.443.                                                                        |
+| `Math.LOG10E`  | Base-10 logarithm of E; approximately 0.434.                                                                       |
+| `Math.SQRT1_2` | Square root of ½ (or equivalently, 1/√2); approximately 0.707.                                                     |
+| `Math.SQRT2`   | Square root of 2; approximately 1.414.                                                                             |
 
-Methods | Description
------------- | ------------- 
-`Math.abs()`| Absolute value
-`Math.sin()`,`Math.cos()`,`Math.tan()`| Standard trigonometric functions; with the argument in radians.
-`Math.asin()`,`Math.acos()`,`Math.atan()`,`Math.atan2()`| Inverse trigonometric functions; return values in radians.
-`Math.sinh`,`Math.acosh`,`Math.atanh`| Hyperbolic functions; argument in hyperbolic angle.
-`Math.asinh`,`Math.acosh`,`Math.atanh`| Inverse hyperbolic functions; return values in hyperbolic angle.
-`Math.pow()`,`Math.exp()`,`Math.expm1()`, | Exponential and logarithmic functions.
-`Math.log10()`,`Math.log1p()`,`Math.log2()` | 
-`Math.floor()`,`Math.ceil()`| Returns the largest/smallest integer less/greater than or equal to an argument.
-`Math.min()`,`Math.max()`| Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.
-`Math.random()`| Returns a random number between 0 and 1.
-`Math.round()`,`Math.fround()`,`Math.trunc()`| Rounding and truncation functions.
-`Math.sqrt()`,`Math.cbrt()`,`Math.hypot()`| Square root, cube root, Square root of the sum of square arguments.
-`Math.sign()`| The sign of a number, indicating whether the number is positive, negative or zero.
-`Math.clz32()`,`Math.imul()`| Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments.
+| Methods                                                  | Description                                                                                                                           |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `Math.abs()`                                             | Absolute value                                                                                                                        |
+| `Math.sin()`,`Math.cos()`,`Math.tan()`                   | Standard trigonometric functions; with the argument in radians.                                                                       |
+| `Math.asin()`,`Math.acos()`,`Math.atan()`,`Math.atan2()` | Inverse trigonometric functions; return values in radians.                                                                            |
+| `Math.sinh`,`Math.acosh`,`Math.atanh`                    | Hyperbolic functions; argument in hyperbolic angle.                                                                                   |
+| `Math.asinh`,`Math.acosh`,`Math.atanh`                   | Inverse hyperbolic functions; return values in hyperbolic angle.                                                                      |
+| `Math.pow()`,`Math.exp()`,`Math.expm1()`,                | Exponential and logarithmic functions.                                                                                                |
+| `Math.log10()`,`Math.log1p()`,`Math.log2()`              |
+| `Math.floor()`,`Math.ceil()`                             | Returns the largest/smallest integer less/greater than or equal to an argument.                                                       |
+| `Math.min()`,`Math.max()`                                | Returns the minimum or maximum (respectively) value of a comma separated list of numbers as arguments.                                |
+| `Math.random()`                                          | Returns a random number between 0 and 1.                                                                                              |
+| `Math.round()`,`Math.fround()`,`Math.trunc()`            | Rounding and truncation functions.                                                                                                    |
+| `Math.sqrt()`,`Math.cbrt()`,`Math.hypot()`               | Square root, cube root, Square root of the sum of square arguments.                                                                   |
+| `Math.sign()`                                            | The sign of a number, indicating whether the number is positive, negative or zero.                                                    |
+| `Math.clz32()`,`Math.imul()`                             | Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments. |
 
 ### Sample Code
 
 ```javascript
-const mathPow = () => Math.pow(4,2); // 16
+const mathPow = () => Math.pow(4, 2); // 16
 const mathFloor = () => Math.floor(5.95); // 5
-const mathCeil = () => Math.ceil(5.10); // 6
-const mathMin = math => Math.min(...math); // 1, Using spread operator (spread turns array into a list of arguments).
+const mathCeil = () => Math.ceil(5.1); // 6
+const mathMin = (math) => Math.min(...math); // 1, Using spread operator (spread turns array into a list of arguments).
 // console.log(mathMin([1,3,5,7,2,10]));
-const mathMax = math => Math.max(...math); // 69
+const mathMax = (math) => Math.max(...math); // 69
 // console.log(mathMax([1,3,5,7,69,10]));
 const mathRandom = () => Math.random(); // Random numbers between 0 to 1.
 const mathRound = () => Math.round(5.5); // 6 Rounds off if the decimal is greater then 4.
-const mathSqrt = () => Math.sqrt(16);  // 4
-const mathCbrt = () => Math.cbrt(64); // 4	
+const mathSqrt = () => Math.sqrt(16); // 4
+const mathCbrt = () => Math.cbrt(64); // 4
 const mathSign = () => Math.sign(30); // 1
-const mathImul = () => Math.imul(10,5); // 50 (10 x 5)
+const mathImul = () => Math.imul(10, 5); // 50 (10 x 5)
 ```
 
 ## Date Object
@@ -1291,19 +1322,19 @@ Calling Date without the `new` keyword returns a string representing the current
 
 The parameters in the preceding syntax can be any of the following:
 
-* Nothing: creates today's date and time. For example, `today = new Date();`.
-* A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
-* A set of integer values for year, month, and day. For example, `var Xmas95 = new Date(1995, 11, 25)`.
-* A set of integer values for year, month, day, hour, minute, and seconds. For example, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+- Nothing: creates today's date and time. For example, `today = new Date();`.
+- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
+- A set of integer values for year, month, and day. For example, `var Xmas95 = new Date(1995, 11, 25)`.
+- A set of integer values for year, month, day, hour, minute, and seconds. For example, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
 ### Methods of the Date object
 
 The **_Date object methods_** for handling dates and times fall into these broad categories:
 
-* "set" methods, for setting date and time values in Date objects.
-* "get" methods, for getting date and time values from Date objects.
-* "to" methods, for returning string values from Date objects.
-* parse and UTC methods, for parsing Date strings.
+- "set" methods, for setting date and time values in Date objects.
+- "get" methods, for getting date and time values from Date objects.
+- "to" methods, for returning string values from Date objects.
+- parse and UTC methods, for parsing Date strings.
 
 ```javascript
 const DATE = new Date(); // Fri Sep 11 2020 11:30:36 GMT+0800 (Taipei Standard Time)
@@ -1314,7 +1345,7 @@ const FULL_YEAR = DATE.getFullYear(); // 2020
 const HOURS = DATE.getHours(); // 11
 const MINUTES = DATE.getMinutes(); // 38
 const SECONDS = DATE.getSeconds(); // 53
-const  MILLI_SECONDS= DATE.getMilliseconds(); // 4
+const MILLI_SECONDS = DATE.getMilliseconds(); // 4
 ```
 
 <p align="right">
@@ -1333,10 +1364,10 @@ An **_object_** is a collection of related data and/or functionality (which usua
 const person1 = {
   name: "John Doe",
   age: 38,
-  greet: function() {
-    return `My name is ${this.name} and I'm ${this.age} yrs old.`
-  }
-}
+  greet: function () {
+    return `My name is ${this.name} and I'm ${this.age} yrs old.`;
+  },
+};
 console.log(person1.greet()); // My name is John Doe and I'm 38 yrs old.
 ```
 
@@ -1346,27 +1377,28 @@ The basic idea of OOP is that we use objects to model real world things that we 
 
 1. **Encapsulation** — Object data (and often, functions too) can be stored neatly.
 2. **Abstraction** — creating a simple model of a more complex thing
-3. **Object instances** — objects that contain the data and functionality defined in the class. 
+3. **Object instances** — objects that contain the data and functionality defined in the class.
 
 ```javascript
 // Part 2: Constructor
 
 // This is called (CONSTRUCTOR)
-function Person(first,last,age,gender) {
+function Person(first, last, age, gender) {
   this.first = first;
   this.last = last;
   this.age = age;
-  this.bio = function() {
-    return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old.`
+  this.bio = function () {
+    return `Hello, my name is ${this.first} ${this.last} and I'm ${this.age} yrs old.`;
   };
 }
 
 // INSTANTIATION
 
 // When an object instance is created the contructor function is run to create it.
-const person5 = new Person("John","Doe",38); // This is called (OBJECT INSTANCE)
+const person5 = new Person("John", "Doe", 38); // This is called (OBJECT INSTANCE)
 console.log(person5.bio()); // Hello, my name is John Doe and I'm 38 yrs old.
 ```
+
 > **Explanation:** When an object instance is created from a class, the class's constructor function is run to create it. This process of creating an object instance from a class is called instantiation — the object instance is instantiated from the class.
 
 ### Other ways to create object instances
@@ -1375,31 +1407,31 @@ So far we've seen two different ways to create an object instance — declaring 
 
 These make sense, but there are other ways — we want to make you familiar with these in case you come across them in your travels around the Web.
 
-* The **Object()** constructor
+- The **Object()** constructor
 
 First of all, you can use the **_Object()_** constructor to create a new object. Yes, even generic objects have a constructor, which generates an empty object.
 
 ```javascript
 let person1 = new Object();
 
-person1.name = 'Chris';
+person1.name = "Chris";
 person1.age = 38;
-person1.greeting = function() {
+person1.greeting = function () {
   return `Hi, my name is ${this.name} and I'm ${this.age} yrs old.`;
 };
 console.log(person1.greeting()); // Hi, my name is Chris and I'm 38 yrs old.
 ```
 
-* Using the **create()** method
+- Using the **create()** method
 
 Constructors can help you give your code order—you can create constructors in one place, then create instances as needed, and it is clear where they came from.
 
 ```javascript
 let person1 = new Object();
 
-person1.name = 'Chris';
+person1.name = "Chris";
 person1.age = 38;
-person1.greeting = function() {
+person1.greeting = function () {
   return `Hi, my name is ${this.name} and I'm ${this.age} yrs old.`;
 };
 
@@ -1415,16 +1447,16 @@ console.log(person2.greeting()); // Hi, my name is Jane Doe and I'm 36 yrs old.
 
 ```javascript
 // Part 3: Prototypes
-function Person(first,last,age,gender) {
+function Person(first, last, age, gender) {
   this.first = first;
   this.last = last;
 }
 
-const person5 = new Person("Mikasa","Ackerman");
+const person5 = new Person("Mikasa", "Ackerman");
 
-Person.prototype.fullName = function(){
+Person.prototype.fullName = function () {
   return `${this.first} ${this.last}`;
-}
+};
 console.log(person5.fullName()); // Mikasa Ackerman
 ```
 
@@ -1434,26 +1466,28 @@ console.log(person5.fullName()); // Mikasa Ackerman
 
 ```javascript
 // Part 4: Inheritance
-function Person(first,last,age,gender) {
+function Person(first, last, age, gender) {
   this.first = first;
   this.last = last;
   this.age = age;
   this.gender = gender;
 }
 
-function Teacher(first,last,age,gender,subject){
-  Person.call(this,first,last,age,gender);
-  
+function Teacher(first, last, age, gender, subject) {
+  Person.call(this, first, last, age, gender);
+
   this.subject = subject;
 }
 
 Teacher.prototype = Object.create(Person.prototype);
 
-Teacher.prototype.greeting = function() {
-  return `My name is ${this.first + " " + this.last} and my favorite subject is ${this.subject}.`;
-}
+Teacher.prototype.greeting = function () {
+  return `My name is ${
+    this.first + " " + this.last
+  } and my favorite subject is ${this.subject}.`;
+};
 
-let teacher1 = new Teacher("Mikasa","Ackerman",19,"Female","Math");
+let teacher1 = new Teacher("Mikasa", "Ackerman", 19, "Female", "Math");
 
 console.log(teacher1.greeting()); // My name is Mikasa Ackerman and my favorite subject is Math.
 ```
@@ -1465,15 +1499,17 @@ console.log(teacher1.greeting()); // My name is Mikasa Ackerman and my favorite 
 ```javascript
 // Part 5: Classes (ES6) Javascript version 2015
 class Person {
-  constructor(first,last,age) {
+  constructor(first, last, age) {
     this.first = first;
     this.last = last;
     this.age = age;
   }
-  
+
   greeting() {
-    return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age} yrs old.`;
-    };
+    return `Hi my name is ${this.first + " " + this.last} and I'm ${
+      this.age
+    } yrs old.`;
+  }
 }
 
 const person1 = new Person("Mikasa", "Ackerman", 19);
@@ -1485,37 +1521,42 @@ console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19
 ```javascript
 // Part 6: Sub-Classes
 class Person {
-  constructor(first,last,age) {
+  constructor(first, last, age) {
     this.first = first;
     this.last = last;
     this.age = age;
   }
-  
+
   greeting() {
-    return `Hi my name is ${this.first + " " + this.last} and I'm ${this.age} yrs old.`;
-  };
+    return `Hi my name is ${this.first + " " + this.last} and I'm ${
+      this.age
+    } yrs old.`;
+  }
 }
 
-const person1 = new Person("Mikasa","Ackerman",19);
+const person1 = new Person("Mikasa", "Ackerman", 19);
 console.log(person1.greeting()); // Hi my name is Mikasa Ackerman and i'm 19 yrs old.
-
 
 // Inheritance in class
 class Teacher extends Person {
-  constructor(first,last,age,subject, grade) {
-    super(first,last,age); // Now 'this' is initialized by calling the parent constructor.
-    
+  constructor(first, last, age, subject, grade) {
+    super(first, last, age); // Now 'this' is initialized by calling the parent constructor.
+
     // subject and grade are specific to Teacher
     this.subject = subject;
     this.grade = grade;
-    }
-    
-    lecture() {
-      return `Hello class, I'm ${this.first + " " + this.last} and I'm ${this.age} yrs old. My subject is ${this.subject} and you need atleast ${this.grade} to pass this subject.`;
-    };
+  }
+
+  lecture() {
+    return `Hello class, I'm ${this.first + " " + this.last} and I'm ${
+      this.age
+    } yrs old. My subject is ${this.subject} and you need atleast ${
+      this.grade
+    } to pass this subject.`;
+  }
 }
 
-const teacher1 = new Teacher("Monkey D.","Luffy",20,"Math",94);
+const teacher1 = new Teacher("Monkey D.", "Luffy", 20, "Math", 94);
 console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 yrs old. My subject is Math and you need atleast 94 to pass this subject.
 ```
 
@@ -1526,30 +1567,78 @@ console.log(teacher1.lecture()); // Hello class, I'm Monkey D. Luffy and I'm 20 
 
 # Asynchronous
 
-The term asynchronous refers to two or more objects or events **not** existing or happening at the same time (or multiple related things happening without waiting for the previous one to complete). In computing, the word "asynchronous" is used in two major contexts.
+Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
 
-[Promise Terminology](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#promise_terminology_recap)
+## Promises
+
+**Promises** are the foundation of asynchronous programming in modern JavaScript. A promise is an object returned by an asynchronous function, which represents the current state of the operation. At the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation.
 
 ```javascript
-const getData = async (url) => {
+const fetchPromise = fetch("url");
 
-    try {
-
-      const response = await fetch(url);
-      const data = await response.json();
-
-       return data;
-
-    } catch (err) {
-
-       return err;
+fetchPromise
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
     }
-    
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(`Error: ${error}`);
+  });
+```
+
+### Promise terminology
+
+Promises come with some quite specific terminology that it's worth getting clear about.
+
+First, a promise can be in one of three states:
+
+- **pending:** the promise has been created, and the asynchronous function it's associated with has not succeeded or failed yet. This is the state your promise is in when it's returned from a call to `fetch()`, and the request is still being made.
+- **fulfilled:** the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
+- **rejected:** the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
+
+> ECMAScript 2015, also known as ES6, introduced the JavaScript Promise object.
+
+## Async and Await
+
+The `async` keyword gives you a simpler way to work with asynchronous promise-based code. Adding async at the start of a function makes it an async function:
+
+```js
+async function myFunction() {
+  // This is an async function
+}
+```
+
+Inside an async function you can use the `await` keyword before a call to a function that returns a promise. This makes the code wait at that point until the promise is settled, at which point the fulfilled value of the promise is treated as a return value, or the rejected value is thrown.
+
+This enables you to write code that uses asynchronous functions but looks like synchronous code. For example, we could use it to rewrite our fetch example:
+
+```js
+async function fetchProducts() {
+  try {
+    // after this line, our function will wait for the `fetch()` call to be settled
+    // the `fetch()` call will either return a Response or throw an error
+    const response = await fetch("url");
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    // after this line, our function will wait for the `response.json()` call to be settled
+    // the `response.json()` call will either return the parsed JSON object or throw an error
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
 
-getData("https://jsonplaceholder.typicode.com/todos/1")
-.then(data => console.log(data)); //{userId: 1, id: 1, title: "delectus aut autem", completed: false}
+fetchProducts();
 ```
+
+> ECMAScript 2017 introduced the JavaScript keywords async and await.
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
@@ -1584,7 +1673,7 @@ element.setAttribute(attributeName, attributeValue); // Attribute example: class
 element.addEventListener(event, function, useCapture);
 
 element.addEventListener("click", () => {
-  
+
 
 });
 
@@ -1626,25 +1715,25 @@ element.classList.toggle("");
 
 Most used events.
 
-* click
-* mouseenter
-* mouseleave
-* dblclick
-* mousedown
-* mouseup
-* mouseover
-* mouseout
-* mousemove
-* keydown
-* keyup
-* keypress
-* focus
-* blur
-* cut
-* paste
-* input
-* change
-* input
+- click
+- mouseenter
+- mouseleave
+- dblclick
+- mousedown
+- mouseup
+- mouseover
+- mouseout
+- mousemove
+- keydown
+- keyup
+- keypress
+- focus
+- blur
+- cut
+- paste
+- input
+- change
+- input
 
 <p align="right">
   <a href="https://github.com/gabriel-cacayan/js-cheatsheet#fire-js-cheatsheet-octocat"> 
